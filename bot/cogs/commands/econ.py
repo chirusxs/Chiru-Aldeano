@@ -1308,7 +1308,7 @@ class Econ(commands.Cog):
                 victim, random.choice(ctx.l.econ.pillage.u_lose.victim).format(ctx.author.mention)
             )
 
-    @commands.command(name="use", aliases=["eat", "chug", "smoke"])
+    @commands.command(name="usar", aliases=["comer", "chugear"])
     # @commands.cooldown(1, 1, commands.BucketType.user)
     async def use_item(self, ctx: Ctx, *, thing):
         """Allows you to use potions and some other items"""
