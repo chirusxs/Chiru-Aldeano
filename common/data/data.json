@@ -154,17 +154,17 @@
         "image": "https://iapetus11.me/images/mob_spawns/zombie.png"
       },
       "skeleton": {
-        "nice": "Skeleton",
+        "nice": "Esqueleto",
         "health": 20,
         "image": "https://iapetus11.me/images/mob_spawns/skeleton.png"
       },
       "spider": {
-        "nice": "Spider",
+        "nice": "Araña",
         "health": 20,
         "image": "https://iapetus11.me/images/mob_spawns/spider.png"
       },
       "cave_spider": {
-        "nice": "Cave Spider",
+        "nice": "Araña de Cueva",
         "health": 12,
         "image": "https://iapetus11.me/images/mob_spawns/cave_spider.png"
       },
@@ -174,7 +174,7 @@
         "image": "https://iapetus11.me/images/mob_spawns/creeper.png"
       },
       "baby_slime": {
-        "nice": "Baby Slime",
+        "nice": "Slime Bebé",
         "health": 20,
         "image": "https://iapetus11.me/images/mob_spawns/baby_slime.png"
       },
