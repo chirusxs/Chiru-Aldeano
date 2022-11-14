@@ -305,9 +305,9 @@ class Events(commands.Cog):
             active_effects = await self.karen.fetch_active_fx(ctx.author.id)
 
             if active_effects:
-                if "haste ii potion" in active_effects:
+                if "poción apuro ii" in active_effects:
                     remaining -= 2
-                elif "haste i potion" in active_effects:
+                elif "poción apuro i" in active_effects:
                     remaining -= 1
 
         seconds = round(remaining, 2)

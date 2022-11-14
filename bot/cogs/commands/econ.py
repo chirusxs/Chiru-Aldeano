@@ -1351,34 +1351,34 @@ class Econ(commands.Cog):
             await ctx.reply_embed(ctx.l.econ.use.stupid_5)
             return
 
-        if thing == "haste i potion":
+        if thing == "poción apuro i":
             if amount > 1:
                 await ctx.reply_embed(ctx.l.econ.use.stupid_1)
                 return
 
             await self.db.remove_item(ctx.author.id, thing, 1)
-            await self.karen.add_active_fx(ctx.author.id, "Haste I Potion")
-            await ctx.reply_embed(ctx.l.econ.use.chug.format("Haste I Potion", 6))
+            await self.karen.add_active_fx(ctx.author.id, "Poción Apuro I")
+            await ctx.reply_embed(ctx.l.econ.use.chug.format("Poción Apuro I", 6))
 
             await asyncio.sleep(60 * 6)
 
-            await self.bot.send_embed(ctx.author, ctx.l.econ.use.done.format("Haste I Potion"))
-            await self.karen.remove_active_fx(ctx.author.id, "Haste I Potion")
+            await self.bot.send_embed(ctx.author, ctx.l.econ.use.done.format("Poción Apuro I"))
+            await self.karen.remove_active_fx(ctx.author.id, "Poción Apuro I")
             return
 
-        if thing == "haste ii potion":
+        if thing == "poción apuro ii":
             if amount > 1:
                 await ctx.reply_embed(ctx.l.econ.use.stupid_1)
                 return
 
             await self.db.remove_item(ctx.author.id, thing, 1)
-            await self.karen.add_active_fx(ctx.author.id, "Haste II Potion")
-            await ctx.reply_embed(ctx.l.econ.use.chug.format("Haste II Potion", 4.5))
+            await self.karen.add_active_fx(ctx.author.id, "Poción Apuro II")
+            await ctx.reply_embed(ctx.l.econ.use.chug.format("Poción Apuro II", 4.5))
 
             await asyncio.sleep(60 * 4.5)
 
-            await self.bot.send_embed(ctx.author, ctx.l.econ.use.done.format("Haste II Potion"))
-            await self.karen.remove_active_fx(ctx.author.id, "Haste II Potion")
+            await self.bot.send_embed(ctx.author, ctx.l.econ.use.done.format("Poción Apuro II"))
+            await self.karen.remove_active_fx(ctx.author.id, "Poción Apuro II")
             return
 
         if thing == "bone meal":

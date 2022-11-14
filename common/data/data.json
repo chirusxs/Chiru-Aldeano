@@ -328,13 +328,13 @@
         "sticky": false
       },
       {
-        "item": "Haste I Potion",
+        "item": "Poción Apuro I",
         "sell_price": 32,
         "rarity": 200,
         "sticky": false
       },
       {
-        "item": "Haste II Potion",
+        "item": "Poción Apuro II",
         "sell_price": 128,
         "rarity": 1000,
         "sticky": false
@@ -697,11 +697,11 @@
         "count_lt": 1
       }
     },
-    "haste i potion": {
+    "poción apuro i": {
       "cat": "magic",
       "buy_price": 120,
       "db_entry": {
-        "item": "Haste I Potion",
+        "item": "Poción Apuro I",
         "sell_price": 32,
         "sticky": false
       },
@@ -931,8 +931,8 @@
       "Libro Saqueo II",
       "Libro Filo I",
       "Libro Filo II",
-      "Haste I Potion",
-      "Haste II Potion",
+      "Poción Apuro I",
+      "Poción Apuro II",
       "Lure I Book",
       "Seaweed",
       "Vault Potion",
@@ -1185,8 +1185,8 @@
     "Libro Filo II": "enchanted_book",
     "Lure I Book": "enchanted_book",
     "Present": "present",
-    "Haste I Potion": "glass_bottle",
-    "Haste II Potion": "glass_bottle",
+    "Poción Apuro I": "glass_bottle",
+    "Poción Apuro II": "glass_bottle",
     "Vault Potion": "glass_bottle",
     "Luck Potion": "glass_bottle",
     "Espada de Madera": "wood_sword",
