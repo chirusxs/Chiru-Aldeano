@@ -72,9 +72,9 @@ class MobSpawner(commands.Cog):
         else:
             raise ValueError(f"{repr(sword)} is not a valid sword.")
 
-        if await self.db.fetch_item(user_id, "Sharpness II Book") is not None:
+        if await self.db.fetch_item(user_id, "Libro Filo II") is not None:
             damage *= 1.5
-        elif await self.db.fetch_item(user_id, "Sharpness I Book") is not None:
+        elif await self.db.fetch_item(user_id, "Libro Filo I") is not None:
             damage *= 1.25
 
         if multi > 1:

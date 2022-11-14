@@ -310,7 +310,7 @@
         "sticky": false
       },
       {
-        "item": "Sharpness I Book",
+        "item": "Libro Filo I",
         "sell_price": 32,
         "rarity": 1000,
         "sticky": false
@@ -322,7 +322,7 @@
         "sticky": false
       },
       {
-        "item": "Sharpness II Book",
+        "item": "Libro Filo II",
         "sell_price": 768,
         "rarity": 9999,
         "sticky": false
@@ -759,11 +759,11 @@
       },
       "requires": {}
     },
-    "sharpness i book": {
+    "libro filo i": {
       "cat": "magic",
       "buy_price": 120,
       "db_entry": {
-        "item": "Sharpness I Book",
+        "item": "Libro Filo I",
         "sell_price": 32,
         "sticky": false
       },
@@ -929,8 +929,8 @@
       "Libro Eficiencia I",
       "Libro Saqueo I",
       "Libro Saqueo II",
-      "Sharpness I Book",
-      "Sharpness II Book",
+      "Libro Filo I",
+      "Libro Filo II",
       "Haste I Potion",
       "Haste II Potion",
       "Lure I Book",
@@ -1181,8 +1181,8 @@
     "Libro Eficiencia I": "enchanted_book",
     "Libro Saqueo I": "enchanted_book",
     "Libro Saqueo II": "enchanted_book",
-    "Sharpness I Book": "enchanted_book",
-    "Sharpness II Book": "enchanted_book",
+    "Libro Filo I": "enchanted_book",
+    "Libro Filo II": "enchanted_book",
     "Lure I Book": "enchanted_book",
     "Present": "present",
     "Haste I Potion": "glass_bottle",

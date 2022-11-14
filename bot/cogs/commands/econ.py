@@ -2151,16 +2151,16 @@ class Econ(commands.Cog):
     #
     #         user_1_sharpness = (
     #             2
-    #             if get_item_count(user_1_items, "Sharpness II Book")
+    #             if get_item_count(user_1_items, "Libro Filo II")
     #             else 1
-    #             if get_item_count(user_1_items, "Sharpness I Book")
+    #             if get_item_count(user_1_items, "Libro Filo I")
     #             else 0
     #         )
     #         user_2_sharpness = (
     #             2
-    #             if get_item_count(user_2_items, "Sharpness II Book")
+    #             if get_item_count(user_2_items, "Libro Filo II")
     #             else 1
-    #             if get_item_count(user_2_items, "Sharpness I Book")
+    #             if get_item_count(user_2_items, "Libro Filo I")
     #             else 0
     #         )
     #
