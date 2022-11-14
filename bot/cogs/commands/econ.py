@@ -1565,14 +1565,14 @@ class Econ(commands.Cog):
             await ctx.reply_embed(ctx.l.econ.use.use_shield_pearl)
             return
 
-        if thing == "time pearl":
+        if thing == "perla del tiempo":
             await asyncio.gather(
                 self.db.add_crop_time(ctx.author.id, datetime.timedelta(days=-2)),
                 self.karen.cooldown_reset("honey", ctx.author.id),
                 self.karen.cooldown_reset("pillage", ctx.author.id),
                 self.karen.cooldown_reset("search", ctx.author.id),
                 self.karen.clear_active_fx(ctx.author.id),
-                self.db.remove_item(ctx.author.id, "Time Pearl", 1),
+                self.db.remove_item(ctx.author.id, "Perla del Tiempo", 1),
             )
 
             await ctx.reply_embed(ctx.l.econ.use.use_time_pearl)

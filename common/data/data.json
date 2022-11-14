@@ -859,11 +859,11 @@
       },
       "requires": {}
     },
-    "time pearl": {
+    "perla del tiempo": {
       "cat": "magic",
       "buy_price": 9999,
       "db_entry": {
-        "item": "Time Pearl",
+        "item": "Perla del Tiempo",
         "sell_price": 3333,
         "sticky": true
       },
@@ -1238,7 +1238,7 @@
     "Ender Pearl": "ender_pearl",
     "Chocolate Chip Cookie": "chocolate_chip_cookie",
     "Will O Wisp": "will_o_wisp",
-    "Time Pearl": "time_pearl",
+    "Perla del Tiempo": "time_pearl",
     "Pata de Pavo": "turkey_leg",
     "Sombrero de Peregrino": "cowboy",
     "Pluma de Pavo": "feather"
