@@ -393,7 +393,7 @@
     "exponent": 2.75,
     "fish": {
       "cod": {
-        "name": "Cod",
+        "name": "Bacalao",
         "value": [
           2,
           15
@@ -402,7 +402,7 @@
         "rarity": 0
       },
       "salmon": {
-        "name": "Salmon",
+        "name": "Salmón",
         "value": [
           10,
           40
@@ -411,7 +411,7 @@
         "rarity": 0
       },
       "tropical_fish": {
-        "name": "Tropical Fish",
+        "name": "Pez Tropical",
         "value": [
           30,
           120
@@ -420,7 +420,7 @@
         "rarity": 1
       },
       "pufferfish": {
-        "name": "Pufferfish",
+        "name": "Pez Globo",
         "value": [
           60,
           200
@@ -429,7 +429,7 @@
         "rarity": 3
       },
       "rainbow_trout": {
-        "name": "Rainbow Trout",
+        "name": "Trucha Arcoíris",
         "value": [
           180,
           290
@@ -438,7 +438,7 @@
         "rarity": 4
       },
       "gold_fish": {
-        "name": "Gold Fish",
+        "name": "Pez Dorado",
         "value": [
           200,
           300
@@ -447,7 +447,7 @@
         "rarity": 4
       },
       "emerald_fish": {
-        "name": "Emerald Fish",
+        "name": "Pez Esmeralda",
         "value": [
           600,
           800
