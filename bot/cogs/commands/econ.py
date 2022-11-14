@@ -308,11 +308,11 @@ class Econ(commands.Cog):
 
         return True, user
 
-    @commands.group(name="inventory", aliases=["inv", "items"], case_insensitive=True)
+    @commands.group(name="inventario", aliases=["inv"], case_insensitive=True)
     @commands.max_concurrency(3, per=commands.BucketType.user, wait=False)
     @commands.guild_only()
     @commands.cooldown(2, 2, commands.BucketType.user)
-    async def inventory(self, ctx: Ctx):
+    async def inventario(self, ctx: Ctx):
         if ctx.invoked_subcommand is not None:
             return
 
@@ -338,7 +338,7 @@ class Econ(commands.Cog):
 
         await self.inventory_logic(ctx, user, items, ctx.l.econ.inv.cats.all, 16)
 
-    @inventory.command(name="tools", aliases=["tool", "pickaxes", "swords"])
+    @inventario.command(name="herramientas", aliases=["herramienta"])
     async def inventory_tools(self, ctx: Ctx, user: discord.User = None):
         valid, user = await self.inventory_boiler(ctx, user)
 
@@ -349,7 +349,7 @@ class Econ(commands.Cog):
 
         await self.inventory_logic(ctx, user, items, ctx.l.econ.inv.cats.tools)
 
-    @inventory.command(name="magic", aliases=["books", "potions", "enchants"])
+    @inventario.command(name="magia")
     async def inventory_magic(self, ctx: Ctx, user: discord.User = None):
         valid, user = await self.inventory_boiler(ctx, user)
 
@@ -360,7 +360,7 @@ class Econ(commands.Cog):
 
         await self.inventory_logic(ctx, user, items, ctx.l.econ.inv.cats.magic)
 
-    @inventory.command(name="misc", aliases=["other"])
+    @inventario.command(name="otros")
     async def inventory_misc(self, ctx: Ctx, user: discord.User = None):
         valid, user = await self.inventory_boiler(ctx, user)
 
@@ -374,7 +374,7 @@ class Econ(commands.Cog):
             ctx, user, items, ctx.l.econ.inv.cats.misc, (16 if len(items) > 24 else 8)
         )
 
-    @inventory.command(name="fish", aliases=["fishes", "fishing", "fishies"])
+    @inventario.command(name="pesca")
     async def inventory_fish(self, ctx: Ctx, user: discord.User = None):
         valid, user = await self.inventory_boiler(ctx, user)
 
@@ -385,7 +385,7 @@ class Econ(commands.Cog):
 
         await self.inventory_logic(ctx, user, items, ctx.l.econ.inv.cats.fish)
 
-    @inventory.command(name="farming", aliases=["farm"])
+    @inventario.command(name="agricultura")
     async def inventory_farming(self, ctx: Ctx, user: discord.User = None):
         valid, user = await self.inventory_boiler(ctx, user)
 
