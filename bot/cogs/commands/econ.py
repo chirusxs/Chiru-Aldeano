@@ -312,7 +312,7 @@ class Econ(commands.Cog):
     @commands.max_concurrency(3, per=commands.BucketType.user, wait=False)
     @commands.guild_only()
     @commands.cooldown(2, 2, commands.BucketType.user)
-    async def inventario(self, ctx: Ctx):
+    async def inventory(self, ctx: Ctx):
         if ctx.invoked_subcommand is not None:
             return
 
@@ -338,7 +338,7 @@ class Econ(commands.Cog):
 
         await self.inventory_logic(ctx, user, items, ctx.l.econ.inv.cats.all, 16)
 
-    @inventario.command(name="herramientas", aliases=["herramienta"])
+    @inventory.command(name="herramientas", aliases=["herramienta"])
     async def inventory_tools(self, ctx: Ctx, user: discord.User = None):
         valid, user = await self.inventory_boiler(ctx, user)
 
@@ -349,7 +349,7 @@ class Econ(commands.Cog):
 
         await self.inventory_logic(ctx, user, items, ctx.l.econ.inv.cats.tools)
 
-    @inventario.command(name="magia")
+    @inventory.command(name="magia")
     async def inventory_magic(self, ctx: Ctx, user: discord.User = None):
         valid, user = await self.inventory_boiler(ctx, user)
 
@@ -360,7 +360,7 @@ class Econ(commands.Cog):
 
         await self.inventory_logic(ctx, user, items, ctx.l.econ.inv.cats.magic)
 
-    @inventario.command(name="otros")
+    @inventory.command(name="otros")
     async def inventory_misc(self, ctx: Ctx, user: discord.User = None):
         valid, user = await self.inventory_boiler(ctx, user)
 
@@ -374,7 +374,7 @@ class Econ(commands.Cog):
             ctx, user, items, ctx.l.econ.inv.cats.misc, (16 if len(items) > 24 else 8)
         )
 
-    @inventario.command(name="pesca")
+    @inventory.command(name="pesca")
     async def inventory_fish(self, ctx: Ctx, user: discord.User = None):
         valid, user = await self.inventory_boiler(ctx, user)
 
@@ -385,7 +385,7 @@ class Econ(commands.Cog):
 
         await self.inventory_logic(ctx, user, items, ctx.l.econ.inv.cats.fish)
 
-    @inventario.command(name="agricultura")
+    @inventory.command(name="agricultura")
     async def inventory_farming(self, ctx: Ctx, user: discord.User = None):
         valid, user = await self.inventory_boiler(ctx, user)
 
@@ -1646,14 +1646,15 @@ class Econ(commands.Cog):
         )
 
         embed.add_field(
-            name=f"{ctx.l.econ.lb.cmds} :keyboard:", value=f"`{ctx.prefix}leaderboard commands`"
+            name=f"{ctx.l.econ.lb.cmds} :keyboard:", value=f"`{ctx.prefix}top comandos`"
         )
 
+        embed.add_field(name="\uFEFF", value="\uFEFF")
         embed.add_field(
             name=f"{ctx.l.econ.lb.farming} {self.d.emojis.farming.normal['wheat']}",
             value=f"`{ctx.prefix}top agricultura`",
         )
-        embed.add_field(name="\uFEFF", value="\uFEFF")
+
         embed.add_field(
             name=f"{ctx.l.econ.lb.trash} {self.d.emojis.diamond}",
             value=f"`{ctx.prefix}top minerales`",
@@ -1673,7 +1674,6 @@ class Econ(commands.Cog):
 
         embed = discord.Embed(color=self.bot.embed_color, title=title)
 
-        embed.add_field(name=ctx.l.econ.lb.local_lb, value=local_lb_str)
         embed.add_field(name=ctx.l.econ.lb.global_lb, value=global_lb_str)
 
         await ctx.reply(embed=embed, mention_author=False)
@@ -2000,7 +2000,7 @@ class Econ(commands.Cog):
 
         await ctx.reply(embed=embed, mention_author=False)
 
-    @trash.command(name="empty")
+    @trash.command(name="vender")
     async def trashcan_empty(self, ctx: Ctx):
         total_ems, amount = await self.db.empty_trashcan(ctx.author.id)
 
