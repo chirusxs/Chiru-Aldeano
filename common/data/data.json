@@ -769,11 +769,11 @@
       },
       "requires": {}
     },
-    "slime trophy": {
+    "trofeo slime": {
       "cat": "other",
       "buy_price": 48000,
       "db_entry": {
-        "item": "Slime Trophy",
+        "item": "Trofeo Slime",
         "sell_price": 2048,
         "sticky": true
       },
@@ -897,7 +897,7 @@
   "rpt_ignore": [
     "Trofeo de Dinero",
     "Amuleto del Pillager",
-    "Slime Trophy",
+    "Trofeo Slime",
     "Fishing Trophy"
   ],
   "cats": {
@@ -937,7 +937,7 @@
       "Alga Marina",
       "Poción de Bóveda",
       "Amuleto del Pillager",
-      "Slime Trophy",
+      "Trofeo Slime",
       "Trofeo de Dinero",
       "Fishing Trophy",
       "Poción de Suerte"
