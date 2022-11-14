@@ -142,7 +142,7 @@ class Database(commands.Cog):
                 "INSERT INTO users (user_id) VALUES ($1) RETURNING *", user_id
             )
 
-            await self.add_item(user_id, "Wood Pickaxe", 0, 1, True, False)
+            await self.add_item(user_id, "Pico de Madera", 0, 1, True, False)
             await self.add_item(user_id, "Espada de Madera", 0, 1, True, False)
             await self.add_item(user_id, "Azada de Madera", 0, 1, True, False)
             await self.add_item(user_id, "Wheat Seed", 24, 5)
@@ -331,9 +331,9 @@ class Database(commands.Cog):
             if pickaxe in items_names:
                 return pickaxe
 
-        await self.add_item(user_id, "Wood Pickaxe", 0, 1, True, False)
+        await self.add_item(user_id, "Pico de Madera", 0, 1, True, False)
 
-        return "Wood Pickaxe"
+        return "Pico de Madera"
 
     async def fetch_sword(self, user_id: int) -> str:
         items_names = {item.name for item in await self.fetch_items(user_id)}

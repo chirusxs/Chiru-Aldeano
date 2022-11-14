@@ -92,11 +92,11 @@
     "trivia"
   ],
   "role_mappings": {
-    "Stone Pickaxe": 965715978241593385,
-    "Iron Pickaxe": 965716062857490474,
-    "Gold Pickaxe": 965716178121162764,
-    "Diamond Pickaxe": 965717091476996126,
-    "Netherite Pickaxe": 965717293474652180,
+    "Pico de Piedra": 965715978241593385,
+    "Pico de Hierro": 965716062857490474,
+    "Pico de Oro": 965716178121162764,
+    "Pico de Diamante": 965717091476996126,
+    "Pico de Netherite": 965717293474652180,
     "BOP": 965717466141556826
   },
   "sword_list": [
@@ -259,27 +259,27 @@
       ]
     },
     "yields_pickaxes": {
-      "Wood Pickaxe": [
+      "Pico de Madera": [
         5,
         26
       ],
-      "Stone Pickaxe": [
+      "Pico de Piedra": [
         6,
         26
       ],
-      "Iron Pickaxe": [
+      "Pico de Hierro": [
         7,
         26
       ],
-      "Gold Pickaxe": [
+      "Pico de Oro": [
         9,
         26
       ],
-      "Diamond Pickaxe": [
+      "Pico de Diamante": [
         11,
         26
       ],
-      "Netherite Pickaxe": [
+      "Pico de Netherite": [
         13,
         26
       ]
@@ -496,11 +496,11 @@
     ]
   },
   "shop_items": {
-    "stone pickaxe": {
+    "pico de piedra": {
       "cat": "tools",
       "buy_price": 32,
       "db_entry": {
-        "item": "Stone Pickaxe",
+        "item": "Pico de Piedra",
         "sell_price": 8,
         "sticky": true
       },
@@ -508,11 +508,11 @@
         "count_lt": 1
       }
     },
-    "iron pickaxe": {
+    "pico de hierro": {
       "cat": "tools",
       "buy_price": 128,
       "db_entry": {
-        "item": "Iron Pickaxe",
+        "item": "Pico de Hierro",
         "sell_price": 32,
         "sticky": true
       },
@@ -520,11 +520,11 @@
         "count_lt": 1
       }
     },
-    "gold pickaxe": {
+    "pico de oro": {
       "cat": "tools",
       "buy_price": 512,
       "db_entry": {
-        "item": "Gold Pickaxe",
+        "item": "Pico de Oro",
         "sell_price": 128,
         "sticky": true
       },
@@ -532,11 +532,11 @@
         "count_lt": 1
       }
     },
-    "diamond pickaxe": {
+    "pico de diamante": {
       "cat": "tools",
       "buy_price": 2048,
       "db_entry": {
-        "item": "Diamond Pickaxe",
+        "item": "Pico de Diamante",
         "sell_price": 512,
         "sticky": true
       },
@@ -544,11 +544,11 @@
         "count_lt": 1
       }
     },
-    "netherite pickaxe": {
+    "pico de netherite": {
       "cat": "tools",
       "buy_price": 8192,
       "db_entry": {
-        "item": "Netherite Pickaxe",
+        "item": "Pico de Netherite",
         "sell_price": 2048,
         "sticky": true
       },
@@ -902,12 +902,12 @@
   ],
   "cats": {
     "tools": [
-      "Wood Pickaxe",
-      "Stone Pickaxe",
-      "Iron Pickaxe",
-      "Gold Pickaxe",
-      "Diamond Pickaxe",
-      "Netherite Pickaxe",
+      "Pico de Madera",
+      "Pico de Piedra",
+      "Pico de Hierro",
+      "Pico de Oro",
+      "Pico de Diamante",
+      "Pico de Netherite",
       "Espada de Madera",
       "Espada de Piedra",
       "Espada de Hierro",
@@ -1195,12 +1195,12 @@
     "Espada de Oro": "gold_sword",
     "Espada de Diamante": "diamond_sword",
     "Espada de Netherite": "netherite_sword",
-    "Wood Pickaxe": "wood_pick",
-    "Stone Pickaxe": "stone_pick",
-    "Iron Pickaxe": "iron_pick",
-    "Gold Pickaxe": "gold_pick",
-    "Diamond Pickaxe": "diamond_pick",
-    "Netherite Pickaxe": "netherite_pick",
+    "Pico de Madera": "wood_pick",
+    "Pico de Piedra": "stone_pick",
+    "Pico de Hierro": "iron_pick",
+    "Pico de Oro": "gold_pick",
+    "Pico de Diamante": "diamond_pick",
+    "Pico de Netherite": "netherite_pick",
     "Azada de Madera": "wood_hoe",
     "Azada de Piedra": "stone_hoe",
     "Azada de Hierro": "iron_hoe",
