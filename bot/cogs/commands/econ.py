@@ -1027,7 +1027,7 @@ class Econ(commands.Cog):
                 random.choice(ctx.l.econ.beg.negative).format(f"{amount}{self.d.emojis.emerald}")
             )
 
-    @commands.command(name="mine", aliases=["mein", "eun", "mien", "m"])
+    @commands.command(name="minar", aliases=["mi"])
     @commands.guild_only()
     # @commands.cooldown(1, 4, commands.BucketType.user)
     @commands.max_concurrency(1, commands.BucketType.user)
