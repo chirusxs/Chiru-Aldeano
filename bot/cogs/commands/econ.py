@@ -1445,19 +1445,19 @@ class Econ(commands.Cog):
             await ctx.reply_embed(ctx.l.econ.use.vault_pot.format(add))
             return
 
-        if thing == "honey jar":
+        if thing == "tarro de miel":
             db_user = await self.db.fetch_user(ctx.author.id)
 
             max_amount = 20 - db_user.health
             if max_amount < 1:
-                await ctx.reply_embed(ctx.l.econ.use.cant_use_any.format("Honey Jars"))
+                await ctx.reply_embed(ctx.l.econ.use.cant_use_any.format("Tarros de Miel"))
                 return
 
             if db_user.health + amount > 20:
                 amount = max_amount
 
             await self.db.update_user(ctx.author.id, health=(db_user.health + amount))
-            await self.db.remove_item(ctx.author.id, "Honey Jar", amount)
+            await self.db.remove_item(ctx.author.id, "Tarro de Miel", amount)
 
             new_health = amount + db_user.health
             await ctx.reply_embed(
@@ -1599,7 +1599,7 @@ class Econ(commands.Cog):
             bees = int((bees + 1024 * 6) // 7)
 
         jars = bees - random.randint(math.ceil(bees / 6), math.ceil(bees / 2))
-        await self.db.add_item(ctx.author.id, "Honey Jar", 1, jars)
+        await self.db.add_item(ctx.author.id, "Tarro de Miel", 1, jars)
 
         await ctx.reply_embed(random.choice(ctx.l.econ.honey.honey).format(jars))
 

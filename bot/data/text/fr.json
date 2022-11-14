@@ -2013,7 +2013,7 @@
         "seaweed_done": "Les effets des **Alga Marina** que tu as mangés plus tôt se sont dissipés.",
         "chug": "Tu as bu une **{}** (L'effet dure {} minutes)",
         "chug_no_end": "Tu as avalé **{}**",
-        "chug_honey": "Tu as avalé {0}x Honey Jar! (Tu es maintenant à {1}/20 {2})",
+        "chug_honey": "Tu as avalé {0}x Tarro de Miel! (Tu es maintenant à {1}/20 {2})",
         "cant_use_any": "Tu ne peux pas utiliser de **{}** pour l'instant.",
         "cant_use_up_to": "Tu ne peux pas utiliser plus de {0} **{1}** pour l'instant.",
         "done": "La **{}** que tu as descendu plus tôt a perdu ses effets.",

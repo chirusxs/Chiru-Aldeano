@@ -2013,7 +2013,7 @@
         "seaweed_done": "The **Alga Marina** you ate earlier has worn off.",
         "chug": "You've chugged a **{}** which lasts **{} minutes**.",
         "chug_no_end": "You've chugged a **{}**!",
-        "chug_honey": "You've chugged {0}x **Honey Jar**! (You now have {1}/20 {2})",
+        "chug_honey": "You've chugged {0}x **Tarro de Miel**! (You now have {1}/20 {2})",
         "cant_use_any": "You can't use any **{}** right now.",
         "cant_use_up_to": "You can't use any more than {0} **{1}** right now.",
         "done": "The **{}** you chugged earlier has worn off.",
