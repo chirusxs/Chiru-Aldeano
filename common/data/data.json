@@ -833,7 +833,7 @@
       "cat": "farming",
       "buy_price": 192,
       "db_entry": {
-        "item": "Potato",
+        "item": "Patata",
         "sell_price": 128,
         "sticky": false
       },
@@ -843,7 +843,7 @@
       "cat": "farming",
       "buy_price": 384,
       "db_entry": {
-        "item": "Melon Seed",
+        "item": "Semilla de Sandía",
         "sell_price": 192,
         "sticky": false
       },
@@ -853,7 +853,7 @@
       "cat": "farming",
       "buy_price": 640,
       "db_entry": {
-        "item": "Chorus Seed",
+        "item": "Semilla Chorus",
         "sell_price": 512,
         "sticky": false
       },
