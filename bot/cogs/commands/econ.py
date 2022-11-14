@@ -408,7 +408,7 @@ class Econ(commands.Cog):
             await ctx.reply_embed(ctx.l.econ.dep.poor_loser)
             return
 
-        if emerald_blocks.lower() in ("todo", "max"):
+        if emerald_blocks.lower() in ("todo", "max", "máx"):
             amount = db_user.vault_max - db_user.vault_balance
 
             if amount * 9 > db_user.emeralds:
