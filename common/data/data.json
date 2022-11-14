@@ -245,14 +245,14 @@
         3,
         4
       ],
-      "Fortune II Book": [
+      "Libro Fortuna II": [
         1,
         1,
         1,
         2,
         3
       ],
-      "Fortune I Book": [
+      "Libro Fortuna I": [
         1,
         1,
         2
@@ -286,7 +286,7 @@
     },
     "findables": [
       {
-        "item": "Fortune II Book",
+        "item": "Libro Fortuna II",
         "sell_price": 128,
         "rarity": 999,
         "sticky": false
@@ -711,7 +711,7 @@
       "cat": "magic",
       "buy_price": 120,
       "db_entry": {
-        "item": "Fortune I Book",
+        "item": "Libro Fortuna I",
         "sell_price": 24,
         "sticky": false
       },
@@ -923,8 +923,8 @@
       "Fishing Rod"
     ],
     "magic": [
-      "Fortune I Book",
-      "Fortune II Book",
+      "Libro Fortuna I",
+      "Libro Fortuna II",
       "Libro Fortuna III",
       "Efficiency I Book",
       "Looting I Book",
@@ -1175,8 +1175,8 @@
     "Gold Fish": "fish.gold_fish",
     "Emerald Fish": "fish.emerald_fish",
     "Mooderald": "autistic_emerald",
-    "Fortune I Book": "enchanted_book",
-    "Fortune II Book": "enchanted_book",
+    "Libro Fortuna I": "enchanted_book",
+    "Libro Fortuna II": "enchanted_book",
     "Libro Fortuna III": "enchanted_book",
     "Efficiency I Book": "enchanted_book",
     "Looting I Book": "enchanted_book",
