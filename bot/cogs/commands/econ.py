@@ -740,7 +740,7 @@ class Econ(commands.Cog):
             ),
         )
 
-    @commands.command(name="sell", aliases=["emeraldify", "s"])
+    @commands.command(name="vender", aliases=["ven"])
     # @commands.cooldown(1, 2, commands.BucketType.user)
     @commands.max_concurrency(1, commands.BucketType.user)
     async def sell(self, ctx: Ctx, *, amount_item):
@@ -748,7 +748,7 @@ class Econ(commands.Cog):
 
         amount_item = amount_item.lower()
 
-        if amount_item.startswith("max ") or amount_item.startswith("all "):
+        if amount_item.startswith("max ") or amount_item.startswith("máx ") or amount_item.startswith("todo "):
             item = amount_item[4:]
             db_item = await self.db.fetch_item(ctx.author.id, item)
 
@@ -797,7 +797,7 @@ class Econ(commands.Cog):
 
         await self.db.update_lb(ctx.author.id, "week_emeralds", amount * db_item.sell_price)
 
-        if db_item.name.endswith("Pickaxe") or db_item.name == "Amuleto del Pillager":
+        if db_item.name.startswith("Pico") or db_item.name == "Amuleto del Pillager":
             await self.karen.update_support_server_member_roles(ctx.author.id)
 
         await ctx.reply_embed(
