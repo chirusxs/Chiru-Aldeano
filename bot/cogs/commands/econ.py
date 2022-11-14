@@ -198,8 +198,8 @@ class Econ(commands.Cog):
 
         await ctx.reply(embed=embed, mention_author=False)
 
-    @commands.command(name="balance", aliases=["bal", "vault", "pocket"])
-    async def balance(self, ctx: Ctx, *, user: discord.User = None):
+    @commands.command(name="saldo", aliases=["bal"])
+    async def saldo(self, ctx: Ctx, *, user: discord.User = None):
         """Shows the balance of a user or the message sender"""
 
         if user is None:
