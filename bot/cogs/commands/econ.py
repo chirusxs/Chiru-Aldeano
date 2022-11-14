@@ -237,7 +237,7 @@ class Econ(commands.Cog):
         )
         embed.add_field(
             name=ctx.l.econ.bal.vault,
-            value=f"{db_user.vault_balance}{self.d.emojis.emerald_block}/{db_user.vault_max}",
+            value=f"{db_user.vault_balance}/{db_user.vault_max} {self.d.emojis.emerald_block}",
         )
 
         await ctx.reply(embed=embed, mention_author=False)
