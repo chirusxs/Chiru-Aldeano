@@ -1822,7 +1822,7 @@ class Econ(commands.Cog):
                 title=ctx.l.econ.lb.lb_trash.format(f" {self.d.emojis.diamond} "),
             )
 
-    @commands.group(name="farm", case_insensitive=True)
+    @commands.group(name="agricultura", case_insensitive=True)
     @commands.max_concurrency(1, per=commands.BucketType.user, wait=False)
     @commands.guild_only()
     async def farm(self, ctx: Ctx):
@@ -1863,7 +1863,7 @@ class Econ(commands.Cog):
 
         await ctx.send(embed=embed)
 
-    @farm.command(name="plant", aliases=["p"])
+    @farm.command(name="cultivar")
     async def farm_plant(self, ctx: Ctx, *, item: str):
         item = item.lower()
         split = item.split()
@@ -1920,7 +1920,7 @@ class Econ(commands.Cog):
             )
         )
 
-    @farm.command(name="harvest", aliases=["h"])
+    @farm.command(name="cosechar")
     async def farm_harvest(self, ctx: Ctx):
         records = await self.db.fetch_ready_crops(ctx.author.id)
         await self.db.delete_ready_crops(ctx.author.id)
