@@ -911,7 +911,7 @@ class Econ(commands.Cog):
                     ignore_exceptions=True,
                 )
 
-    @commands.command(name="gamble", aliases=["bet", "stonk", "stonks"])
+    @commands.command(name="apostar", aliases=["bet"])
     # @commands.cooldown(1, 30, commands.BucketType.user)
     @commands.max_concurrency(1, commands.BucketType.user)
     async def gamble(self, ctx: Ctx, amount):
@@ -919,7 +919,7 @@ class Econ(commands.Cog):
 
         db_user = await self.db.fetch_user(ctx.author.id)
 
-        if amount.lower() in ("all", "max"):
+        if amount.lower() in ("todo", "max", "máx"):
             amount = db_user.emeralds
 
         else:
