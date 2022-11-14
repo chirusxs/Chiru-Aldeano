@@ -89,10 +89,10 @@ class Voting(commands.Cog):
             )
         elif vote_streak % 16 == 0:
             barrels = min(int(vote_streak // 32 + 1), 8)
-            await self.db.add_item(user.id, "Barrel", 1024, barrels)
+            await self.db.add_item(user.id, "Barril", 1024, barrels)
             await self.bot.send_embed(
                 user,
-                f"Thanks for voting! You've received {barrels}x **Barrel**!",
+                f"Thanks for voting! You've received {barrels}x **Barril**!",
                 ignore_exceptions=True,
             )
         else:

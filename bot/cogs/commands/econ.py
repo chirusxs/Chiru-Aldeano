@@ -1487,12 +1487,12 @@ class Econ(commands.Cog):
 
                         return
 
-        if thing == "barrel":
+        if thing == "barril":
             if amount > 1:
                 await ctx.reply_embed(ctx.l.econ.use.stupid_1)
                 return
 
-            await self.db.remove_item(ctx.author.id, "Barrel", 1)
+            await self.db.remove_item(ctx.author.id, "Barril", 1)
 
             for _ in range(20):
                 for item in self.d.mining.findables:

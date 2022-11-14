@@ -165,7 +165,7 @@ class Emojis(ImmutableBaseModel):
     uno_reverse: str
     rusty_fishing_hook: str
     ticket: str
-    barrel: str
+    barril: str
     rock: str
     gun: str
     alien: str

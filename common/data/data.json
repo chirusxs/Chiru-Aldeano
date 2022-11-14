@@ -352,7 +352,7 @@
         "sticky": false
       },
       {
-        "item": "Barrel",
+        "item": "Barril",
         "sell_price": 1024,
         "rarity": 99999,
         "sticky": false
@@ -1034,7 +1034,7 @@
     "uno_reverse": "<:uno_reverse:863933879105880085>",
     "rusty_fishing_hook": "<:rusty_fishing_hook:934121573735104592>",
     "ticket": "🎟️",
-    "barrel": "<:barrel:950570603872649216>",
+    "barril": "<:barril:950570603872649216>",
     "rock": "🪨",
     "gun": "🔫",
     "alien": "👽",
@@ -1221,7 +1221,7 @@
     "Wheat Seed": "farming.seeds.wheat",
     "Rusty Fishing Hook": "rusty_fishing_hook",
     "Minecraft Movie Ticket": "ticket",
-    "Barrel": "barrel",
+    "Barril": "barril",
     "Moon Rock": "rock",
     "BFG 3000": "gun",
     "Alien Mask": "alien",
