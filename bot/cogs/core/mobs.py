@@ -332,7 +332,7 @@ class MobSpawner(commands.Cog):
                     # increase balls won depending on looting level
                     balls_won = round(balls_won * ({0: 1, 1: 1.25, 2: 1.5}[looting_level]))
 
-                    await self.db.add_item(user.id, "Slime Ball", 5, balls_won, True)
+                    await self.db.add_item(user.id, "Bola de Slime", 5, balls_won, True)
 
                     await ctx.send_embed(
                         random.choice(ctx.l.mobs_mech.found).format(

@@ -780,7 +780,7 @@
       "requires": {
         "count_lt": 1,
         "items": {
-          "Slime Ball": 24
+          "Bola de Slime": 24
         }
       }
     },
@@ -872,7 +872,7 @@
           "Perla Ender": 1,
           "Antimeralda": 1,
           "Hueso Molido": 1,
-          "Slime Ball": 4
+          "Bola de Slime": 4
         }
       }
     },
@@ -888,7 +888,7 @@
         "items": {
           "Perla Ender": 1,
           "Antimeralda": 5,
-          "Slime Ball": 4,
+          "Bola de Slime": 4,
           "Fragmento de Netherite": 100
         }
       }
@@ -944,7 +944,7 @@
     ],
     "material": [
       "Fragmento de Netherite",
-      "Slime Ball",
+      "Bola de Slime",
       "Corazón del Mar"
     ],
     "fish": [
@@ -1165,7 +1165,7 @@
   },
   "emoji_items": {
     "Fragmento de Netherite": "netherite",
-    "Slime Ball": "slimeball",
+    "Bola de Slime": "slimeball",
     "Corazón del Mar": "heart_of_the_sea",
     "Cod": "fish.cod",
     "Salmon": "fish.salmon",

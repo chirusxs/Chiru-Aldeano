@@ -1525,13 +1525,13 @@ class Econ(commands.Cog):
             return
 
         if thing == "recipiente de cristal":
-            slime_balls = await self.db.fetch_item(ctx.author.id, "Slime Ball")
+            slime_balls = await self.db.fetch_item(ctx.author.id, "Bola de Slime")
 
             if slime_balls is None or slime_balls.amount < amount:
                 await ctx.reply_embed(ctx.l.econ.use.need_slimy_balls)
                 return
 
-            await self.db.remove_item(ctx.author.id, "Slime Ball", amount)
+            await self.db.remove_item(ctx.author.id, "Bola de Slime", amount)
             await self.db.remove_item(ctx.author.id, "Recipiente de Cristal", amount)
             await self.db.add_item(ctx.author.id, "Beaker Of Slime", 13, amount, False)
 
@@ -1540,7 +1540,7 @@ class Econ(commands.Cog):
 
         if thing == "beaker of slime":
             await self.db.remove_item(ctx.author.id, "Beaker Of Slime", amount)
-            await self.db.add_item(ctx.author.id, "Slime Ball", 5, amount, True)
+            await self.db.add_item(ctx.author.id, "Bola de Slime", 5, amount, True)
 
             await ctx.reply_embed(ctx.l.econ.use.beaker_of_slime_undo.format(amount))
             return
