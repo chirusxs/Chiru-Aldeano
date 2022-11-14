@@ -1569,7 +1569,7 @@ class Econ(commands.Cog):
 
         await ctx.reply_embed(ctx.l.econ.use.stupid_6)
 
-    @commands.command(name="honey", aliases=["harvesthoney", "horny"])
+    @commands.command(name="miel")
     # @commands.cooldown(1, 24 * 60 * 60, commands.BucketType.user)
     async def honey(self, ctx: Ctx):
         bees = await self.db.fetch_item(ctx.author.id, "Tarro de Abejas")
