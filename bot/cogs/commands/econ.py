@@ -978,7 +978,7 @@ class Econ(commands.Cog):
         else:
             await ctx.reply_embed(ctx.l.econ.gamble.tie)
 
-    @commands.command(name="search", aliases=["beg"])
+    @commands.command(name="buscar")
     # @commands.cooldown(1, 30 * 60, commands.BucketType.user)
     @commands.max_concurrency(1, commands.BucketType.user)
     async def search(self, ctx: Ctx):
