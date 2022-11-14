@@ -1,28 +1,16 @@
 {
   "embed_color": "green",
   "splash_logo": "http://iapetus11.me/images/villager-splash.png",
-  "support": "https://discord.gg/39DwwUV",
+  "support": "https://discord.gg/ZC8shhpSkf",
   "invite": "https://discord.com/oauth2/authorize?client_id={bot_id}&permissions=1074130126&scope=bot%20applications.commands",
   "topgg": "https://top.gg/bot/639498607632056321",
-  "github": "https://github.com/Iapetus-11/Villager-Bot",
+  "github": "https://github.com/chirusxs/Chiru-Aldeano",
   "privacy_policy": "https://github.com/Iapetus-11/Villager-Bot/blob/main/PRIVACY-POLICY.md",
   "mob_chance": 40,
   "tip_chance": 150,
   "topgg_reward": 32,
   "credit_users": {
-    "iapetus11": 536986067140608041,
-    "hpancakesk": 447425892361306141,
-    "moody": 617882209956659259,
-    "emulator": 187974048167362560,
-    "elrynd": 128554674482577408,
-    "chez": 656373241144934420,
-    "quack": 626932139166007347,
-    "xe": 725269430409494588,
-    "zelou": 493907466401087498,
-    "joaooh": 357656894699208706,
-    "radar": 747107518471209024,
-    "kuro": 763169296288579604,
-    "hilt": 766368169241083944
+    "chirualdeano": 965701189339582524
   },
   "upvote_emoji_image": "https://cdn.discordapp.com/emojis/682422396636233769.png",
   "acceptable_prefix_chars": [
