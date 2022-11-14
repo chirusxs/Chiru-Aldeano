@@ -304,7 +304,7 @@
         "sticky": false
       },
       {
-        "item": "Looting I Book",
+        "item": "Libro Saqueo I",
         "sell_price": 128,
         "rarity": 1000,
         "sticky": false
@@ -316,7 +316,7 @@
         "sticky": false
       },
       {
-        "item": "Looting II Book",
+        "item": "Libro Saqueo II",
         "sell_price": 768,
         "rarity": 9999,
         "sticky": false
@@ -927,8 +927,8 @@
       "Libro Fortuna II",
       "Libro Fortuna III",
       "Libro Eficiencia I",
-      "Looting I Book",
-      "Looting II Book",
+      "Libro Saqueo I",
+      "Libro Saqueo II",
       "Sharpness I Book",
       "Sharpness II Book",
       "Haste I Potion",
@@ -1179,8 +1179,8 @@
     "Libro Fortuna II": "enchanted_book",
     "Libro Fortuna III": "enchanted_book",
     "Libro Eficiencia I": "enchanted_book",
-    "Looting I Book": "enchanted_book",
-    "Looting II Book": "enchanted_book",
+    "Libro Saqueo I": "enchanted_book",
+    "Libro Saqueo II": "enchanted_book",
     "Sharpness I Book": "enchanted_book",
     "Sharpness II Book": "enchanted_book",
     "Lure I Book": "enchanted_book",

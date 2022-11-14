@@ -319,9 +319,9 @@ class MobSpawner(commands.Cog):
 
             # calculate looting level
             looting_level = 0
-            if await self.db.fetch_item(user.id, "Looting II Book") is not None:
+            if await self.db.fetch_item(user.id, "Libro Saqueo II") is not None:
                 looting_level = 2
-            elif await self.db.fetch_item(user.id, "Looting I Book") is not None:
+            elif await self.db.fetch_item(user.id, "Libro Saqueo I") is not None:
                 looting_level = 1
 
             if user_health > 0:  # user win
