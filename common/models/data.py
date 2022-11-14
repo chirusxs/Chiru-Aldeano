@@ -130,15 +130,12 @@ class Emojis(ImmutableBaseModel):
     bounce: str
     anichest: str
     rainbow_shep: str
-    rainbow_stud: str
     emerald_spinn: str
     heart_spin: str
     enchanted_book: str
-    amogus: str
     heart_of_the_sea: str
     autistic_emerald: str
     present: str
-    morbius: str
     glass_bottle: str
     wood_sword: str
     stone_sword: str
@@ -162,7 +159,6 @@ class Emojis(ImmutableBaseModel):
     air: str
     jar_of_bees: str
     honey_jar: str
-    uno_reverse: str
     rusty_fishing_hook: str
     ticket: str
     barril: str

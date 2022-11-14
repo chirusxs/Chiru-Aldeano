@@ -283,15 +283,11 @@ class Events(commands.Cog):
 
             if not message.content.startswith(prefix):
                 with suppress(discord.errors.HTTPException):
-                    if "emerald" in content_lower:
+                    if "esmeralda" in content_lower:
                         await message.channel.send(random.choice(self.d.hmms))
                     elif "creeper" in content_lower:
                         await message.channel.send("awww{} man".format(random.randint(1, 5) * "w"))
-                    elif "reee" in content_lower:
-                        await message.channel.send(random.choice(self.d.emojis.reees))
-                    elif "amogus" in content_lower or content_lower == "sus":
-                        await message.channel.send(self.d.emojis.amogus)
-                    elif content_lower == "good bot":
+                    elif content_lower == "buen bot":
                         await message.reply(random.choice(self.d.owos), mention_author=False)
 
     async def handle_command_cooldown(
