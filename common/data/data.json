@@ -869,24 +869,24 @@
       },
       "requires": {
         "items": {
-          "Ender Pearl": 1,
+          "Perla Ender": 1,
           "Antimeralda": 1,
           "Hueso Molido": 1,
           "Slime Ball": 4
         }
       }
     },
-    "shield pearl": {
+    "escudo de perlas": {
       "cat": "magic",
       "buy_price": 9999,
       "db_entry": {
-        "item": "Shield Pearl",
+        "item": "Escudo de Perlas",
         "sell_price": 3333,
         "sticky": true
       },
       "requires": {
         "items": {
-          "Ender Pearl": 1,
+          "Perla Ender": 1,
           "Antimeralda": 5,
           "Slime Ball": 4,
           "Fragmento de Netherite": 100
@@ -1235,7 +1235,7 @@
     "Dirt Block": "dirt_block",
     "Forever Alone Trophy": "trophy",
     "Trofeo de Dinero": "trophy",
-    "Ender Pearl": "ender_pearl",
+    "Perla Ender": "ender_pearl",
     "Chocolate Chip Cookie": "chocolate_chip_cookie",
     "Will O Wisp": "will_o_wisp",
     "Perla del Tiempo": "time_pearl",

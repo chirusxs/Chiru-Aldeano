@@ -1971,7 +1971,7 @@
         "stupid_2": "Tu ne peux pas piller les gens d'un autre serveur ...",
         "stupid_3": "Tu ne peux piller le gens que si tu possèdes plus de 64{}",
         "stupid_4": "Tu peux uniquement piller quelqu'un s'il a plus de 64{}",
-        "stupid_5": "Tu ne peux pas piller quelqu’un qui a une **Shield Pearl** activée.",
+        "stupid_5": "Tu ne peux pas piller quelqu’un qui a une **Escudo de Perlas** activée.",
         "u_win": {
           "user": [
             "Tu t'échapes avec {}{}",
@@ -2020,7 +2020,7 @@
         "need_slimy_balls": "Tu as besoin d'une **Slime Ball** pour chaque **Recipiente de Cristal**.",
         "slimy_balls_funne": "Tu as transformé {0}x **Slime Ball** + {0}x **Recipiente de Cristal** en {0}x **Beaker Of Slime** !",
         "beaker_of_slime_undo": "Tu as transformé {0}x **Beaker Of Slime** en {0}x **Slime Ball** !",
-        "use_shield_pearl": "Tu as utilisé une **Shield Pearl** qui te rend invincible au pillages pendant un mois.",
+        "use_shield_pearl": "Tu as utilisé une **Escudo de Perlas** qui te rend invincible au pillages pendant un mois.",
         "use_time_pearl": "**Tu as utilisé une **Perla del Tiempo** qui t'as téléportée deux jours dans le futur.",
         "present": [
           "Tu ouvre ton cadeau et trouve 1x **{}** (Valant {}{})!",

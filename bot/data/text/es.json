@@ -1971,7 +1971,7 @@
         "stupid_2": "No puedes robarle a la gente de otros servidores...",
         "stupid_3": "Sólo puedes robarle a la gente si tienes más de 64{}",
         "stupid_4": "Sólo puedes robarle a una persona si tiene más de 64{}",
-        "stupid_5": "No puedes saquear a una persona con un **Shield Pearl** activo.",
+        "stupid_5": "No puedes saquear a una persona con un **Escudo de Perlas** activo.",
         "u_win": {
           "user": [
             "Escapaste con {}{}",
@@ -2020,7 +2020,7 @@
         "need_slimy_balls": "Necesitas un **Slime Ball** por cada **Recipiente de Cristal**.",
         "slimy_balls_funne": "Has convertido {0}x **Slime Ball** + {0}x **Recipiente de Cristal** en {0}x **Beaker Of Slime**!",
         "beaker_of_slime_undo": "Has convertido {0}x **Beaker Of Slime** en {0}x **Slime Ball**!",
-        "use_shield_pearl": "Has usado un **Shield Pearl** y ahora eres invencible a los saqueadores por todo el mes.",
+        "use_shield_pearl": "Has usado un **Escudo de Perlas** y ahora eres invencible a los saqueadores por todo el mes.",
         "use_time_pearl": "Usaste una **Perla del Tiempo** la cuál adelantó el tiempo 2 días.",
         "present": [
           "Abriste tu regalo y encontraste 1x **{}** (Vale {}{})!",

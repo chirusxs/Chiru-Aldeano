@@ -169,7 +169,7 @@ class Econ(commands.Cog):
         if db_user.shield_pearl and (
             arrow.get(db_user.shield_pearl).shift(months=1) > arrow.utcnow()
         ):
-            active_fx.add("shield pearl")
+            active_fx.add("escudo de perlas")
 
         embed = discord.Embed(color=self.bot.embed_color, description=f"{health_bar}")
         embed.set_author(name=user.display_name, icon_url=getattr(user.avatar, "url", None))
@@ -1237,7 +1237,7 @@ class Econ(commands.Cog):
             await ctx.reply_embed(ctx.l.econ.pillage.stupid_4.format(self.d.emojis.emerald))
             return
 
-        # check if victim has a shield pearl active
+        # check if victim has a escudo de perlas active
         if db_victim.shield_pearl and (
             arrow.get(db_victim.shield_pearl).shift(months=1) > arrow.utcnow()
         ):
@@ -1549,7 +1549,7 @@ class Econ(commands.Cog):
             await ctx.reply_embed("I'M MOOOOOOOORBINGGGG!!!")
             return
 
-        if thing == "shield pearl":
+        if thing == "escudo de perlas":
             db_user = await self.db.fetch_user(ctx.author.id)
 
             if (
@@ -1559,7 +1559,7 @@ class Econ(commands.Cog):
                 await ctx.reply_embed(ctx.l.econ.use.stupid_1)
                 return
 
-            await self.db.remove_item(ctx.author.id, "Shield Pearl", 1)
+            await self.db.remove_item(ctx.author.id, "Escudo de Perlas", 1)
             await self.db.update_user(ctx.author.id, shield_pearl=arrow.utcnow().datetime)
 
             await ctx.reply_embed(ctx.l.econ.use.use_shield_pearl)

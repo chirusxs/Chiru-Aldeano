@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS users ( -- used for economy data
   vote_streak        INT NOT NULL DEFAULT 0, -- the current vote streak of the user
   last_vote          TIMESTAMPTZ, -- the time at which the last user voted
   give_alert         BOOLEAN NOT NULL DEFAULT true, -- whether users should be alerted if someone gives them items or emeralds or not
-  shield_pearl       TIMESTAMPTZ -- time at which last shield pearl was activated
+  shield_pearl       TIMESTAMPTZ -- time at which last escudo de perlas was activated
 );
 
 CREATE TABLE IF NOT EXISTS items (

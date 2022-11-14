@@ -350,7 +350,7 @@ class MobSpawner(commands.Cog):
                 elif mob_key == "enderman" and random.randint(0, 30 - (looting_level * 3)) == 1:
                     pearls_won = random.randint(1, {"easy": 1, "hard": 3}[difficulty])
 
-                    await self.db.add_item(user.id, "Ender Pearl", 1024, pearls_won)
+                    await self.db.add_item(user.id, "Perla Ender", 1024, pearls_won)
 
                     await ctx.send_embed(
                         random.choice(ctx.l.mobs_mech.found).format(
