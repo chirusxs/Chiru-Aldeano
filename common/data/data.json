@@ -116,12 +116,12 @@
     "Espada de Madera"
   ],
   "hoe_list_proper": [
-    "Netherite Hoe",
-    "Diamond Hoe",
-    "Gold Hoe",
-    "Iron Hoe",
-    "Stone Hoe",
-    "Wood Hoe"
+    "Azada de Netherite",
+    "Azada de Diamante",
+    "Azada de Oro",
+    "Azada de Hierro",
+    "Azada de Piedra",
+    "Azada de Madera"
   ],
   "kills": [
     "**{0}** was suicided.",
@@ -651,11 +651,11 @@
         }
       }
     },
-    "stone hoe": {
+    "azada de piedra": {
       "cat": "tools,farming",
       "buy_price": 32,
       "db_entry": {
-        "item": "Stone Hoe",
+        "item": "Azada de Piedra",
         "sell_price": 8,
         "sticky": true
       },
@@ -663,11 +663,11 @@
         "count_lt": 1
       }
     },
-    "iron hoe": {
+    "azada de hierro": {
       "cat": "tools,farming",
       "buy_price": 128,
       "db_entry": {
-        "item": "Iron Hoe",
+        "item": "Azada de Hierro",
         "sell_price": 32,
         "sticky": true
       },
@@ -675,11 +675,11 @@
         "count_lt": 1
       }
     },
-    "gold hoe": {
+    "azada de oro": {
       "cat": "tools,farming",
       "buy_price": 512,
       "db_entry": {
-        "item": "Gold Hoe",
+        "item": "Azada de Oro",
         "sell_price": 128,
         "sticky": true
       },
@@ -687,11 +687,11 @@
         "count_lt": 1
       }
     },
-    "diamond hoe": {
+    "azada de diamante": {
       "cat": "tools,farming",
       "buy_price": 2048,
       "db_entry": {
-        "item": "Diamond Hoe",
+        "item": "Azada de Diamante",
         "sell_price": 512,
         "sticky": true
       },
@@ -699,11 +699,11 @@
         "count_lt": 1
       }
     },
-    "netherite hoe": {
+    "azada de netherite": {
       "cat": "tools,farming",
       "buy_price": 8192,
       "db_entry": {
-        "item": "Netherite Hoe",
+        "item": "Azada de Netherite",
         "sell_price": 2048,
         "sticky": true
       },
@@ -943,12 +943,12 @@
       "Espada de Oro",
       "Espada de Diamante",
       "Espada de Netherite",
-      "Wood Hoe",
-      "Stone Hoe",
-      "Iron Hoe",
-      "Gold Hoe",
-      "Diamond Hoe",
-      "Netherite Hoe",
+      "Azada de Madera",
+      "Azada de Piedra",
+      "Azada de Hierro",
+      "Azada de Oro",
+      "Azada de Diamante",
+      "Azada de Netherite",
       "Fishing Rod"
     ],
     "magic": [
@@ -986,12 +986,12 @@
       "Emerald Fish"
     ],
     "farming": [
-      "Wood Hoe",
-      "Stone Hoe",
-      "Iron Hoe",
-      "Gold Hoe",
-      "Diamond Hoe",
-      "Netherite Hoe",
+      "Azada de Madera",
+      "Azada de Piedra",
+      "Azada de Hierro",
+      "Azada de Oro",
+      "Azada de Diamante",
+      "Azada de Netherite",
       "Emerald Fruit",
       "Chorus Fruit",
       "Chorus Seed",
@@ -1230,12 +1230,12 @@
     "Gold Pickaxe": "gold_pick",
     "Diamond Pickaxe": "diamond_pick",
     "Netherite Pickaxe": "netherite_pick",
-    "Wood Hoe": "wood_hoe",
-    "Stone Hoe": "stone_hoe",
-    "Iron Hoe": "iron_hoe",
-    "Gold Hoe": "gold_hoe",
-    "Diamond Hoe": "diamond_hoe",
-    "Netherite Hoe": "netherite_hoe",
+    "Azada de Madera": "wood_hoe",
+    "Azada de Piedra": "stone_hoe",
+    "Azada de Hierro": "iron_hoe",
+    "Azada de Oro": "gold_hoe",
+    "Azada de Diamante": "diamond_hoe",
+    "Azada de Netherite": "netherite_hoe",
     "Fishing Rod": "fishing_rod",
     "Jar Of Bees": "jar_of_bees",
     "Honey Jar": "honey_jar",
@@ -1327,12 +1327,12 @@
       "wheat": "2 HOURS"
     },
     "max_plots": {
-      "Netherite Hoe": 60,
-      "Diamond Hoe": 50,
-      "Gold Hoe": 40,
-      "Iron Hoe": 30,
-      "Stone Hoe": 20,
-      "Wood Hoe": 10
+      "Azada de Netherite": 60,
+      "Azada de Diamante": 50,
+      "Azada de Oro": 40,
+      "Azada de Hierro": 30,
+      "Azada de Piedra": 20,
+      "Azada de Madera": 10
     },
     "name_map": {
       "emerald_fruit": "Emerald Fruit",

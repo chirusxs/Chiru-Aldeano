@@ -418,7 +418,7 @@
           {
             "d": 2,
             "tf": true,
-            "q": "**true** or **false**: an iron hoe has more durability than a golden hoe",
+            "q": "**true** or **false**: an azada de hierro has more durability than a golden hoe",
             "a": [
               "true",
               "false"

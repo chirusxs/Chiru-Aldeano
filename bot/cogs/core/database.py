@@ -144,7 +144,7 @@ class Database(commands.Cog):
 
             await self.add_item(user_id, "Wood Pickaxe", 0, 1, True, False)
             await self.add_item(user_id, "Espada de Madera", 0, 1, True, False)
-            await self.add_item(user_id, "Wood Hoe", 0, 1, True, False)
+            await self.add_item(user_id, "Azada de Madera", 0, 1, True, False)
             await self.add_item(user_id, "Wheat Seed", 24, 5)
 
         return User(**user)
@@ -353,9 +353,9 @@ class Database(commands.Cog):
             if hoe in items_names:
                 return hoe
 
-        await self.add_item(user_id, "Wood Hoe", 0, 1, True, False)
+        await self.add_item(user_id, "Azada de Madera", 0, 1, True, False)
 
-        return "Wood Hoe"
+        return "Azada de Madera"
 
     async def rich_trophy_wipe(self, user_id: int) -> None:
         await self.set_balance(user_id, 0)
