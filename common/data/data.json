@@ -1280,7 +1280,7 @@
         1,
         3
       ],
-      "zanahoria": [
+      "carrot": [
         1,
         3
       ],
@@ -1294,7 +1294,7 @@
       "chorus_fruit": "2 DAYS",
       "melon": "1 DAY",
       "potato": "16 HOURS",
-      "zanahoria": "8 HOURS",
+      "carrot": "8 HOURS",
       "wheat": "2 HOURS"
     },
     "max_plots": {
@@ -1306,19 +1306,20 @@
       "Azada de Madera": 10
     },
     "name_map": {
-      "emerald_fruit": "Emerald Fruit",
-      "chorus_fruit": "Chorus Fruit",
-      "melon": "Melon",
-      "potato": "Potato",
+      "emerald_fruit": "Fruta Esmeralda",
+      "chorus_fruit": "Fruta Chorus",
+      "melon": "Sandía",
+      "potato": "Patata",
       "carrot": "Zanahoria",
-      "wheat": "Wheat"
+      "wheat": "Trigo"
     },
     "plantable": {
       "semilla de trigo": "wheat",
       "zanahoria": "carrot",
-      "potato": "potato",
-      "melon seed": "melon",
-      "chorus seed": "chorus_fruit"
+      "patata": "potato",
+      "semilla de sandía": "melon",
+      "semilla de sandia": "melon",
+      "semilla chorus": "chorus_fruit"
     }
   },
   "build_ideas": {
