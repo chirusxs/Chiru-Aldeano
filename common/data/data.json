@@ -382,7 +382,7 @@
         "sticky": false
       },
       {
-        "item": "Pilgrim Hat",
+        "item": "Sombrero de Peregrino",
         "sell_price": 1024,
         "rarity": 99999,
         "sticky": false
@@ -1240,7 +1240,7 @@
     "Will O Wisp": "will_o_wisp",
     "Time Pearl": "time_pearl",
     "Pata de Pavo": "turkey_leg",
-    "Pilgrim Hat": "cowboy",
+    "Sombrero de Peregrino": "cowboy",
     "Pluma de Pavo": "feather"
   },
   "farming": {
