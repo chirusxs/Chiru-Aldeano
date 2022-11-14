@@ -188,46 +188,46 @@
   "mining": {
     "finds": [
       [
-        "cobblestone",
-        "cobblestone",
-        "dirt",
-        "dirt",
-        "coal",
-        "iron ore"
+        "adoquín",
+        "adoquín",
+        "tierra",
+        "tierra",
+        "carbón",
+        "mineral de hierro"
       ],
       [
-        "cobblestone",
-        "cobblestone",
-        "dirt",
-        "dirt",
-        "coal",
-        "iron ore",
+        "adoquín",
+        "adoquín",
+        "tierra",
+        "tierra",
+        "carbón",
+        "mineral de hierro",
         "lapis lazuli",
-        "gold ore"
+        "mineral de oro"
       ],
       [
-        "cobblestone",
-        "cobblestone",
-        "dirt",
-        "coal",
-        "coal",
-        "iron ore",
-        "iron ore",
+        "adoquín",
+        "adoquín",
+        "tierra",
+        "carbón",
+        "carbón",
+        "mineral de hierro",
+        "mineral de hierro",
         "lapis lazuli",
-        "gold ore",
-        "diamond",
-        "diamond",
+        "mineral de oro",
+        "diamante",
+        "diamante",
         "redstone"
       ]
     ],
     "find_values": {
-      "cobblestone": 0.1,
-      "dirt": 0.1,
-      "coal": 0.25,
-      "iron ore": 0.5,
+      "adoquín": 0.1,
+      "tierra": 0.1,
+      "carbón": 0.25,
+      "mineral de hierro": 0.5,
       "lapis lazuli": 0.5,
-      "gold ore": 0.75,
-      "diamond": 0.0,
+      "mineral de oro": 0.75,
+      "diamante": 0.0,
       "redstone": 0.75
     },
     "yields_enchant_items": {
