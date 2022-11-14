@@ -339,9 +339,9 @@ class MobSpawner(commands.Cog):
                             balls_won, self.d.emojis.slimeball
                         )
                     )
-                # if mob is skeleton determine if it should drop bone meal
+                # if mob is skeleton determine if it should drop hueso molido
                 elif mob_key == "skeleton" and random.randint(0, 20 - (looting_level * 3)) == 1:
-                    await self.db.add_item(user.id, "Bone Meal", 512, 1)
+                    await self.db.add_item(user.id, "Hueso Molido", 512, 1)
 
                     await ctx.send_embed(
                         random.choice(ctx.l.mobs_mech.found).format(1, self.d.emojis.bone_meal)

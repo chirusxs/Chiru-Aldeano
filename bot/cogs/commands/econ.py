@@ -1381,7 +1381,7 @@ class Econ(commands.Cog):
             await self.karen.remove_active_fx(ctx.author.id, "Poción Apuro II")
             return
 
-        if thing == "bone meal":
+        if thing == "hueso molido":
             if amount > 1:
                 await ctx.reply_embed(ctx.l.econ.use.stupid_1)
                 return

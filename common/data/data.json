@@ -346,7 +346,7 @@
         "sticky": false
       },
       {
-        "item": "Bone Meal",
+        "item": "Hueso Molido",
         "sell_price": 512,
         "rarity": 49999,
         "sticky": false
@@ -871,7 +871,7 @@
         "items": {
           "Ender Pearl": 1,
           "Mooderald": 1,
-          "Bone Meal": 1,
+          "Hueso Molido": 1,
           "Slime Ball": 4
         }
       }
@@ -972,7 +972,7 @@
       "Carrot",
       "Wheat",
       "Wheat Seed",
-      "Bone Meal"
+      "Hueso Molido"
     ]
   },
   "emojis": {
@@ -1227,7 +1227,7 @@
     "Alien Mask": "alien",
     "Pride Flag": "pride_flag",
     "A Literal Rainbow": "rainbow",
-    "Bone Meal": "bone_meal",
+    "Hueso Molido": "bone_meal",
     "Rainbow Lego Stud": "rainbow_stud",
     "Morbius": "morbius",
     "Recycler": "recycle",
