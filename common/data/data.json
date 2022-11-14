@@ -370,13 +370,13 @@
         "sticky": true
       },
       {
-        "item": "Turkey Leg",
+        "item": "Pata de Pavo",
         "sell_price": 512,
         "rarity": 49999,
         "sticky": false
       },
       {
-        "item": "Turkey Feather",
+        "item": "Pluma de Pavo",
         "sell_price": 128,
         "rarity": 1000,
         "sticky": false
@@ -1239,9 +1239,9 @@
     "Chocolate Chip Cookie": "chocolate_chip_cookie",
     "Will O Wisp": "will_o_wisp",
     "Time Pearl": "time_pearl",
-    "Turkey Leg": "turkey_leg",
+    "Pata de Pavo": "turkey_leg",
     "Pilgrim Hat": "cowboy",
-    "Turkey Feather": "feather"
+    "Pluma de Pavo": "feather"
   },
   "farming": {
     "emojis": {
