@@ -147,7 +147,7 @@ class Econ(commands.Cog):
             self.d.emojis.heart_empty,
         )
 
-        mooderalds = getattr(await self.db.fetch_item(user.id, "Mooderald"), "amount", 0)
+        mooderalds = getattr(await self.db.fetch_item(user.id, "Antimeralda"), "amount", 0)
 
         vote_streak = db_user.vote_streak
         last_voted_at = arrow.get(db_user.last_vote or 0)
@@ -225,7 +225,7 @@ class Econ(commands.Cog):
 
         total_wealth = calc_total_wealth(db_user, u_items)
 
-        mooderalds = getattr(await self.db.fetch_item(user.id, "Mooderald"), "amount", 0)
+        mooderalds = getattr(await self.db.fetch_item(user.id, "Antimeralda"), "amount", 0)
 
         embed = discord.Embed(color=self.bot.embed_color)
         embed.set_author(
@@ -998,7 +998,7 @@ class Econ(commands.Cog):
             # random chance to get mooderald
             if random.randint(1, 420) == 420:
                 mooderalds = random.randint(1, 3)
-                await self.db.add_item(ctx.author.id, "Mooderald", 768, mooderalds, True)
+                await self.db.add_item(ctx.author.id, "Antimeralda", 768, mooderalds, True)
                 await ctx.reply_embed(
                     random.choice(ctx.l.econ.beg.mooderald).format(
                         f"{mooderalds}{self.d.emojis.autistic_emerald}"
@@ -1818,9 +1818,9 @@ class Econ(commands.Cog):
     @leaderboards.command(name="mooderalds", aliases=["autism", "moods", "mooderald"])
     async def leaderboard_mooderalds(self, ctx: Ctx):
         async with SuppressCtxManager(ctx.typing()):
-            global_lb = await self.db.fetch_global_lb_item("Mooderald", ctx.author.id)
+            global_lb = await self.db.fetch_global_lb_item("Antimeralda", ctx.author.id)
             local_lb = await self.db.fetch_local_lb_item(
-                "Mooderald", ctx.author.id, [m.id for m in ctx.guild.members if not m.bot]
+                "Antimeralda", ctx.author.id, [m.id for m in ctx.guild.members if not m.bot]
             )
 
             await self._lb_logic(

@@ -470,13 +470,13 @@
         "sticky": false
       },
       {
-        "item": "Heart Of The Sea",
+        "item": "Corazón del Mar",
         "sell_price": 420,
         "rarity": 6669,
         "sticky": false
       },
       {
-        "item": "Mooderald",
+        "item": "Antimeralda",
         "sell_price": 768,
         "rarity": 4096,
         "sticky": true
@@ -795,7 +795,7 @@
       "requires": {
         "count_lt": 1,
         "items": {
-          "Heart Of The Sea": 12
+          "Corazón del Mar": 12
         }
       }
     },
@@ -870,7 +870,7 @@
       "requires": {
         "items": {
           "Ender Pearl": 1,
-          "Mooderald": 1,
+          "Antimeralda": 1,
           "Hueso Molido": 1,
           "Slime Ball": 4
         }
@@ -887,7 +887,7 @@
       "requires": {
         "items": {
           "Ender Pearl": 1,
-          "Mooderald": 5,
+          "Antimeralda": 5,
           "Slime Ball": 4,
           "Netherite Scrap": 100
         }
@@ -945,7 +945,7 @@
     "material": [
       "Netherite Scrap",
       "Slime Ball",
-      "Heart Of The Sea"
+      "Corazón del Mar"
     ],
     "fish": [
       "Cod",
@@ -1166,7 +1166,7 @@
   "emoji_items": {
     "Netherite Scrap": "netherite",
     "Slime Ball": "slimeball",
-    "Heart Of The Sea": "heart_of_the_sea",
+    "Corazón del Mar": "heart_of_the_sea",
     "Cod": "fish.cod",
     "Salmon": "fish.salmon",
     "Tropical Fish": "fish.tropical_fish",
@@ -1174,7 +1174,7 @@
     "Rainbow Trout": "fish.rainbow_trout",
     "Gold Fish": "fish.gold_fish",
     "Emerald Fish": "fish.emerald_fish",
-    "Mooderald": "autistic_emerald",
+    "Antimeralda": "autistic_emerald",
     "Libro Fortuna I": "enchanted_book",
     "Libro Fortuna II": "enchanted_book",
     "Libro Fortuna III": "enchanted_book",
