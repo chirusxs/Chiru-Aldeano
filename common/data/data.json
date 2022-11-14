@@ -717,11 +717,11 @@
       },
       "requires": {}
     },
-    "jar of bees": {
+    "tarro de abejas": {
       "cat": "other",
       "buy_price": 8,
       "db_entry": {
-        "item": "Jar Of Bees",
+        "item": "Tarro de Abejas",
         "sell_price": 2,
         "sticky": false
       },
@@ -1208,7 +1208,7 @@
     "Azada de Diamante": "diamond_hoe",
     "Azada de Netherite": "netherite_hoe",
     "Fishing Rod": "fishing_rod",
-    "Jar Of Bees": "jar_of_bees",
+    "Tarro de Abejas": "jar_of_bees",
     "Honey Jar": "honey_jar",
     "Emerald Fruit": "farming.normal.emerald_fruit",
     "Chorus Fruit": "farming.normal.chorus_fruit",

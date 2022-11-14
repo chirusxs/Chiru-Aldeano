@@ -1247,8 +1247,8 @@ class Econ(commands.Cog):
         if db_user.shield_pearl:
             await self.db.update_user(ctx.author.id, shield_pearl=None)
 
-        user_bees = getattr(await self.db.fetch_item(ctx.author.id, "Jar Of Bees"), "amount", 0)
-        victim_bees = getattr(await self.db.fetch_item(victim.id, "Jar Of Bees"), "amount", 0)
+        user_bees = getattr(await self.db.fetch_item(ctx.author.id, "Tarro de Abejas"), "amount", 0)
+        victim_bees = getattr(await self.db.fetch_item(victim.id, "Tarro de Abejas"), "amount", 0)
 
         if await self.db.fetch_item(victim.id, "Amuleto del Pillager"):
             chances = [False] * 5 + [True]
@@ -1583,7 +1583,7 @@ class Econ(commands.Cog):
     @commands.command(name="honey", aliases=["harvesthoney", "horny"])
     # @commands.cooldown(1, 24 * 60 * 60, commands.BucketType.user)
     async def honey(self, ctx: Ctx):
-        bees = await self.db.fetch_item(ctx.author.id, "Jar Of Bees")
+        bees = await self.db.fetch_item(ctx.author.id, "Tarro de Abejas")
 
         bees = 0 if bees is None else bees.amount
 
@@ -1609,7 +1609,7 @@ class Econ(commands.Cog):
         if not lucky and random.choice([False] * 3 + [True]):
             bees_lost = random.randint(math.ceil(bees / 75), math.ceil(bees / 50))
 
-            await self.db.remove_item(ctx.author.id, "Jar Of Bees", bees_lost)
+            await self.db.remove_item(ctx.author.id, "Tarro de Abejas", bees_lost)
 
             await ctx.reply_embed(random.choice(ctx.l.econ.honey.ded).format(bees_lost))
 
@@ -1754,9 +1754,9 @@ class Econ(commands.Cog):
     @leaderboards.command(name="bees", aliases=["jarofbees", "jarsofbees"])
     async def leaderboard_bees(self, ctx: Ctx):
         async with SuppressCtxManager(ctx.typing()):
-            global_lb = await self.db.fetch_global_lb_item("Jar Of Bees", ctx.author.id)
+            global_lb = await self.db.fetch_global_lb_item("Tarro de Abejas", ctx.author.id)
             local_lb = await self.db.fetch_local_lb_item(
-                "Jar Of Bees", ctx.author.id, [m.id for m in ctx.guild.members if not m.bot]
+                "Tarro de Abejas", ctx.author.id, [m.id for m in ctx.guild.members if not m.bot]
             )
 
             await self._lb_logic(
@@ -2002,7 +2002,7 @@ class Econ(commands.Cog):
             await ctx.reply_embed(ctx.l.econ.farm.cant_harvest)
             return
 
-        user_bees = await self.db.fetch_item(ctx.author.id, "Jar Of Bees")
+        user_bees = await self.db.fetch_item(ctx.author.id, "Tarro de Abejas")
         user_bees = 0 if user_bees is None else user_bees.amount
         extra_yield_limit = round(max(0, math.log((user_bees + 0.0001) / 64)))
 
@@ -2146,8 +2146,8 @@ class Econ(commands.Cog):
     #         user_1_health = db_user_1.health
     #         user_2_health = db_user_2.health
     #
-    #         user_1_bees = get_item_count(user_1_items, "Jar Of Bees")
-    #         user_2_bees = get_item_count(user_2_items, "Jar Of Bees")
+    #         user_1_bees = get_item_count(user_1_items, "Tarro de Abejas")
+    #         user_2_bees = get_item_count(user_2_items, "Tarro de Abejas")
     #
     #         user_1_sharpness = (
     #             2

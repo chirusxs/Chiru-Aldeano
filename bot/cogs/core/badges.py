@@ -104,7 +104,7 @@ class Badges(commands.Cog):
             return
 
         if bees is None:
-            bees = await self.db.fetch_item(user_id, "Jar Of Bees")
+            bees = await self.db.fetch_item(user_id, "Tarro de Abejas")
 
             if bees is None:
                 bees = 0
