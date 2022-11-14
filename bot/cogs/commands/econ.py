@@ -1157,7 +1157,7 @@ class Econ(commands.Cog):
         if random.randint(1, 8) == 1 or (lucky and random.randint(1, 5) == 1):
 
             # calculate the chance for them to fish up junk (True means junk)
-            if await self.db.fetch_item(ctx.author.id, "Fishing Trophy") is not None or lucky:
+            if await self.db.fetch_item(ctx.author.id, "Trofeo de Pesca") is not None or lucky:
                 junk_chance = (True, False, False, False, False)
             else:
                 junk_chance = (True, True, True, False, False)

@@ -784,11 +784,11 @@
         }
       }
     },
-    "fishing trophy": {
+    "trofeo de pesca": {
       "cat": "other",
       "buy_price": 48000,
       "db_entry": {
-        "item": "Fishing Trophy",
+        "item": "Trofeo de Pesca",
         "sell_price": 2048,
         "sticky": true
       },
@@ -898,7 +898,7 @@
     "Trofeo de Dinero",
     "Amuleto del Pillager",
     "Trofeo Slime",
-    "Fishing Trophy"
+    "Trofeo de Pesca"
   ],
   "cats": {
     "tools": [
@@ -939,7 +939,7 @@
       "Amuleto del Pillager",
       "Trofeo Slime",
       "Trofeo de Dinero",
-      "Fishing Trophy",
+      "Trofeo de Pesca",
       "Poción de Suerte"
     ],
     "material": [
