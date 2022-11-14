@@ -2061,7 +2061,7 @@ class Econ(commands.Cog):
             total_ems *= (
                 await self.db.fetch_item(ctx.author.id, "Rich Person Trophy") is not None
             ) + 1
-            total_ems *= (await self.db.fetch_item(ctx.author.id, "Recycler") is not None) + 1
+            total_ems *= (await self.db.fetch_item(ctx.author.id, "Reciclador") is not None) + 1
 
             embed.description = (
                 ctx.l.econ.trash.total_contents.format(
@@ -2079,7 +2079,7 @@ class Econ(commands.Cog):
 
         total_ems = math.floor(total_ems)
         total_ems *= (await self.db.fetch_item(ctx.author.id, "Rich Person Trophy") is not None) + 1
-        total_ems *= (await self.db.fetch_item(ctx.author.id, "Recycler") is not None) + 1
+        total_ems *= (await self.db.fetch_item(ctx.author.id, "Reciclador") is not None) + 1
 
         await self.db.balance_add(ctx.author.id, total_ems)
 

@@ -358,7 +358,7 @@
         "sticky": false
       },
       {
-        "item": "Recycler",
+        "item": "Reciclador",
         "sell_price": 1024,
         "rarity": 99999,
         "sticky": false
@@ -488,7 +488,7 @@
         "sticky": false
       },
       {
-        "item": "Recycler",
+        "item": "Reciclador",
         "sell_price": 1024,
         "rarity": 99999,
         "sticky": false
@@ -1230,7 +1230,7 @@
     "Hueso Molido": "bone_meal",
     "Rainbow Lego Stud": "rainbow_stud",
     "Morbius": "morbius",
-    "Recycler": "recycle",
+    "Reciclador": "recycle",
     "Guacamole Sombrero": "guacamole_sombrero",
     "Dirt Block": "dirt_block",
     "Forever Alone Trophy": "trophy",
