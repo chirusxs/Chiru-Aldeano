@@ -731,7 +731,7 @@ class Econ(commands.Cog):
 
         if (
             shop_item.db_entry.item.endswith("Pickaxe")
-            or shop_item.db_entry.item == "Bane Of Pillagers Amulet"
+            or shop_item.db_entry.item == "Amuleto del Pillager"
         ):
             await self.karen.update_support_server_member_roles(ctx.author.id)
         elif shop_item.db_entry.item == "Rich Person Trophy":
@@ -804,7 +804,7 @@ class Econ(commands.Cog):
 
         await self.db.update_lb(ctx.author.id, "week_emeralds", amount * db_item.sell_price)
 
-        if db_item.name.endswith("Pickaxe") or db_item.name == "Bane Of Pillagers Amulet":
+        if db_item.name.endswith("Pickaxe") or db_item.name == "Amuleto del Pillager":
             await self.karen.update_support_server_member_roles(ctx.author.id)
 
         await ctx.reply_embed(
@@ -961,7 +961,7 @@ class Econ(commands.Cog):
             multi = (
                 40
                 + random.randint(5, 30)
-                + (await self.db.fetch_item(ctx.author.id, "Bane Of Pillagers Amulet") is not None)
+                + (await self.db.fetch_item(ctx.author.id, "Amuleto del Pillager") is not None)
                 * 20
             )
             multi += (
@@ -1250,7 +1250,7 @@ class Econ(commands.Cog):
         user_bees = getattr(await self.db.fetch_item(ctx.author.id, "Jar Of Bees"), "amount", 0)
         victim_bees = getattr(await self.db.fetch_item(victim.id, "Jar Of Bees"), "amount", 0)
 
-        if await self.db.fetch_item(victim.id, "Bane Of Pillagers Amulet"):
+        if await self.db.fetch_item(victim.id, "Amuleto del Pillager"):
             chances = [False] * 5 + [True]
         elif user_bees > victim_bees:
             chances = [False] * 3 + [True] * 5

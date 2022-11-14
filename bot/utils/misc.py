@@ -227,7 +227,7 @@ async def update_support_member_role(bot, member):
         if pickaxe_role is not None:
             roles.append(support_guild.get_role(pickaxe_role))
 
-        if await db.fetch_item(member.id, "Bane Of Pillagers Amulet") is not None:
+        if await db.fetch_item(member.id, "Amuleto del Pillager") is not None:
             roles.append(support_guild.get_role(bot.d.role_mappings.get("BOP")))
 
         if roles != member.roles:

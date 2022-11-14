@@ -231,7 +231,7 @@
       "redstone": 0.75
     },
     "yields_enchant_items": {
-      "Bane Of Pillagers Amulet": [
+      "Amuleto del Pillager": [
         2,
         3,
         4,
@@ -364,7 +364,7 @@
         "sticky": false
       },
       {
-        "item": "Bane Of Pillagers Amulet",
+        "item": "Amuleto del Pillager",
         "sell_price": 4096,
         "rarity": 500000,
         "sticky": true
@@ -896,7 +896,7 @@
   },
   "rpt_ignore": [
     "Rich Person Trophy",
-    "Bane Of Pillagers Amulet",
+    "Amuleto del Pillager",
     "Slime Trophy",
     "Fishing Trophy"
   ],
@@ -936,7 +936,7 @@
       "Lure I Book",
       "Seaweed",
       "Vault Potion",
-      "Bane Of Pillagers Amulet",
+      "Amuleto del Pillager",
       "Slime Trophy",
       "Rich Person Trophy",
       "Fishing Trophy",
