@@ -806,7 +806,7 @@ class Econ(commands.Cog):
             ),
         )
 
-    @commands.command(name="give", aliases=["gift", "share", "g", "gib", "trade"])
+    @commands.command(name="dar", aliases=["regalar"])
     @commands.guild_only()
     # @commands.cooldown(1, 10, commands.BucketType.user)
     @commands.max_concurrency(1, commands.BucketType.user)
@@ -847,7 +847,7 @@ class Econ(commands.Cog):
 
         db_user = await self.db.fetch_user(ctx.author.id)
 
-        if "pickaxe" in item.lower() or "sword" in item.lower():
+        if "pico" in item.lower() or "espada" in item.lower():
             await ctx.reply_embed(ctx.l.econ.give.and_i_oop)
             return
 
