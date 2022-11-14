@@ -799,31 +799,31 @@
         }
       }
     },
-    "glass beaker": {
+    "recipiente de cristal": {
       "cat": "other",
       "buy_price": 8,
       "db_entry": {
-        "item": "Glass Beaker",
+        "item": "Recipiente de Cristal",
         "sell_price": 2,
         "sticky": false
       },
       "requires": {}
     },
-    "wheat seed": {
+    "semilla de trigo": {
       "cat": "farming",
       "buy_price": 32,
       "db_entry": {
-        "item": "Wheat Seed",
+        "item": "Semilla de Trigo",
         "sell_price": 24,
         "sticky": false
       },
       "requires": {}
     },
-    "carrot": {
+    "zanahoria": {
       "cat": "farming",
       "buy_price": 96,
       "db_entry": {
-        "item": "Carrot",
+        "item": "Zanahoria",
         "sell_price": 64,
         "sticky": false
       },
@@ -969,9 +969,9 @@
       "Melon",
       "Melon Seed",
       "Potato",
-      "Carrot",
+      "Zanahoria",
       "Wheat",
-      "Wheat Seed",
+      "Semilla de Trigo",
       "Hueso Molido"
     ]
   },
@@ -1060,7 +1060,7 @@
         "chorus_fruit": "<:chorus_fruit_growing:927292976999333948>",
         "melon": "<:melon_growing:982370173711425546>",
         "potato": "<:potatoes_growing:927292976995127316>",
-        "carrot": "<:carrots_growing:927292976852529163>",
+        "zanahoria": "<:carrots_growing:927292976852529163>",
         "wheat": "<:wheat_growing:927292977091600494>",
         "farmland": "<:farmland:927282404958285914>"
       },
@@ -1069,7 +1069,7 @@
         "chorus_fruit": "<:chorus_fruit:929404115644211200>",
         "melon": "<:melon_slice:982365225347088444>",
         "potato": "<:potato:982316859640647741>",
-        "carrot": "<:carrot:982316859573551174>",
+        "zanahoria": "<:carrot:982316859573551174>",
         "wheat": "<:wheat:929404115669352519>"
       },
       "seeds": {
@@ -1216,9 +1216,9 @@
     "Melon": "farming.normal.melon",
     "Melon Seed": "farming.seeds.melon",
     "Potato": "farming.normal.potato",
-    "Carrot": "farming.normal.carrot",
+    "Zanahoria": "farming.normal.carrot",
     "Wheat": "farming.normal.wheat",
-    "Wheat Seed": "farming.seeds.wheat",
+    "Semilla de Trigo": "farming.seeds.wheat",
     "Rusty Fishing Hook": "rusty_fishing_hook",
     "Minecraft Movie Ticket": "ticket",
     "Barril": "barril",
@@ -1260,7 +1260,7 @@
       "chorus_fruit": 1024,
       "melon": 256,
       "potato": 128,
-      "carrot": 64,
+      "zanahoria": 64,
       "wheat": 32
     },
     "crop_yields": {
@@ -1280,7 +1280,7 @@
         1,
         3
       ],
-      "carrot": [
+      "zanahoria": [
         1,
         3
       ],
@@ -1294,7 +1294,7 @@
       "chorus_fruit": "2 DAYS",
       "melon": "1 DAY",
       "potato": "16 HOURS",
-      "carrot": "8 HOURS",
+      "zanahoria": "8 HOURS",
       "wheat": "2 HOURS"
     },
     "max_plots": {
@@ -1310,12 +1310,12 @@
       "chorus_fruit": "Chorus Fruit",
       "melon": "Melon",
       "potato": "Potato",
-      "carrot": "Carrot",
+      "carrot": "Zanahoria",
       "wheat": "Wheat"
     },
     "plantable": {
-      "wheat seed": "wheat",
-      "carrot": "carrot",
+      "semilla de trigo": "wheat",
+      "zanahoria": "carrot",
       "potato": "potato",
       "melon seed": "melon",
       "chorus seed": "chorus_fruit"

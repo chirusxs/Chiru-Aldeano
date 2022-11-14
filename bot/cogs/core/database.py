@@ -145,7 +145,7 @@ class Database(commands.Cog):
             await self.add_item(user_id, "Pico de Madera", 0, 1, True, False)
             await self.add_item(user_id, "Espada de Madera", 0, 1, True, False)
             await self.add_item(user_id, "Azada de Madera", 0, 1, True, False)
-            await self.add_item(user_id, "Wheat Seed", 24, 5)
+            await self.add_item(user_id, "Semilla de Trigo", 24, 5)
 
         return User(**user)
 
