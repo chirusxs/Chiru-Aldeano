@@ -583,7 +583,7 @@ class Econ(commands.Cog):
             ctx, "other", f"{ctx.l.econ.shop.villager_shop} [{ctx.l.econ.shop.other[3:]}]"
         )
 
-    @commands.command(name="fishmarket", aliases=["fishshop", "fishprices", "fishprice"])
+    @commands.command(name="mercadopeces", aliases=["tiendapeces"])
     async def fish_market(self, ctx: Ctx):
         embed_template = discord.Embed(
             color=self.bot.embed_color,
