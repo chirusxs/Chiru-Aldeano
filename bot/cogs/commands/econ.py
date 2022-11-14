@@ -122,8 +122,8 @@ class Econ(commands.Cog):
     async def max_concurrency_dummy(self, ctx: Ctx):
         pass
 
-    @commands.command(name="profile", aliases=["pp"])
-    async def profile(self, ctx: Ctx, *, user: discord.User = None):
+    @commands.command(name="perfil", aliases=["pp"])
+    async def perfil(self, ctx: Ctx, *, user: discord.User = None):
         if user is None:
             user = ctx.author
 
@@ -180,13 +180,6 @@ class Econ(commands.Cog):
         embed.add_field(name="\uFEFF", value="\uFEFF")
         embed.add_field(
             name=ctx.l.econ.pp.mooderalds, value=f"{mooderalds}{self.d.emojis.autistic_emerald}"
-        )
-
-        embed.add_field(name=ctx.l.econ.pp.streak, value=(vote_streak or 0))
-        embed.add_field(name="\uFEFF", value="\uFEFF")
-        embed.add_field(
-            name=ctx.l.econ.pp.can_vote,
-            value=can_vote_value,
         )
 
         embed.add_field(name=ctx.l.econ.pp.pick, value=(await self.db.fetch_pickaxe(user.id)))
