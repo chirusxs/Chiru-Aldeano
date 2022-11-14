@@ -396,7 +396,7 @@ class Econ(commands.Cog):
 
         await self.inventory_logic(ctx, user, items, ctx.l.econ.inv.cats.farming)
 
-    @commands.command(name="deposit", aliases=["dep"])
+    @commands.command(name="depositar", aliases=["dep"])
     # @commands.cooldown(1, 2, commands.BucketType.user)
     @commands.max_concurrency(1, commands.BucketType.user)
     async def vault_deposit(self, ctx: Ctx, emerald_blocks: str):
@@ -408,7 +408,7 @@ class Econ(commands.Cog):
             await ctx.reply_embed(ctx.l.econ.dep.poor_loser)
             return
 
-        if emerald_blocks.lower() in ("all", "max"):
+        if emerald_blocks.lower() in ("todo", "max"):
             amount = db_user.vault_max - db_user.vault_balance
 
             if amount * 9 > db_user.emeralds:
@@ -425,7 +425,7 @@ class Econ(commands.Cog):
             return
 
         if amount < 1:
-            if emerald_blocks.lower() in ("all", "max"):
+            if emerald_blocks.lower() in ("todo", "max"):
                 await ctx.reply_embed(ctx.l.econ.dep.stupid_2)
             else:
                 await ctx.reply_embed(ctx.l.econ.dep.stupid_1)
