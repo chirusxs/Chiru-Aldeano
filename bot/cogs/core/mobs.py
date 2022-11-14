@@ -57,17 +57,17 @@ class MobSpawner(commands.Cog):
         return _attack_check
 
     async def calculate_sword_damage(self, user_id: int, sword: str, multi: float) -> int:
-        if sword == "Netherite Sword":
+        if sword == "Espada de Netherite":
             damage = random.randint(7, 10)
-        elif sword == "Diamond Sword":
+        elif sword == "Espada de Diamante":
             damage = random.randint(6, 7)
-        elif sword == "Gold Sword":
+        elif sword == "Espada de Oro":
             damage = random.randint(4, 5)
-        elif sword == "Iron Sword":
+        elif sword == "Espada de Hierro":
             damage = random.randint(2, 4)
-        elif sword == "Stone Sword":
+        elif sword == "Espada de Piedra":
             damage = random.randint(1, 3)
-        elif sword == "Wood Sword":
+        elif sword == "Espada de Madera":
             damage = random.randint(1, 2)
         else:
             raise ValueError(f"{repr(sword)} is not a valid sword.")

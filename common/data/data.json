@@ -100,20 +100,20 @@
     "BOP": 965717466141556826
   },
   "sword_list": [
-    "wood sword",
-    "stone sword",
-    "iron sword",
-    "gold sword",
-    "diamond sword",
-    "netherite sword"
+    "espada de madera",
+    "espada de piedra",
+    "espada de hierro",
+    "espada de oro",
+    "espada de diamante",
+    "espada de netherite"
   ],
   "sword_list_proper": [
-    "Netherite Sword",
-    "Diamond Sword",
-    "Gold Sword",
-    "Iron Sword",
-    "Stone Sword",
-    "Wood Sword"
+    "Espada de Netherite",
+    "Espada de Diamante",
+    "Espada de Oro",
+    "Espada de Hierro",
+    "Espada de Piedra",
+    "Espada de Madera"
   ],
   "hoe_list_proper": [
     "Netherite Hoe",
@@ -588,11 +588,11 @@
         }
       }
     },
-    "stone sword": {
+    "espada de piedra": {
       "cat": "tools",
       "buy_price": 32,
       "db_entry": {
-        "item": "Stone Sword",
+        "item": "Espada de Piedra",
         "sell_price": 8,
         "sticky": true
       },
@@ -600,11 +600,11 @@
         "count_lt": 1
       }
     },
-    "iron sword": {
+    "espada de hierro": {
       "cat": "tools",
       "buy_price": 128,
       "db_entry": {
-        "item": "Iron Sword",
+        "item": "Espada de Hierro",
         "sell_price": 32,
         "sticky": true
       },
@@ -612,11 +612,11 @@
         "count_lt": 1
       }
     },
-    "gold sword": {
+    "espada de oro": {
       "cat": "tools",
       "buy_price": 512,
       "db_entry": {
-        "item": "Gold Sword",
+        "item": "Espada de Oro",
         "sell_price": 128,
         "sticky": true
       },
@@ -624,11 +624,11 @@
         "count_lt": 1
       }
     },
-    "diamond sword": {
+    "espada de diamante": {
       "cat": "tools",
       "buy_price": 2048,
       "db_entry": {
-        "item": "Diamond Sword",
+        "item": "Espada de Diamante",
         "sell_price": 512,
         "sticky": true
       },
@@ -636,11 +636,11 @@
         "count_lt": 1
       }
     },
-    "netherite sword": {
+    "espada de netherite": {
       "cat": "tools",
       "buy_price": 8192,
       "db_entry": {
-        "item": "Netherite Sword",
+        "item": "Espada de Netherite",
         "sell_price": 2048,
         "sticky": true
       },
@@ -937,12 +937,12 @@
       "Gold Pickaxe",
       "Diamond Pickaxe",
       "Netherite Pickaxe",
-      "Wood Sword",
-      "Stone Sword",
-      "Iron Sword",
-      "Gold Sword",
-      "Diamond Sword",
-      "Netherite Sword",
+      "Espada de Madera",
+      "Espada de Piedra",
+      "Espada de Hierro",
+      "Espada de Oro",
+      "Espada de Diamante",
+      "Espada de Netherite",
       "Wood Hoe",
       "Stone Hoe",
       "Iron Hoe",
@@ -1218,12 +1218,12 @@
     "Haste II Potion": "glass_bottle",
     "Vault Potion": "glass_bottle",
     "Luck Potion": "glass_bottle",
-    "Wood Sword": "wood_sword",
-    "Stone Sword": "stone_sword",
-    "Iron Sword": "iron_sword",
-    "Gold Sword": "gold_sword",
-    "Diamond Sword": "diamond_sword",
-    "Netherite Sword": "netherite_sword",
+    "Espada de Madera": "wood_sword",
+    "Espada de Piedra": "stone_sword",
+    "Espada de Hierro": "iron_sword",
+    "Espada de Oro": "gold_sword",
+    "Espada de Diamante": "diamond_sword",
+    "Espada de Netherite": "netherite_sword",
     "Wood Pickaxe": "wood_pick",
     "Stone Pickaxe": "stone_pick",
     "Iron Pickaxe": "iron_pick",

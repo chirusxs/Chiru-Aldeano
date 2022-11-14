@@ -2167,12 +2167,12 @@ class Econ(commands.Cog):
     #         def attack_damage(sharp: int, sword: str) -> int:
     #             damage = random.randint(
     #                 *{
-    #                     "Netherite Sword": [7, 10],
-    #                     "Diamond Sword": [6, 7],
-    #                     "Gold Sword": [4, 5],
-    #                     "Iron Sword": [2, 4],
-    #                     "Stone Sword": [1, 3],
-    #                     "Wood Sword": [1, 2],
+    #                     "Espada de Netherite": [7, 10],
+    #                     "Espada de Diamante": [6, 7],
+    #                     "Espada de Oro": [4, 5],
+    #                     "Espada de Hierro": [2, 4],
+    #                     "Espada de Piedra": [1, 3],
+    #                     "Espada de Madera": [1, 2],
     #                 }[sword]
     #             )
     #

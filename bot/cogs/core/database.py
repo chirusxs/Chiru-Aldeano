@@ -143,7 +143,7 @@ class Database(commands.Cog):
             )
 
             await self.add_item(user_id, "Wood Pickaxe", 0, 1, True, False)
-            await self.add_item(user_id, "Wood Sword", 0, 1, True, False)
+            await self.add_item(user_id, "Espada de Madera", 0, 1, True, False)
             await self.add_item(user_id, "Wood Hoe", 0, 1, True, False)
             await self.add_item(user_id, "Wheat Seed", 24, 5)
 
@@ -342,9 +342,9 @@ class Database(commands.Cog):
             if sword in items_names:
                 return sword
 
-        await self.add_item(user_id, "Wood Sword", 0, 1, True, False)
+        await self.add_item(user_id, "Espada de Madera", 0, 1, True, False)
 
-        return "Wood Sword"
+        return "Espada de Madera"
 
     async def fetch_hoe(self, user_id: int) -> str:
         items_names = {item.name for item in await self.fetch_items(user_id)}
