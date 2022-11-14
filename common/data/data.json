@@ -138,24 +138,14 @@
   ],
   "mobs_mech": {
     "valid_attacks": [
-      "attack",
-      "fight",
-      "punch",
-      "atk",
-      "kill",
-      "kil",
-      "atack",
-      "stab",
-      "stabb",
-      "bonk"
+      "atacar",
+      "golpear",
+      "luchar"
     ],
     "valid_flees": [
-      "flee",
-      "run",
-      "iamababy",
-      "run away",
-      "i am a baby",
-      "mommy"
+      "huir",
+      "correr",
+      "escapar"
     ],
     "mobs": {
       "zombie": {
