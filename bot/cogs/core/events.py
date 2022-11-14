@@ -299,7 +299,7 @@ class Events(commands.Cog):
     ) -> None:
         # handle mine command cooldown effects
         if ctx.command.qualified_name == "mine":
-            if await self.db.fetch_item(ctx.author.id, "Efficiency I Book") is not None:
+            if await self.db.fetch_item(ctx.author.id, "Libro Eficiencia I") is not None:
                 remaining -= 0.5
 
             active_effects = await self.karen.fetch_active_fx(ctx.author.id)
