@@ -238,7 +238,7 @@
         5,
         6
       ],
-      "Fortune III Book": [
+      "Libro Fortuna III": [
         1,
         1,
         2,
@@ -292,7 +292,7 @@
         "sticky": false
       },
       {
-        "item": "Fortune III Book",
+        "item": "Libro Fortuna III",
         "sell_price": 768,
         "rarity": 9999,
         "sticky": false
@@ -925,7 +925,7 @@
     "magic": [
       "Fortune I Book",
       "Fortune II Book",
-      "Fortune III Book",
+      "Libro Fortuna III",
       "Efficiency I Book",
       "Looting I Book",
       "Looting II Book",
@@ -1177,7 +1177,7 @@
     "Mooderald": "autistic_emerald",
     "Fortune I Book": "enchanted_book",
     "Fortune II Book": "enchanted_book",
-    "Fortune III Book": "enchanted_book",
+    "Libro Fortuna III": "enchanted_book",
     "Efficiency I Book": "enchanted_book",
     "Looting I Book": "enchanted_book",
     "Looting II Book": "enchanted_book",
