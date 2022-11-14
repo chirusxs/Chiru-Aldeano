@@ -707,7 +707,7 @@
       },
       "requires": {}
     },
-    "fortune i book": {
+    "libro fortuna i": {
       "cat": "magic",
       "buy_price": 120,
       "db_entry": {
@@ -829,7 +829,7 @@
       },
       "requires": {}
     },
-    "potato": {
+    "patata": {
       "cat": "farming",
       "buy_price": 192,
       "db_entry": {
@@ -839,7 +839,7 @@
       },
       "requires": {}
     },
-    "melon seed": {
+    "semilla de sandía": {
       "cat": "farming",
       "buy_price": 384,
       "db_entry": {
@@ -849,7 +849,7 @@
       },
       "requires": {}
     },
-    "chorus seed": {
+    "semilla chorus": {
       "cat": "farming",
       "buy_price": 640,
       "db_entry": {
@@ -1060,7 +1060,7 @@
         "chorus_fruit": "<:chorus_fruit_growing:927292976999333948>",
         "melon": "<:melon_growing:982370173711425546>",
         "potato": "<:potatoes_growing:927292976995127316>",
-        "zanahoria": "<:carrots_growing:927292976852529163>",
+        "carrot": "<:carrots_growing:927292976852529163>",
         "wheat": "<:wheat_growing:927292977091600494>",
         "farmland": "<:farmland:927282404958285914>"
       },
@@ -1069,7 +1069,7 @@
         "chorus_fruit": "<:chorus_fruit:929404115644211200>",
         "melon": "<:melon_slice:982365225347088444>",
         "potato": "<:potato:982316859640647741>",
-        "zanahoria": "<:carrot:982316859573551174>",
+        "carrot": "<:carrot:982316859573551174>",
         "wheat": "<:wheat:929404115669352519>"
       },
       "seeds": {
@@ -1248,7 +1248,7 @@
       "chorus_fruit": 1024,
       "melon": 256,
       "potato": 128,
-      "zanahoria": 64,
+      "carrot": 64,
       "wheat": 32
     },
     "crop_yields": {
