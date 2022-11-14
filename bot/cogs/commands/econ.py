@@ -445,7 +445,7 @@ class Econ(commands.Cog):
             )
         )
 
-    @commands.command(name="withdraw", aliases=["with"])
+    @commands.command(name="retirar", aliases=["ret"])
     @commands.cooldown(1, 2, commands.BucketType.user)
     @commands.max_concurrency(1, commands.BucketType.user)
     async def vault_withdraw(self, ctx: Ctx, emerald_blocks: str):
@@ -457,7 +457,7 @@ class Econ(commands.Cog):
             await ctx.reply_embed(ctx.l.econ.withd.poor_loser)
             return
 
-        if emerald_blocks.lower() in ("all", "max"):
+        if emerald_blocks.lower() in ("todo", "max", "máx"):
             amount = db_user.vault_balance
         else:
             try:
