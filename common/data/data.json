@@ -340,7 +340,7 @@
         "sticky": false
       },
       {
-        "item": "Luck Potion",
+        "item": "Poción de Suerte",
         "sell_price": 128,
         "rarity": 1000,
         "sticky": false
@@ -482,7 +482,7 @@
         "sticky": true
       },
       {
-        "item": "Luck Potion",
+        "item": "Poción de Suerte",
         "sell_price": 128,
         "rarity": 6669,
         "sticky": false
@@ -940,7 +940,7 @@
       "Slime Trophy",
       "Rich Person Trophy",
       "Fishing Trophy",
-      "Luck Potion"
+      "Poción de Suerte"
     ],
     "material": [
       "Netherite Scrap",
@@ -1188,7 +1188,7 @@
     "Poción Apuro I": "glass_bottle",
     "Poción Apuro II": "glass_bottle",
     "Vault Potion": "glass_bottle",
-    "Luck Potion": "glass_bottle",
+    "Poción de Suerte": "glass_bottle",
     "Espada de Madera": "wood_sword",
     "Espada de Piedra": "stone_sword",
     "Espada de Hierro": "iron_sword",

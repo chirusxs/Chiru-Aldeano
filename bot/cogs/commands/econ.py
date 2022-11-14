@@ -1044,8 +1044,8 @@ class Econ(commands.Cog):
 
         pickaxe = await self.db.fetch_pickaxe(ctx.author.id)
 
-        # see if user has chugged a luck potion
-        lucky = await self.karen.check_active_fx(ctx.author.id, "Luck Potion")
+        # see if user has chugged a poción de suerte
+        lucky = await self.karen.check_active_fx(ctx.author.id, "Poción de Suerte")
 
         # iterate through items findable via mining
         for item in self.d.mining.findables:
@@ -1141,7 +1141,7 @@ class Econ(commands.Cog):
             lure_i_book, seaweed_active, lucky = await asyncio.gather(
                 self.db.fetch_item(ctx.author.id, "Lure I Book"),
                 self.karen.check_active_fx(ctx.author.id, "Seaweed"),
-                self.karen.check_active_fx(ctx.author.id, "Luck Potion"),
+                self.karen.check_active_fx(ctx.author.id, "Poción de Suerte"),
             )
 
             if lure_i_book is not None:
@@ -1393,19 +1393,19 @@ class Econ(commands.Cog):
 
             return
 
-        if thing == "luck potion":
+        if thing == "poción de suerte":
             if amount > 1:
                 await ctx.reply_embed(ctx.l.econ.use.stupid_1)
                 return
 
             await self.db.remove_item(ctx.author.id, thing, 1)
-            await self.karen.add_active_fx(ctx.author.id, "Luck Potion")
-            await ctx.reply_embed(ctx.l.econ.use.chug.format("Luck Potion", 4.5))
+            await self.karen.add_active_fx(ctx.author.id, "Poción de Suerte")
+            await ctx.reply_embed(ctx.l.econ.use.chug.format("Poción de Suerte", 4.5))
 
             await asyncio.sleep(60 * 4.5)
 
-            await self.bot.send_embed(ctx.author, ctx.l.econ.use.done.format("Luck Potion"))
-            await self.karen.remove_active_fx(ctx.author.id, "Luck Potion")
+            await self.bot.send_embed(ctx.author, ctx.l.econ.use.done.format("Poción de Suerte"))
+            await self.karen.remove_active_fx(ctx.author.id, "Poción de Suerte")
             return
 
         if thing == "seaweed":
@@ -1603,8 +1603,8 @@ class Econ(commands.Cog):
 
         await ctx.reply_embed(random.choice(ctx.l.econ.honey.honey).format(jars))
 
-        # see if user has chugged a luck potion
-        lucky = await self.karen.check_active_fx(ctx.author.id, "Luck Potion")
+        # see if user has chugged a poción de suerte
+        lucky = await self.karen.check_active_fx(ctx.author.id, "Poción de Suerte")
 
         if not lucky and random.choice([False] * 3 + [True]):
             bees_lost = random.randint(math.ceil(bees / 75), math.ceil(bees / 50))
