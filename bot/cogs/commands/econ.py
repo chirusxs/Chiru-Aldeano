@@ -1139,7 +1139,7 @@ class Econ(commands.Cog):
             wait = random.randint(12, 32)
 
             lure_i_book, seaweed_active, lucky = await asyncio.gather(
-                self.db.fetch_item(ctx.author.id, "Lure I Book"),
+                self.db.fetch_item(ctx.author.id, "Libro Atracción I"),
                 self.karen.check_active_fx(ctx.author.id, "Seaweed"),
                 self.karen.check_active_fx(ctx.author.id, "Poción de Suerte"),
             )

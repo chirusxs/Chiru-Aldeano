@@ -458,7 +458,7 @@
     },
     "findables": [
       {
-        "item": "Lure I Book",
+        "item": "Libro Atracción I",
         "sell_price": 32,
         "rarity": 200,
         "sticky": false
@@ -933,7 +933,7 @@
       "Libro Filo II",
       "Poción Apuro I",
       "Poción Apuro II",
-      "Lure I Book",
+      "Libro Atracción I",
       "Seaweed",
       "Vault Potion",
       "Amuleto del Pillager",
@@ -1183,7 +1183,7 @@
     "Libro Saqueo II": "enchanted_book",
     "Libro Filo I": "enchanted_book",
     "Libro Filo II": "enchanted_book",
-    "Lure I Book": "enchanted_book",
+    "Libro Atracción I": "enchanted_book",
     "Present": "present",
     "Poción Apuro I": "glass_bottle",
     "Poción Apuro II": "glass_bottle",
