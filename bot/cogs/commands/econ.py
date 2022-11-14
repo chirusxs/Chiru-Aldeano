@@ -1140,7 +1140,7 @@ class Econ(commands.Cog):
 
             lure_i_book, seaweed_active, lucky = await asyncio.gather(
                 self.db.fetch_item(ctx.author.id, "Libro Atracción I"),
-                self.karen.check_active_fx(ctx.author.id, "Seaweed"),
+                self.karen.check_active_fx(ctx.author.id, "Alga Marina"),
                 self.karen.check_active_fx(ctx.author.id, "Poción de Suerte"),
             )
 
@@ -1408,19 +1408,19 @@ class Econ(commands.Cog):
             await self.karen.remove_active_fx(ctx.author.id, "Poción de Suerte")
             return
 
-        if thing == "seaweed":
+        if thing == "alga marina":
             if amount > 1:
                 await ctx.reply_embed(ctx.l.econ.use.stupid_1)
                 return
 
             await self.db.remove_item(ctx.author.id, thing, 1)
-            await self.karen.add_active_fx(ctx.author.id, "Seaweed")
+            await self.karen.add_active_fx(ctx.author.id, "Alga Marina")
             await ctx.reply_embed(ctx.l.econ.use.smoke_seaweed.format(30))
 
             await asyncio.sleep(60 * 30)
 
             await self.bot.send_embed(ctx.author, ctx.l.econ.use.seaweed_done)
-            await self.karen.remove_active_fx(ctx.author.id, "Seaweed")
+            await self.karen.remove_active_fx(ctx.author.id, "Alga Marina")
             return
 
         if thing == "vault potion":
