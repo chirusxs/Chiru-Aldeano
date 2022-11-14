@@ -685,11 +685,11 @@
         }
       }
     },
-    "fishing rod": {
+    "caña de pesca": {
       "cat": "tools",
       "buy_price": 1024,
       "db_entry": {
-        "item": "Fishing Rod",
+        "item": "Caña de Pesca",
         "sell_price": 256,
         "sticky": true
       },
@@ -920,7 +920,7 @@
       "Azada de Oro",
       "Azada de Diamante",
       "Azada de Netherite",
-      "Fishing Rod"
+      "Caña de Pesca"
     ],
     "magic": [
       "Libro Fortuna I",
@@ -1207,7 +1207,7 @@
     "Azada de Oro": "gold_hoe",
     "Azada de Diamante": "diamond_hoe",
     "Azada de Netherite": "netherite_hoe",
-    "Fishing Rod": "fishing_rod",
+    "Caña de Pesca": "fishing_rod",
     "Tarro de Abejas": "jar_of_bees",
     "Honey Jar": "honey_jar",
     "Fruta Esmeralda": "farming.normal.emerald_fruit",

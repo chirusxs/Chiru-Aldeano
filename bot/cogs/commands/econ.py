@@ -1129,7 +1129,7 @@ class Econ(commands.Cog):
         if not await self.math_problem(ctx, 5):
             return
 
-        if await self.db.fetch_item(ctx.author.id, "Fishing Rod") is None:
+        if await self.db.fetch_item(ctx.author.id, "Caña de Pesca") is None:
             await ctx.reply_embed(ctx.l.econ.fishing.stupid_1)
             return
 
