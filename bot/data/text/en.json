@@ -2018,8 +2018,8 @@
         "cant_use_up_to": "You can't use any more than {0} **{1}** right now.",
         "done": "The **{}** you chugged earlier has worn off.",
         "need_slimy_balls": "You need one **Bola de Slime** for each **Recipiente de Cristal**.",
-        "slimy_balls_funne": "You've converted {0}x **Bola de Slime** + {0}x **Recipiente de Cristal** into {0}x **Beaker Of Slime**!",
-        "beaker_of_slime_undo": "You've converted {0}x **Beaker Of Slime** into {0}x **Bola de Slime**!",
+        "slimy_balls_funne": "You've converted {0}x **Bola de Slime** + {0}x **Recipiente de Cristal** into {0}x **Recipiente de Slime**!",
+        "beaker_of_slime_undo": "You've converted {0}x **Recipiente de Slime** into {0}x **Bola de Slime**!",
         "use_shield_pearl": "You've used a **Escudo de Perlas** and are now invincible against pillagers for the next month.",
         "use_time_pearl": "You've used a **Perla del Tiempo** which has skipped time forwards two days.",
         "present": [

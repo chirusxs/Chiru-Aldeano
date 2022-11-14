@@ -2018,8 +2018,8 @@
         "cant_use_up_to": "No puedes usar más de {0} **{1}** ahora.",
         "done": "El **{}** que has tragado antes ha desaparecido.",
         "need_slimy_balls": "Necesitas un **Bola de Slime** por cada **Recipiente de Cristal**.",
-        "slimy_balls_funne": "Has convertido {0}x **Bola de Slime** + {0}x **Recipiente de Cristal** en {0}x **Beaker Of Slime**!",
-        "beaker_of_slime_undo": "Has convertido {0}x **Beaker Of Slime** en {0}x **Bola de Slime**!",
+        "slimy_balls_funne": "Has convertido {0}x **Bola de Slime** + {0}x **Recipiente de Cristal** en {0}x **Recipiente de Slime**!",
+        "beaker_of_slime_undo": "Has convertido {0}x **Recipiente de Slime** en {0}x **Bola de Slime**!",
         "use_shield_pearl": "Has usado un **Escudo de Perlas** y ahora eres invencible a los saqueadores por todo el mes.",
         "use_time_pearl": "Usaste una **Perla del Tiempo** la cuál adelantó el tiempo 2 días.",
         "present": [

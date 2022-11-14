@@ -1466,12 +1466,12 @@ class Econ(commands.Cog):
 
             return
 
-        if thing == "present":
+        if thing == "regalo":
             if amount > 1:
                 await ctx.reply_embed(ctx.l.econ.use.stupid_1)
                 return
 
-            await self.db.remove_item(ctx.author.id, "Present", 1)
+            await self.db.remove_item(ctx.author.id, "Regalo", 1)
 
             while True:
                 for item in self.d.mining.findables:
@@ -1533,20 +1533,16 @@ class Econ(commands.Cog):
 
             await self.db.remove_item(ctx.author.id, "Bola de Slime", amount)
             await self.db.remove_item(ctx.author.id, "Recipiente de Cristal", amount)
-            await self.db.add_item(ctx.author.id, "Beaker Of Slime", 13, amount, False)
+            await self.db.add_item(ctx.author.id, "Recipiente de Slime", 13, amount, False)
 
             await ctx.reply_embed(ctx.l.econ.use.slimy_balls_funne.format(amount))
             return
 
-        if thing == "beaker of slime":
-            await self.db.remove_item(ctx.author.id, "Beaker Of Slime", amount)
+        if thing == "recipiente de slime":
+            await self.db.remove_item(ctx.author.id, "Recipiente de Slime", amount)
             await self.db.add_item(ctx.author.id, "Bola de Slime", 5, amount, True)
 
             await ctx.reply_embed(ctx.l.econ.use.beaker_of_slime_undo.format(amount))
-            return
-
-        if thing == "morbius":
-            await ctx.reply_embed("I'M MOOOOOOOORBINGGGG!!!")
             return
 
         if thing == "escudo de perlas":
