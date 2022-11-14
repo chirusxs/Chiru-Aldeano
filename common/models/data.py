@@ -159,7 +159,6 @@ class Emojis(ImmutableBaseModel):
     air: str
     jar_of_bees: str
     honey_jar: str
-    rusty_fishing_hook: str
     ticket: str
     barril: str
     rock: str
@@ -175,12 +174,9 @@ class Emojis(ImmutableBaseModel):
     trophy: str
     aniloading: str
     ender_pearl: str
-    chocolate_chip_cookie: str
-    will_o_wisp: str
     time_pearl: str
     feather: str
     cowboy: str
-    turkey_leg: str
     farming: FarmingEmojis
     reees: list[str]
     fish: FishEmojis
