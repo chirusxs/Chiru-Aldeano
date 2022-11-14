@@ -625,7 +625,7 @@ class Econ(commands.Cog):
 
         await self.paginator.paginate_embed(ctx, get_page, timeout=60, page_count=len(pages))
 
-    @commands.command(name="buy", aliases=["purchase"])
+    @commands.command(name="comprar", aliases=["com"])
     # @commands.cooldown(1, 5, commands.BucketType.user)
     @commands.max_concurrency(1, commands.BucketType.user)
     async def buy(self, ctx: Ctx, *, amount_item: str):
@@ -634,7 +634,7 @@ class Econ(commands.Cog):
         amount_item = amount_item.lower()
         db_user = await self.db.fetch_user(ctx.author.id)
 
-        if amount_item.startswith("max ") or amount_item.startswith("all "):
+        if amount_item.startswith("max ") or amount_item.startswith("máx ") or amount_item.startswith("todo "):
             item = amount_item[4:]
 
             try:
@@ -710,7 +710,7 @@ class Econ(commands.Cog):
 
         sellable = True
         # hoes shouldn't be sellable
-        if shop_item.db_entry.item.endswith("Hoe"):
+        if shop_item.db_entry.item.startswith("Azada"):
             sellable = False
 
         await self.db.add_item(
@@ -723,7 +723,7 @@ class Econ(commands.Cog):
         )
 
         if (
-            shop_item.db_entry.item.endswith("Pickaxe")
+            shop_item.db_entry.item.startswith("Pico")
             or shop_item.db_entry.item == "Amuleto del Pillager"
         ):
             await self.karen.update_support_server_member_roles(ctx.author.id)
