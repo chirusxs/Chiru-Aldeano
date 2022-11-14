@@ -483,10 +483,10 @@ class Econ(commands.Cog):
             )
         )
 
-    @commands.group(name="shop", case_insensitive=True)
+    @commands.group(name="tienda", case_insensitive=True)
     @commands.guild_only()
     @commands.cooldown(2, 10, commands.BucketType.user)
-    async def shop(self, ctx: Ctx):
+    async def tienda(self, ctx: Ctx):
         """Shows the available options in the Villager Shop"""
 
         if ctx.invoked_subcommand is None:
@@ -496,23 +496,23 @@ class Econ(commands.Cog):
             # row 1
             embed.add_field(
                 name=f"__**{ctx.l.econ.shop.tools.format(self.d.emojis.netherite_pickaxe_ench)}**__",
-                value=f"`{ctx.prefix}shop tools`",
+                value=f"`{ctx.prefix}tienda herramientas`",
             )
             embed.add_field(name="\uFEFF", value="\uFEFF")
             embed.add_field(
                 name=f"__**{ctx.l.econ.shop.magic.format(self.d.emojis.enchanted_book)}**__",
-                value=f"`{ctx.prefix}shop magic`",
+                value=f"`{ctx.prefix}tienda magia`",
             )
 
             # row 2
             embed.add_field(
                 name=f"__**{ctx.l.econ.shop.other.format(self.d.emojis.totem)}**__",
-                value=f"`{ctx.prefix}shop other`",
+                value=f"`{ctx.prefix}tienda otros`",
             )
             embed.add_field(name="\uFEFF", value="\uFEFF")
             embed.add_field(
                 name=f"__**{ctx.l.econ.shop.farming.format(self.d.emojis.farming.normal['wheat'])}**__",
-                value=f"`{ctx.prefix}shop farm`",
+                value=f"`{ctx.prefix}tienda agricultura`",
             )
 
             embed.set_footer(text=ctx.l.econ.shop.embed_footer.format(ctx.prefix))
@@ -541,7 +541,7 @@ class Econ(commands.Cog):
             for item in item_pages[page]:
                 embed.add_field(
                     name=f"{emojify_item(self.d, item.db_entry.item)} {item.db_entry.item} ({format_required(self.d, item)})",
-                    value=f"`{ctx.prefix}buy {item.db_entry.item.lower()}`",
+                    value=f"`{ctx.prefix}comprar {item.db_entry.item.lower()}`",
                     inline=False,
                 )
 
@@ -551,7 +551,7 @@ class Econ(commands.Cog):
 
         await self.paginator.paginate_embed(ctx, get_page, timeout=60, page_count=len(item_pages))
 
-    @shop.command(name="tools")
+    @tienda.command(name="herramientas")
     async def shop_tools(self, ctx: Ctx):
         """Allows you to shop for tools"""
 
@@ -559,7 +559,7 @@ class Econ(commands.Cog):
             ctx, "tools", f"{ctx.l.econ.shop.villager_shop} [{ctx.l.econ.shop.tools[3:]}]"
         )
 
-    @shop.command(name="magic")
+    @tienda.command(name="magia")
     async def shop_magic(self, ctx: Ctx):
         """Allows you to shop for magic items"""
 
@@ -567,7 +567,7 @@ class Econ(commands.Cog):
             ctx, "magic", f"{ctx.l.econ.shop.villager_shop} [{ctx.l.econ.shop.magic[3:]}]"
         )
 
-    @shop.command(name="farming", aliases=["farm"])
+    @tienda.command(name="agricultura", aliases=["agri"])
     async def shop_farming(self, ctx: Ctx):
         """Allows you to shop for farming items"""
 
@@ -575,7 +575,7 @@ class Econ(commands.Cog):
             ctx, "farming", f"{ctx.l.econ.shop.villager_shop} [{ctx.l.econ.shop.farming[3:]}]"
         )
 
-    @shop.command(name="other")
+    @tienda.command(name="otros")
     async def shop_other(self, ctx: Ctx):
         """Allows you to shop for other/miscellaneous items"""
 
