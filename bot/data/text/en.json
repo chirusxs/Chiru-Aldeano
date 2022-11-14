@@ -2007,7 +2007,7 @@
         "stupid_5": "You can't use more items than you have!",
         "stupid_6": "Either that isn't a usable item, or it doesn't exist.",
         "vault_max": "You cannot expand your vault further via this method.",
-        "vault_pot": "You've chugged a **Vault Potion**. Your vault space has increased by {} spaces.",
+        "vault_pot": "You've chugged a **Poción de Bóveda**. Your vault space has increased by {} spaces.",
         "smoke_seaweed": "You've eaten some **Alga Marina** which lasts **{} minutes**",
         "use_bonemeal": "You've used some **Hueso Molido** on your crops, making them grow!",
         "seaweed_done": "The **Alga Marina** you ate earlier has worn off.",

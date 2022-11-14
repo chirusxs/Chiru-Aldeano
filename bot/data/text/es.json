@@ -2007,7 +2007,7 @@
         "stupid_5": "No puedes usar mas objetos de los que tienes!",
         "stupid_6": "O no es un objeto utilizable, o no existe.",
         "vault_max": "No se puede expandir más la bóveda con este método.",
-        "vault_pot": "Te has tomado una **Vault Potion**. El espacio de tu bóveda se ha incrementado en {} espacios..",
+        "vault_pot": "Te has tomado una **Poción de Bóveda**. El espacio de tu bóveda se ha incrementado en {} espacios..",
         "smoke_seaweed": "Has comido **Alga Marina** que dura **{} minutos**",
         "use_bonemeal": "Has usado **polvo de hueso** en tus cultivos, haciéndolos crecer!",
         "seaweed_done": "El **Alga Marina** que comiste antes ya no tiene efecto.",

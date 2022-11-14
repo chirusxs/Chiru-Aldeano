@@ -734,7 +734,7 @@ class Econ(commands.Cog):
             or shop_item.db_entry.item == "Amuleto del Pillager"
         ):
             await self.karen.update_support_server_member_roles(ctx.author.id)
-        elif shop_item.db_entry.item == "Rich Person Trophy":
+        elif shop_item.db_entry.item == "Trofeo de Dinero":
             await self.db.rich_trophy_wipe(ctx.author.id)
             await self.karen.update_support_server_member_roles(ctx.author.id)
 
@@ -965,7 +965,7 @@ class Econ(commands.Cog):
                 * 20
             )
             multi += (
-                await self.db.fetch_item(ctx.author.id, "Rich Person Trophy") is not None
+                await self.db.fetch_item(ctx.author.id, "Trofeo de Dinero") is not None
             ) * 40
             multi = (150 + random.randint(-5, 0)) if multi >= 150 else multi
             multi /= 100
@@ -1081,7 +1081,7 @@ class Econ(commands.Cog):
 
             found = int(found) * random.randint(1, 2)
 
-            if await self.db.fetch_item(ctx.author.id, "Rich Person Trophy") is not None:
+            if await self.db.fetch_item(ctx.author.id, "Trofeo de Dinero") is not None:
                 found *= 2
 
             await self.db.balance_add(ctx.author.id, found)
@@ -1423,7 +1423,7 @@ class Econ(commands.Cog):
             await self.karen.remove_active_fx(ctx.author.id, "Alga Marina")
             return
 
-        if thing == "vault potion":
+        if thing == "poción de bóveda":
             if amount > 1:
                 await ctx.reply_embed(ctx.l.econ.use.stupid_1)
                 return
@@ -1439,7 +1439,7 @@ class Econ(commands.Cog):
             if db_user.vault_max + add > 2000:
                 add = 2000 - db_user.vault_max
 
-            await self.db.remove_item(ctx.author.id, "Vault Potion", 1)
+            await self.db.remove_item(ctx.author.id, "Poción de Bóveda", 1)
             await self.db.set_vault(ctx.author.id, db_user.vault_balance, db_user.vault_max + add)
 
             await ctx.reply_embed(ctx.l.econ.use.vault_pot.format(add))
@@ -1511,7 +1511,7 @@ class Econ(commands.Cog):
 
             ems = random.randint(2, 4096)
 
-            if await self.db.fetch_item(ctx.author.id, "Rich Person Trophy") is not None:
+            if await self.db.fetch_item(ctx.author.id, "Trofeo de Dinero") is not None:
                 ems *= 1.5
                 ems = round(ems)
 
@@ -2059,7 +2059,7 @@ class Econ(commands.Cog):
 
             total_ems = sum([float(item["amount"]) * item["value"] for item in items])
             total_ems *= (
-                await self.db.fetch_item(ctx.author.id, "Rich Person Trophy") is not None
+                await self.db.fetch_item(ctx.author.id, "Trofeo de Dinero") is not None
             ) + 1
             total_ems *= (await self.db.fetch_item(ctx.author.id, "Reciclador") is not None) + 1
 
@@ -2078,7 +2078,7 @@ class Econ(commands.Cog):
         total_ems, amount = await self.db.empty_trashcan(ctx.author.id)
 
         total_ems = math.floor(total_ems)
-        total_ems *= (await self.db.fetch_item(ctx.author.id, "Rich Person Trophy") is not None) + 1
+        total_ems *= (await self.db.fetch_item(ctx.author.id, "Trofeo de Dinero") is not None) + 1
         total_ems *= (await self.db.fetch_item(ctx.author.id, "Reciclador") is not None) + 1
 
         await self.db.balance_add(ctx.author.id, total_ems)

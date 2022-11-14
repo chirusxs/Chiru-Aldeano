@@ -2007,7 +2007,7 @@
         "stupid_5": "Tu ne peux pas utiliser plus d'objet que tu en as !",
         "stupid_6": "Soit cet objet est inutilisable, soit il n'existe pas.",
         "vault_max": "Tu ne peux plus agrandir ton coffre de cette manière.",
-        "vault_pot": "Tu as descendu une **Vault Potion**. Ton coffre s'est agrandi de {} emplacements.",
+        "vault_pot": "Tu as descendu une **Poción de Bóveda**. Ton coffre s'est agrandi de {} emplacements.",
         "smoke_seaweed": "Tu as mangé des **Alga Marina** dont les effets durent **{} minutes**",
         "use_bonemeal": "Vous avez utilisé de la Boudre d'Os sur vos cultures, les faisant pousser!",
         "seaweed_done": "Les effets des **Alga Marina** que tu as mangés plus tôt se sont dissipés.",

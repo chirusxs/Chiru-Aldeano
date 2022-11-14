@@ -555,7 +555,7 @@
       "requires": {
         "count_lt": 1,
         "items": {
-          "Netherite Scrap": 4
+          "Fragmento de Netherite": 4
         }
       }
     },
@@ -618,7 +618,7 @@
       "requires": {
         "count_lt": 1,
         "items": {
-          "Netherite Scrap": 6
+          "Fragmento de Netherite": 6
         }
       }
     },
@@ -681,7 +681,7 @@
       "requires": {
         "count_lt": 1,
         "items": {
-          "Netherite Scrap": 2
+          "Fragmento de Netherite": 2
         }
       }
     },
@@ -727,21 +727,21 @@
       },
       "requires": {}
     },
-    "netherite scrap": {
+    "fragmento de netherite": {
       "cat": "other",
       "buy_price": 32,
       "db_entry": {
-        "item": "Netherite Scrap",
+        "item": "Fragmento de Netherite",
         "sell_price": 8,
         "sticky": false
       },
       "requires": {}
     },
-    "rich person trophy": {
+    "trofeo de dinero": {
       "cat": "magic",
       "buy_price": 36000,
       "db_entry": {
-        "item": "Rich Person Trophy",
+        "item": "Trofeo de Dinero",
         "sell_price": 1024,
         "sticky": true
       },
@@ -749,11 +749,11 @@
         "count_lt": 1
       }
     },
-    "vault potion": {
+    "poción de bóveda": {
       "cat": "magic",
       "buy_price": 81,
       "db_entry": {
-        "item": "Vault Potion",
+        "item": "Poción de Bóveda",
         "sell_price": 30,
         "sticky": false
       },
@@ -889,13 +889,13 @@
           "Ender Pearl": 1,
           "Antimeralda": 5,
           "Slime Ball": 4,
-          "Netherite Scrap": 100
+          "Fragmento de Netherite": 100
         }
       }
     }
   },
   "rpt_ignore": [
-    "Rich Person Trophy",
+    "Trofeo de Dinero",
     "Amuleto del Pillager",
     "Slime Trophy",
     "Fishing Trophy"
@@ -935,15 +935,15 @@
       "Poción Apuro II",
       "Libro Atracción I",
       "Alga Marina",
-      "Vault Potion",
+      "Poción de Bóveda",
       "Amuleto del Pillager",
       "Slime Trophy",
-      "Rich Person Trophy",
+      "Trofeo de Dinero",
       "Fishing Trophy",
       "Poción de Suerte"
     ],
     "material": [
-      "Netherite Scrap",
+      "Fragmento de Netherite",
       "Slime Ball",
       "Corazón del Mar"
     ],
@@ -1164,7 +1164,7 @@
     ]
   },
   "emoji_items": {
-    "Netherite Scrap": "netherite",
+    "Fragmento de Netherite": "netherite",
     "Slime Ball": "slimeball",
     "Corazón del Mar": "heart_of_the_sea",
     "Cod": "fish.cod",
@@ -1187,7 +1187,7 @@
     "Present": "present",
     "Poción Apuro I": "glass_bottle",
     "Poción Apuro II": "glass_bottle",
-    "Vault Potion": "glass_bottle",
+    "Poción de Bóveda": "glass_bottle",
     "Poción de Suerte": "glass_bottle",
     "Espada de Madera": "wood_sword",
     "Espada de Piedra": "stone_sword",
@@ -1234,7 +1234,7 @@
     "Guacamole Sombrero": "guacamole_sombrero",
     "Dirt Block": "dirt_block",
     "Forever Alone Trophy": "trophy",
-    "Rich Person Trophy": "trophy",
+    "Trofeo de Dinero": "trophy",
     "Ender Pearl": "ender_pearl",
     "Chocolate Chip Cookie": "chocolate_chip_cookie",
     "Will O Wisp": "will_o_wisp",
