@@ -155,9 +155,9 @@ class VillagerBotCluster(commands.AutoShardedBot, PacketHandlerRegistry):
 
     def get_language(self, ctx: CustomContext) -> Translation:
         if ctx.guild:
-            return self.l[self.language_cache.get(ctx.guild.id, "en")]
+            return self.l[self.language_cache.get(ctx.guild.id, "es")]
 
-        return self.l["en"]
+        return self.l["es"]
 
     async def on_ready(self):
         if self.cluster_id == 0:

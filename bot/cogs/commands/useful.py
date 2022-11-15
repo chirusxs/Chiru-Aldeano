@@ -79,26 +79,23 @@ class Useful(commands.Cog):
         embed.description = lang.help.main.desc.format(self.d.support, self.d.topgg)
 
         embed.add_field(
-            name=(self.d.emojis.emerald_spinn + lang.help.n.economy), value=f"`{prefix}help econ`"
+            name=(self.d.emojis.emerald_spinn + lang.help.n.economy), value=f"`{prefix}ayuda econ`"
         )
         embed.add_field(
-            name=(self.d.emojis.bounce + " " + lang.help.n.minecraft), value=f"`{prefix}help mc`"
+            name=(self.d.emojis.bounce + " " + lang.help.n.minecraft), value=f"`{prefix}ayuda mc`"
         )
         embed.add_field(
-            name=(self.d.emojis.anichest + lang.help.n.utility), value=f"`{prefix}help util`"
+            name=(self.d.emojis.anichest + lang.help.n.utility), value=f"`{prefix}ayuda util`"
         )
 
         embed.add_field(
-            name=(self.d.emojis.rainbow_shep + lang.help.n.fun), value=f"`{prefix}help diversión`"
+            name=(self.d.emojis.rainbow_shep + lang.help.n.fun), value=f"`{prefix}ayuda diversión`"
         )
         embed.add_field(
             name=(self.d.emojis.netherite_sword_ench + lang.help.n.admin),
-            value=f"`{prefix}help admin`",
+            value=f"`{prefix}ayuda admin`",
         )
-        embed.add_field(
-            name=(self.d.emojis.heart_spin + lang.help.main.support),
-            value=f"**[{lang.help.main.clickme}]({self.d.support})**",
-        )
+        embed.add_field(name="\uFEFF", value="\uFEFF")
 
         embed.set_footer(
             text=lang.useful.credits.foot.format(prefix)
@@ -112,7 +109,7 @@ class Useful(commands.Cog):
     async def help_slash_command(self, inter: discord.Interaction):
         """Revisa el menú de ayuda de Chiru Aldeano"""
 
-        language = self.bot.l[self.bot.language_cache.get(inter.guild_id, "en")]
+        language = self.bot.l[self.bot.language_cache.get(inter.guild_id, "es")]
         prefix = self.bot.prefix_cache.get(inter.guild_id, self.bot.k.default_prefix)
         await inter.response.send_message(embed=self._get_main_help_embed(language, prefix))
 
@@ -236,7 +233,7 @@ class Useful(commands.Cog):
 
         await ctx.reply(embed=embed, mention_author=False)
 
-    @commands.command(name="creditos")
+    @commands.command(name="créditos", aliases=["creditos"])
     @commands.cooldown(1, 2, commands.BucketType.user)
     async def credits(self, ctx: Ctx):
         embed_template = discord.Embed(color=self.bot.embed_color)

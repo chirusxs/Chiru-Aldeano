@@ -28,8 +28,8 @@ def check_obj(keys: list[Any], obj: Any, against: Any, against_name: str):
 
 
 def main():
-    with open("text/en.json", "r", encoding="utf8") as f:
-        en_data = json.load(f)["en"]
+    with open("text/es.json", "r", encoding="utf8") as f:
+        en_data = json.load(f)["es"]
 
     for filename in os.listdir("text"):
         with open(f"text/{filename}", "r", encoding="utf8") as f:

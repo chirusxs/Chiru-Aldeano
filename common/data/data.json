@@ -1,6 +1,6 @@
 {
   "embed_color": "green",
-  "splash_logo": "http://iapetus11.me/images/villager-splash.png",
+  "splash_logo": "https://i.imgur.com/FbfrRmD.png",
   "support": "https://discord.gg/ZC8shhpSkf",
   "invite": "https://discord.com/oauth2/authorize?client_id={bot_id}&permissions=1074130126&scope=bot%20applications.commands",
   "topgg": "https://top.gg/bot/639498607632056321",
@@ -10,7 +10,8 @@
   "tip_chance": 150,
   "topgg_reward": 32,
   "credit_users": {
-    "chirualdeano": 965701189339582524
+    "Chiruso": 851072040189427722,
+    "iapetus11": 536986067140608041
   },
   "upvote_emoji_image": "https://cdn.discordapp.com/emojis/682422396636233769.png",
   "acceptable_prefix_chars": [

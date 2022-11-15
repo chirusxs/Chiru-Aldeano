@@ -92,7 +92,7 @@ class Events(commands.Cog):
         if channel is None:
             return
 
-        translation = self.bot.l[self.bot.language_cache.get(guild.id, "en")]
+        translation = self.bot.l[self.bot.language_cache.get(guild.id, "es")]
 
         embed = discord.Embed(
             color=self.bot.embed_color,
@@ -217,7 +217,7 @@ class Events(commands.Cog):
 
                     embed.set_author(name="Chiru Aldeano", icon_url=self.d.splash_logo)
                     embed.set_footer(
-                        text=f"Bot oficial de la comunidad CHIRUSXS ({self.k.default_prefix}creditos)  |  Revisa las {self.k.default_prefix}reglasbot"
+                        text=f"Bot oficial de la comunidad CHIRUSXS ({self.k.default_prefix}créditos)  |  Revisa las {self.k.default_prefix}reglasbot"
                     )
 
                     await message.channel.send(embed=embed)
