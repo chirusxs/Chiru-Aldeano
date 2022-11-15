@@ -1709,8 +1709,8 @@
         "reminder": "{0}, you wanted me to remind you: *{1}*"
       },
       "credits": {
-        "credits": "Villager Bot wouldn't be possible without...",
-        "foot": "Made by Iapetus11 and others ({0}credits)",
+        "credits": "Créditos del bot",
+        "foot": "Bot oficial de la comunidad CHIRUSXS ({0}creditos)",
         "people": {
           "iapetus11": "The creator, owner, and developer of Villager Bot",
           "hpancakesk": "Helped come up with the original ideas behind Villager Bot",

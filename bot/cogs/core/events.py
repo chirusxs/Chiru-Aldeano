@@ -103,7 +103,7 @@ class Events(commands.Cog):
             ),
         )
 
-        embed.set_author(name="Villager Bot", icon_url=self.d.splash_logo)
+        embed.set_author(name="Chiru Aldeano", icon_url=self.d.splash_logo)
         embed.set_footer(text=translation.misc.intro.footer.format(prefix=self.k.default_prefix))
 
         with suppress(discord.errors.Forbidden):
@@ -211,13 +211,13 @@ class Events(commands.Cog):
                 if prior_messages < 1:
                     embed = discord.Embed(
                         color=self.bot.embed_color,
-                        description=f"Hey {message.author.mention}! Type `{self.k.default_prefix}help` to get started with Villager Bot!\n"
-                        f"If you need any more help, check out the **[Support Server]({self.d.support})**!",
+                        description=f"¡Hola {message.author.mention}! Escribe `{self.k.default_prefix}ayuda` para comenzar con el bot!\n"
+                        f"Si necesitas más ayuda, abre un ticket en <#832033137742708737>",
                     )
 
-                    embed.set_author(name="Villager Bot", icon_url=self.d.splash_logo)
+                    embed.set_author(name="Chiru Aldeano", icon_url=self.d.splash_logo)
                     embed.set_footer(
-                        text=f"Made by Iapetus11 and others ({self.k.default_prefix}credits)  |  Check the {self.k.default_prefix}rules"
+                        text=f"Bot oficial de la comunidad CHIRUSXS ({self.k.default_prefix}creditos)  |  Revisa las {self.k.default_prefix}reglasbot"
                     )
 
                     await message.channel.send(embed=embed)
@@ -243,7 +243,7 @@ class Events(commands.Cog):
                 color=self.bot.embed_color,
                 description=lang.misc.pingpong.format(prefix, self.d.support),
             )
-            embed.set_author(name="Villager Bot", icon_url=self.d.splash_logo)
+            embed.set_author(name="Chiru Aldeano", icon_url=self.d.splash_logo)
             embed.set_footer(text=lang.useful.credits.foot.format(prefix))
 
             with suppress(discord.errors.HTTPException):
