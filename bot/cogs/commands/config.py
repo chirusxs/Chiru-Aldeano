@@ -37,7 +37,7 @@ class Config(commands.Cog):
 
             await ctx.reply(embed=embed, mention_author=False)
 
-    @config.command(name="prefix")
+    @config.command(name="prefijo", aliases=["prefix"])
     @commands.guild_only()
     @commands.has_permissions(administrator=True)
     @commands.cooldown(1, 2, commands.BucketType.user)
@@ -60,7 +60,7 @@ class Config(commands.Cog):
         self.bot.prefix_cache[ctx.guild.id] = prefix
         await ctx.reply_embed(ctx.l.config.prefix.set.format(prefix))
 
-    @config.command(name="replies")
+    @config.command(name="respuestas")
     @commands.guild_only()
     @commands.has_permissions(administrator=True)
     @commands.cooldown(1, 2, commands.BucketType.user)
@@ -73,12 +73,12 @@ class Config(commands.Cog):
             await ctx.reply_embed(ctx.l.config.replies.this_server.format(state))
             return
 
-        if replies.lower() in ("yes", "true", "on"):
+        if replies.lower() in ("sí", "si", "activar"):
             await self.db.set_guild_attr(ctx.guild.id, "do_replies", True)
             self.bot.replies_cache.add(ctx.guild.id)
 
             await ctx.reply_embed(ctx.l.config.replies.set.format("on"))
-        elif replies.lower() in ("no", "false", "off"):
+        elif replies.lower() in ("no", "desactivar"):
             await self.db.set_guild_attr(ctx.guild.id, "do_replies", False)
 
             try:
@@ -88,7 +88,7 @@ class Config(commands.Cog):
 
             await ctx.reply_embed(ctx.l.config.replies.set.format("off"))
         else:
-            await ctx.reply_embed(ctx.l.config.invalid.format("`on`, `off`"))
+            await ctx.reply_embed(ctx.l.config.invalid.format("`sí`, `no`"))
 
     @config.command(name="difficulty", aliases=["diff"])
     @commands.guild_only()
@@ -100,19 +100,19 @@ class Config(commands.Cog):
             await ctx.reply_embed(ctx.l.config.diff.this_server.format(guild.difficulty))
             return
 
-        if diff.lower() == "peaceful":
+        if diff.lower() == "pacífico" or "pacifico":
             await self.db.set_guild_attr(ctx.guild.id, "difficulty", "peaceful")
             await ctx.reply_embed(ctx.l.config.diff.set.format("peaceful"))
-        elif diff.lower() == "easy":
+        elif diff.lower() == "fácil" or "facil":
             await self.db.set_guild_attr(ctx.guild.id, "difficulty", "easy")
             await ctx.reply_embed(ctx.l.config.diff.set.format("easy"))
-        elif diff.lower() == "hard":
+        elif diff.lower() == "díficil" or "dificil":
             await self.db.set_guild_attr(ctx.guild.id, "difficulty", "hard")
             await ctx.reply_embed(ctx.l.config.diff.set.format("hard"))
         else:
-            await ctx.reply_embed(ctx.l.config.invalid.format("`peaceful`, `easy`, `hard`"))
+            await ctx.reply_embed(ctx.l.config.invalid.format("`pacífico`, `fácil`, `díficil`"))
 
-    @config.command(name="language", aliases=["lang"])
+    @config.command(name="idioma")
     @commands.guild_only()
     @commands.has_permissions(administrator=True)
     @commands.cooldown(1, 2, commands.BucketType.user)
@@ -140,7 +140,7 @@ class Config(commands.Cog):
                 ctx.l.config.invalid.format("`{}`".format("`, `".join(lang_codes)))
             )
 
-    @config.command(name="defaultserver", aliases=["defaultmcserver", "mcserver"])
+    @config.command(name="servidorminecraft")
     @commands.guild_only()
     @commands.has_permissions(administrator=True)
     @commands.cooldown(1, 2, commands.BucketType.user)
@@ -157,7 +157,7 @@ class Config(commands.Cog):
         await self.db.set_guild_attr(ctx.guild.id, "mc_server", mc_server)
         await ctx.reply_embed(ctx.l.config.mcs.set.format(mc_server))
 
-    @config.command(name="togglecommand", aliases=["togglecmd", "toggleenabled"])
+    @config.command(name="alternarcomando")
     @commands.guild_only()
     @commands.has_permissions(administrator=True)
     @commands.cooldown(1, 2, commands.BucketType.user)
@@ -198,7 +198,7 @@ class Config(commands.Cog):
             await self.db.set_cmd_usable(ctx.guild.id, cmd_true, False)
             await ctx.reply_embed(ctx.l.config.cmd.disable.format(cmd_true))
 
-    @config.command(name="giftalert", aliases=["gift", "give", "givealert"])
+    @config.command(name="alertaregalo")
     @commands.cooldown(1, 2, commands.BucketType.user)
     async def config_gift_alert(self, ctx: Ctx, alert=None):
         if alert is None:
@@ -210,17 +210,17 @@ class Config(commands.Cog):
             )
             return
 
-        if alert.lower() in ("yes", "true", "on"):
+        if alert.lower() in ("sí", "si", "activar"):
             await self.db.update_user(ctx.author.id, give_alert=True)
             await ctx.reply_embed(ctx.l.config.gift.set.format("on"))
-        elif alert.lower() in ("no", "false", "off"):
+        elif alert.lower() in ("no", "desactivar"):
             await self.db.update_user(ctx.author.id, give_alert=False)
             await ctx.reply_embed(ctx.l.config.gift.set.format("off"))
         else:
-            await ctx.reply_embed(ctx.l.config.invalid.format("`on`, `off`"))
+            await ctx.reply_embed(ctx.l.config.invalid.format("`sí`, `no`"))
 
     @config.command(
-        name="clearrconpasswords", aliases=["clearpasswords", "deletepasswords", "delrconpasswords"]
+        name="rconlimpiar"
     )
     @commands.cooldown(1, 2, commands.BucketType.user)
     async def config_clear_rcon_passwords(self, ctx: Ctx):
