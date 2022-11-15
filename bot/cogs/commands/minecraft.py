@@ -62,12 +62,13 @@ class Minecraft(commands.Cog):
                 await ctx.reply_embed(ctx.l.minecraft.mcping.shortcut_error.format(ctx.prefix))
                 return
         else:
-            port_str = ""
+            if ctx.guild is None:
+                raise commands.MissingRequiredArgument(cj.ClassyDict({"name": "host"}))
 
-            if port is not None and port != 0:
-                port_str = f":{port}"
-
-            combined = f"{host}{port_str}"
+            combined = (await self.db.fetch_guild(ctx.guild.id)).mc_server
+            if combined is None:
+                await ctx.reply_embed(ctx.l.minecraft.mcping.shortcut_error.format(ctx.prefix))
+                return
 
         fail = False
         jj: dict = None
