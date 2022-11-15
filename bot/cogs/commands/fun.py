@@ -301,17 +301,5 @@ class Fun(commands.Cog):
         else:
             await self.trivia_multiple_choice(ctx, question, do_reward)
 
-    @commands.command(name="gayrate", aliases=["gaypercent"])
-    async def gay_rate(self, ctx: Ctx, *, thing: typing.Union[discord.Member, str] = None):
-        if thing is None:
-            thing = ctx.author.mention
-        elif isinstance(thing, discord.Member):
-            thing = thing.mention
-
-        await ctx.reply_embed(
-            ctx.l.fun.gayrate.format("\uFEFF :rainbow_flag: \uFEFF", shorten_text(thing, 256))
-        )
-
-
 async def setup(bot: VillagerBotCluster) -> None:
     await bot.add_cog(Fun(bot))
