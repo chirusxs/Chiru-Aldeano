@@ -130,7 +130,6 @@ class Useful(commands.Cog):
                         **ctx.l.help.mc,
                         **ctx.l.help.util,
                         **ctx.l.help.fun,
-                        **ctx.l.help.mod,
                     }
 
                     help_text = all_help.get(str(cmd_true))

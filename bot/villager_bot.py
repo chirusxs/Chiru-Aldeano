@@ -69,7 +69,6 @@ class VillagerBotCluster(commands.AutoShardedBot, PacketHandlerRegistry):
             "commands.config",
             "commands.econ",
             "commands.minecraft",
-            "commands.mod",
             "commands.fun",
         ]
 
