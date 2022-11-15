@@ -87,14 +87,14 @@ class Fun(commands.Cog):
 
             await ctx.send(embed=embed)
 
-    @commands.command(name="villagerspeak")
+    @commands.command(name="traductoraldeano")
     async def villager_speak(self, ctx: Ctx, *, text: str):
         """Turns the given text into Minecraft villager sounds as text"""
 
         translated = self.lang_convert(clean_text(ctx.message, text), self.d.fun_langs.villager)
         await ctx.send(shorten_text(translated))
 
-    @commands.command(name="enchant")
+    @commands.command(name="encantar")
     async def enchant_lang(self, ctx: Ctx, *, text: str):
         """Turns regular text into the Minecraft enchantment table language"""
 
@@ -103,7 +103,7 @@ class Fun(commands.Cog):
         )
         await ctx.send(shorten_text(translated))
 
-    @commands.command(name="unenchant")
+    @commands.command(name="desencantar")
     async def unenchant_lang(self, ctx: Ctx, *, text: str):
         """Turns the Minecraft enchantment table language back into regular text"""
 
@@ -113,7 +113,7 @@ class Fun(commands.Cog):
         translated = self.lang_convert(clean_text(ctx.message, text), self.d.fun_langs.vaporwave)
         await ctx.send(shorten_text(translated))
 
-    @commands.command(name="owo", aliases=["owofy"])
+    @commands.command(name="owo", aliases=["uwu"])
     async def owofy_text(self, ctx: Ctx, *, text):
         """Make any text more cringe"""
 
@@ -124,9 +124,11 @@ class Fun(commands.Cog):
         else:
             await ctx.send(f"{text} {random.choice(self.d.owos)}")
 
-    @commands.command(name="coinflip", aliases=["flipcoin", "cf"])
+    @commands.command(name="lanzarmoneda", aliases=["flipcoin"])
     async def coin_flip(self, ctx: Ctx):
         await ctx.send_embed(random.choice(("heads", "tails")))
+
+    # Trivia stuff
 
     def calculate_trivia_reward(self, question_difficulty: int) -> int:
         return int((random.random() + 0.25) * (question_difficulty + 0.25) * 9) + 1
