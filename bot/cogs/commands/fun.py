@@ -74,27 +74,6 @@ class Fun(commands.Cog):
 
         await ctx.send(embed=embed)
 
-    @commands.command(name="meme", aliases=["meemee", "meem", "maymay", "mehmeh"])
-    @commands.cooldown(1, 1.5, commands.BucketType.user)
-    async def meme(self, ctx: Ctx):
-        """Sends a meme from reddit"""
-
-        await self.reddit_post_logic(ctx, "meme")
-
-    @commands.command(name="4chan", aliases=["greentext"])
-    @commands.cooldown(1, 1.5, commands.BucketType.user)
-    async def greentext(self, ctx: Ctx):
-        """Sends a greentext from r/greentext"""
-
-        await self.reddit_post_logic(ctx, "greentext", show_details=False)
-
-    @commands.command(name="comic")
-    @commands.cooldown(1, 1.5, commands.BucketType.user)
-    async def comic(self, ctx: Ctx):
-        """Sends a comic from r/comics"""
-
-        await self.reddit_post_logic(ctx, "comic")
-
     @commands.command(name="cursed", aliases=["cursedmc"])
     @commands.cooldown(1, 1.5, commands.BucketType.user)
     async def cursed_mc(self, ctx: Ctx):
@@ -107,29 +86,6 @@ class Fun(commands.Cog):
             )
 
             await ctx.send(embed=embed)
-
-    @commands.command(name="say")
-    async def say_text(self, ctx: Ctx, *, text: str):
-        """Sends whatever is put into the command"""
-
-        text = clean_text(ctx.message, text)
-
-        if text.lower() in {
-            "i am stupid",
-            "i am dumb",
-            "i am very stupid",
-            "i am very dumb",
-            "i stupid",
-            "i'm stupid",
-            "i'm dumb",
-        }:
-            await ctx.reply("Yes.")
-            return
-
-        with suppress(discord.errors.HTTPException):
-            await ctx.message.delete()
-
-        await ctx.send(text)
 
     @commands.command(name="villagerspeak")
     async def villager_speak(self, ctx: Ctx, *, text: str):
@@ -154,62 +110,8 @@ class Fun(commands.Cog):
         translated = self.lang_convert(clean_text(ctx.message, text), self.d.fun_langs.unenchant)
         await ctx.send(shorten_text(translated))
 
-    @commands.command(name="vaporwave")
-    async def vaporwave_text(self, ctx: Ctx, *, text: str):
-        """Turns regular text into vaporwave text"""
-
         translated = self.lang_convert(clean_text(ctx.message, text), self.d.fun_langs.vaporwave)
         await ctx.send(shorten_text(translated))
-
-    @commands.command(name="sarcastic", aliases=["spongebob"])
-    async def sarcastic_text(self, ctx: Ctx, *, text: str):
-        """Turns regular text into "sarcastic" text from spongebob"""
-
-        text = clean_text(ctx.message, text)
-
-        caps = True
-        sarcastic = ""
-
-        for letter in text:
-            if not letter == " ":
-                caps = not caps
-
-            if caps:
-                sarcastic += letter.upper()
-            else:
-                sarcastic += letter.lower()
-
-        await ctx.send(sarcastic)
-
-    @commands.command(name="clap")
-    async def clap_cheeks(self, ctx: Ctx, *, text: str):
-        """Puts the :clap: emoji between words"""
-
-        clapped = ":clap: " + " :clap: ".join(clean_text(ctx.message, text).split(" ")) + " :clap:"
-
-        if len(clapped) > 2000:
-            await ctx.send_embed(ctx.l.fun.too_long)
-            return
-
-        await ctx.send(clapped)
-
-    @commands.command(name="emojify")
-    async def emojify(self, ctx: Ctx, *, text: str):
-        """Turns text or images into emojis"""
-
-        text = clean_text(ctx.message, text)
-        emojified = ""
-
-        for letter in text:
-            if letter in "abcdefghijklmnopqrstuvwxyz":
-                emojified += f":regional_indicator_{letter}: "
-            else:
-                emojified += self.d.emojified.get(letter, letter) + " "
-
-        if len(emojified) > 2000:
-            await ctx.send_embed(ctx.l.fun.too_long)
-        else:
-            await ctx.send(emojified)
 
     @commands.command(name="owo", aliases=["owofy"])
     async def owofy_text(self, ctx: Ctx, *, text):
@@ -222,101 +124,9 @@ class Fun(commands.Cog):
         else:
             await ctx.send(f"{text} {random.choice(self.d.owos)}")
 
-    @commands.command(name="bubblewrap", aliases=["pop"])
-    async def bubblewrap(self, ctx: Ctx, size=None):
-        """Sends bubblewrap to the chat"""
-
-        if size is None:
-            size = (10, 10)
-        else:
-            size = size.split("x")
-
-            if len(size) != 2:
-                await ctx.send_embed(ctx.l.fun.bubblewrap.invalid_size_1)
-                return
-
-            try:
-                size[0] = int(size[0])
-                size[1] = int(size[1])
-            except ValueError:
-                await ctx.send_embed(ctx.l.fun.bubblewrap.invalid_size_1)
-                return
-
-            for val in size:
-                if val < 1 or val > 12:
-                    await ctx.send_embed(ctx.l.fun.bubblewrap.invalid_size_2)
-                    return
-
-        bubble = "||**pop**||"
-        await ctx.send_embed(f"{bubble*size[0]}\n" * size[1])
-
-    @commands.command(name="kill", aliases=["die", "kil", "dorito"])
-    async def kill_thing(self, ctx: Ctx, *, thing: typing.Union[discord.Member, str]):
-        if isinstance(thing, discord.Member):
-            thing = thing.mention
-
-        await ctx.send_embed(
-            random.choice(self.d.kills).format(shorten_text(thing, 500), ctx.author.mention)
-        )
-
     @commands.command(name="coinflip", aliases=["flipcoin", "cf"])
     async def coin_flip(self, ctx: Ctx):
         await ctx.send_embed(random.choice(("heads", "tails")))
-
-    @commands.command(name="pat")
-    @commands.guild_only()
-    async def pat(self, ctx: Ctx, users: commands.Greedy[discord.Member] = [], *, text: str = ""):
-        resp = await self.bot.aiohttp.get("https://rra.ram.moe/i/r?type=pat")
-        image_url = "https://rra.ram.moe" + (await resp.json())["path"]
-
-        embed = discord.Embed(
-            color=self.bot.embed_color,
-            title=f"**{discord.utils.escape_markdown(ctx.author.display_name)}** pats {', '.join(f'**{discord.utils.escape_markdown(u.display_name)}**' for u in users)} {text}"[
-                :256
-            ],
-        )
-        embed.set_image(url=image_url)
-
-        await ctx.send(embed=embed)
-
-    @commands.command(name="slap")
-    @commands.guild_only()
-    async def slap(self, ctx: Ctx, users: commands.Greedy[discord.Member] = [], *, text: str = ""):
-        resp = await self.bot.aiohttp.get("https://rra.ram.moe/i/r?type=slap")
-        image_url = "https://rra.ram.moe" + (await resp.json())["path"]
-
-        embed = discord.Embed(
-            color=self.bot.embed_color,
-            title=shorten_text(
-                f"**{discord.utils.escape_markdown(ctx.author.display_name)}** slaps {', '.join(f'**{discord.utils.escape_markdown(u.display_name)}**' for u in users)} {text}",
-                256,
-            ),
-        )
-        embed.set_image(url=image_url)
-
-        await ctx.send(embed=embed)
-
-    @commands.command(name="achievement", aliases=["mcachieve"])
-    @commands.cooldown(1, 1, commands.BucketType.user)
-    async def minecraft_achievement(self, ctx: Ctx, *, text: str):
-        url = f"https://api.iapetus11.me/mc/image/achievement/{urlquote(shorten_text(text, 26))}"
-        embed = discord.Embed(color=self.bot.embed_color)
-
-        embed.description = ctx.l.fun.dl_img.format(url)
-        embed.set_image(url=url)
-
-        await ctx.send(embed=embed)
-
-    @commands.command(name="splashtext", aliases=["mcsplash", "splashscreen", "splash"])
-    @commands.cooldown(1, 1, commands.BucketType.user)
-    async def minecraft_splash_screen(self, ctx: Ctx, *, text: str):
-        url = f"https://api.iapetus11.me/mc/image/splash/{urlquote(shorten_text(text, 27))}"
-        embed = discord.Embed(color=self.bot.embed_color)
-
-        embed.description = ctx.l.fun.dl_img.format(url)
-        embed.set_image(url=url)
-
-        await ctx.send(embed=embed)
 
     def calculate_trivia_reward(self, question_difficulty: int) -> int:
         return int((random.random() + 0.25) * (question_difficulty + 0.25) * 9) + 1
