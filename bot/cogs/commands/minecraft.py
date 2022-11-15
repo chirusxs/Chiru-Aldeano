@@ -112,9 +112,8 @@ class Minecraft(commands.Cog):
         )
 
         embed.add_field(name=ctx.l.minecraft.mcping.latency, value=f'{jj["latency"]}ms')
-        ver = jj["version"].get("brand", "Unknown")
         embed.add_field(
-            name=ctx.l.minecraft.mcping.version, value=("1.19.2" if ver is None else ver)
+            name=ctx.l.minecraft.mcping.version, value=("1.19.2")
         )
 
         player_list_cut = []
