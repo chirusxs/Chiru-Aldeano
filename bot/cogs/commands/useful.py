@@ -89,7 +89,7 @@ class Useful(commands.Cog):
         )
 
         embed.add_field(
-            name=(self.d.emojis.rainbow_shep + lang.help.n.fun), value=f"`{prefix}help fun`"
+            name=(self.d.emojis.rainbow_shep + lang.help.n.fun), value=f"`{prefix}help diversión`"
         )
         embed.add_field(
             name=(self.d.emojis.netherite_sword_ench + lang.help.n.admin),
