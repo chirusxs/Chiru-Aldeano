@@ -1316,8 +1316,8 @@
       "mcping": {
         "shortcut_error": "To use this shortcut, you must set a default Minecraft server to ping via `{}config`",
         "title_offline": "{} no server found at `{}`",
-        "title_online": "¡El servidor está en línea",
-        "title_plain": "El servidor no está en línea.",
+        "title_online": "{} ¡El servidor está en línea",
+        "title_plain": "{} El servidor no está en línea.",
         "latency": "Ping",
         "version": "IP",
         "field_online_players": {
