@@ -156,7 +156,7 @@ class Badges(commands.Cog):
         elif murderer_level < 1 and murders >= 100:
             await self.update_user_badges(user_id, murderer=1)
 
-    async def update_badge_fisherman(self, user_id: int, fishies_fished: int) -> None:
+    async def update_badge_fisherman(self, user_id: int, fish_fished: int) -> None:
         # levels are:
         # I -> 100 fishies fished (cod)
         # II -> 1_000 fishies fished (tropical)
@@ -169,13 +169,13 @@ class Badges(commands.Cog):
         if fisherman_level == 4:
             return
 
-        if fisherman_level < 4 and fishies_fished >= 100_000:
+        if fisherman_level < 4 and fish_fished >= 100_000:
             await self.update_user_badges(user_id, fisherman=4)
-        elif fisherman_level < 3 and fishies_fished >= 10_000:
+        elif fisherman_level < 3 and fish_fished >= 10_000:
             await self.update_user_badges(user_id, fisherman=3)
-        elif fisherman_level < 2 and fishies_fished >= 1_000:
+        elif fisherman_level < 2 and fish_fished >= 1_000:
             await self.update_user_badges(user_id, fisherman=2)
-        elif fisherman_level < 1 and fishies_fished >= 100:
+        elif fisherman_level < 1 and fish_fished >= 100:
             await self.update_user_badges(user_id, fisherman=1)
 
     async def update_badge_enthusiast(self, user_id: int, commands_ran: int) -> None:
