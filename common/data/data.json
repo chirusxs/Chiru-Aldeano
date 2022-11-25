@@ -488,6 +488,12 @@
         "rarity": 6669,
         "sticky": false
       },
+       {
+        "item": "Cornucopia",
+        "sell_price": 512,
+        "rarity": 9999,
+        "sticky": false
+      },
       {
         "item": "Reciclador",
         "sell_price": 1024,
@@ -1047,6 +1053,7 @@
     "feather": ":feather:",
     "cowboy": ":cowboy:",
     "stevegun": "🔫",
+    "seaweed": "<:seaweed:1043637964158279742>",
     "farming": {
       "growing": {
         "emerald_fruit": "<:emerald_fruit_growing:927292976756031551>",
@@ -1221,7 +1228,8 @@
     "Perla Ender": "ender_pearl",
     "Perla del Tiempo": "time_pearl",
     "Sombrero de Peregrino": "cowboy",
-    "Pluma de Pavo": "feather"
+    "Pluma de Pavo": "feather",
+    "Seaweed": "seaweed"
   },
   "farming": {
     "emojis": {

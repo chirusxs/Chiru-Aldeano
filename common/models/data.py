@@ -177,6 +177,7 @@ class Emojis(ImmutableBaseModel):
     time_pearl: str
     feather: str
     cowboy: str
+    seaweed: str
     farming: FarmingEmojis
     reees: list[str]
     fish: FishEmojis
