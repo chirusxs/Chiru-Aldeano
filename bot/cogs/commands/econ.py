@@ -149,19 +149,6 @@ class Econ(commands.Cog):
 
         mooderalds = getattr(await self.db.fetch_item(user.id, "Antimeralda"), "amount", 0)
 
-        vote_streak = db_user.vote_streak
-        last_voted_at = arrow.get(db_user.last_vote or 0)
-        voted = arrow.utcnow().shift(hours=-12) < last_voted_at
-
-        if arrow.utcnow().shift(days=-1, hours=-12) > arrow.get(db_user.last_vote or 0):
-            vote_streak = 0
-            await self.db.update_user(user.id, vote_streak=0, last_vote=None)
-
-        if voted:
-            can_vote_value = last_voted_at.shift(hours=12).humanize(locale=ctx.l.lang)
-        else:
-            can_vote_value = f"[{ctx.l.econ.pp.yep}]({self.d.topgg + '/vote'})"
-
         user_badges_str = self.badges.emojify_badges(await self.badges.fetch_user_badges(user.id))
 
         active_fx = await self.karen.fetch_active_fx(user.id)
