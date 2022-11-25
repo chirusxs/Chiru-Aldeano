@@ -1590,7 +1590,7 @@ class Econ(commands.Cog):
             await ctx.reply_embed(random.choice(ctx.l.econ.honey.ded).format(bees_lost))
 
     @commands.group(
-        name="top", aliases=["tablas"], case_insensitive=True
+        name="leaderboards", aliases=["tablas"], case_insensitive=True
     )
     @commands.guild_only()
     @commands.cooldown(1, 3, commands.BucketType.user)
