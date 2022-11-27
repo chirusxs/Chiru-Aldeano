@@ -27,6 +27,6 @@ El bot está dockerizado y su arquitectura permite cambiar de escalas manteniend
 - El bot puede propocionar una lista completa de los créditos originales en Discord
 
 ## Reconocimientos (Pendiente de agregar)
-- Puedes ver la lista de contribuidores en este repositorio y también puedes ver una lista de créditos del fork (diseñadores de los nuevos emojis propios del fork, desarrolladores de código totalmente nuevo, etc) proporcionada por el bot en Discord
+- Puedes ver la lista de contribuidores en este repositorio y también puedes ver una lista de créditos del fork (quienes hayan contribuido a este fork, ya sean diseñadores de los nuevos emojis propios del fork, desarrolladores de código totalmente nuevo, etc) proporcionada por el bot en Discord
 
 ## [Privacy Policy](PRIVACY-POLICY.md)
