@@ -3,26 +3,30 @@
 [![Discord](https://img.shields.io/discord/714753410985099284?color=0FAE6E&label=Discord)](https://discord.gg/ZC8shhpSkf)
 [![CI](https://github.com/chirusxs/Chiru-Aldeano/actions/workflows/ci.yml/badge.svg)](https://github.com/chirusxs/Chiru-Aldeano/actions/workflows/ci.yml)
 
-## Notable Features
-* Ability to ping / check the status of the CHIRUSXS Minecraft server
-* Expansive emerald-based economy system
-* Tons of customization and configuration options
+## Características principales
+* La posibilidad de revisar el estado del servidor de Minecraft de la comunidad
+* Un sistema de economía basado en esmeraldas, con objetos, herramientas y más
+* Comandos de diversión variados para interactuar en los canales de Discord
 
-## Contact Information
+## Información de contacto
 * [Discord Server](https://discord.gg/ZC8shhpSkf)
 * E-mail: `soporte@chirusxs.net`
 
-## Technologies
+## Tecnologías
 - [discord.py](https://github.com/Rapptz/discord.py)
 - [Cython](https://cython.org/)
 - [OpenCV](https://opencv.org/) + [Numpy](https://numpy.org/)
 - websockets
-### Architecture
-Chiru Aldeano is separated into two components; Karen and the clusters. A "cluster" is a group of shards (websockets connected to Discord in this case).
-Due to the nature of Chiru Aldeano, these clusters need to share state and communicate, which is what Karen facilitates via the use of websockets.
-The bot is dockerized and this architecture allows scaling while maintaining functionality and easy development.
+### Arquitectura
+Chiru Aldeano está separado en dos componentes; "Karen" y los clusters. Un "cluster" es un grupo de shards (websockets conectados a Discord).
+Debido a como Chiru Aldeano funciona, los clusters necesitan estar comunicados entre sí, que es lo que "Karen" hace posible mediante el uso de websockets.
+El bot está dockerizado y su arquitectura permite cambiar de escalas manteniendo estabilidad y un desarrollo sencillo.
 
-## Acknowledgments
-- [Iapetus-11](https://github.com/Iapetus-11), the creator of the project
+## Reconocimientos originales / Original acknowledgments
+- [Iapetus-11](https://github.com/Iapetus-11) - Dueño, creador y principal mantenedor del bot / Owner, creator and main maintainer of the bot
+- El bot puede propocionar una lista completa de los créditos originales en Discord
+
+## Reconocimientos (Pendiente de agregar)
+- Puedes ver la lista de contribuidores en este repositorio y también puedes ver una lista de créditos del fork (diseñadores de los nuevos emojis propios del fork, desarrolladores de código totalmente nuevo, etc) proporcionada por el bot en Discord
 
 ## [Privacy Policy](PRIVACY-POLICY.md)
