@@ -234,7 +234,7 @@ class Useful(commands.Cog):
 
         await ctx.reply(embed=embed, mention_author=False)
 
-    @commands.command(name="créditos", aliases=["creditos"])
+    @commands.command(name="créditosoriginales", aliases=["creditosoriginales"])
     @commands.cooldown(1, 2, commands.BucketType.user)
     async def credits(self, ctx: Ctx):
         embed_template = discord.Embed(color=self.bot.embed_color)
@@ -247,9 +247,46 @@ class Useful(commands.Cog):
             user_id, contribution = entry
 
             # get user's current name
-            user = self.bot.get_user(self.d.credit_users[user_id])
+            user = self.bot.get_user(self.d.original_credit_users[user_id])
             if user is None:
-                user = await self.bot.fetch_user(self.d.credit_users[user_id])
+                user = await self.bot.fetch_user(self.d.original_credit_users[user_id])
+
+            fields.append({"name": f"**{user.display_name}**", "value": contribution})
+
+            if i % 2 == 1:
+                fields.append({"value": "\uFEFF", "name": "\uFEFF"})
+
+        pages = [fields[i : i + 9] for i in range(0, len(fields), 9)]
+        del fields
+
+        def get_page(page: int) -> discord.Embed:
+            embed = embed_template.copy()
+
+            for field in pages[page]:
+                embed.add_field(**field)
+
+            embed.set_footer(text=f"{ctx.l.econ.page} {page+1}/{len(pages)}")
+
+            return embed
+
+        await self.paginator.paginate_embed(ctx, get_page, timeout=60, page_count=len(pages))
+
+    @commands.command(name="créditoscomunidad", aliases=["creditoscomunidad"])
+    @commands.cooldown(1, 2, commands.BucketType.user)
+    async def credits(self, ctx: Ctx):
+        embed_template = discord.Embed(color=self.bot.embed_color)
+        embed_template.set_author(name=ctx.l.useful.credits.credits, icon_url=self.d.splash_logo)
+
+        fields: list[dict[str, str]] = []
+
+        entry: tuple[int, str]
+        for i, entry in enumerate(ctx.l.useful.credits.people.items()):
+            user_id, contribution = entry
+
+            # get user's current name
+            user = self.bot.get_user(self.d.fork_credit_users[user_id])
+            if user is None:
+                user = await self.bot.fetch_user(self.d.fork_credit_users[user_id])
 
             fields.append({"name": f"**{user.display_name}**", "value": contribution})
 

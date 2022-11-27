@@ -225,7 +225,8 @@ class Data(ImmutableBaseModel):
     mob_chance: int
     tip_chance: int
     topgg_reward: int
-    credit_users: dict[str, int]  # name: discord id
+    original_credit_users: dict[str, int]  # name: discord id
+    fork_credit_users: dict[str, int]
     upvote_emoji_image: str
     acceptable_prefix_chars: list[str]
     cooldown_rates: dict[str, float]  # command: cooldown
