@@ -156,7 +156,7 @@ class Econ(commands.Cog):
         if db_user.shield_pearl and (
             arrow.get(db_user.shield_pearl).shift(months=1) > arrow.utcnow()
         ):
-            active_fx.add("escudo de perlas")
+            active_fx.add("escudo perla")
 
         embed = discord.Embed(color=self.bot.embed_color, description=f"{health_bar}")
         embed.set_author(name=user.display_name, icon_url=getattr(user.avatar, "url", None))
@@ -1501,7 +1501,7 @@ class Econ(commands.Cog):
             await ctx.reply_embed(ctx.l.econ.use.beaker_of_slime_undo.format(amount))
             return
 
-        if thing == "escudo de perlas":
+        if thing == "escudo perla":
             db_user = await self.db.fetch_user(ctx.author.id)
 
             if (
@@ -1511,7 +1511,7 @@ class Econ(commands.Cog):
                 await ctx.reply_embed(ctx.l.econ.use.stupid_1)
                 return
 
-            await self.db.remove_item(ctx.author.id, "Escudo de Perlas", 1)
+            await self.db.remove_item(ctx.author.id, "Escudo Perla", 1)
             await self.db.update_user(ctx.author.id, shield_pearl=arrow.utcnow().datetime)
 
             await ctx.reply_embed(ctx.l.econ.use.use_shield_pearl)

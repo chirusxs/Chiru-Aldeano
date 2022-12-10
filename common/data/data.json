@@ -933,11 +933,11 @@
         }
       }
     },
-    "escudo de perlas": {
+    "escudo perla": {
       "cat": "magic",
       "buy_price": 9999,
       "db_entry": {
-        "item": "Escudo de Perlas",
+        "item": "Escudo Perla",
         "sell_price": 3333,
         "sticky": true
       },
