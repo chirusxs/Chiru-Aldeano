@@ -175,6 +175,7 @@ class Emojis(ImmutableBaseModel):
     aniloading: str
     ender_pearl: str
     time_pearl: str
+    shield_pearl: str
     feather: str
     cowboy: str
     seaweed: str

@@ -1331,34 +1331,25 @@ class Econ(commands.Cog):
             await ctx.reply_embed(ctx.l.econ.use.stupid_5)
             return
 
-        if thing == "poción apuro i":
+        generic_potions = {
+            "poción apuro i": 60 * 7,
+            "poción apuro ii": 60 * 6,
+            "poción de suerte": 60 * 4.5,
+        }
+
+        if thing in generic_potions:
+            duration = generic_potions[thing]
+
             if amount > 1:
                 await ctx.reply_embed(ctx.l.econ.use.stupid_1)
                 return
 
-            await self.db.remove_item(ctx.author.id, thing, 1)
-            await self.karen.add_active_fx(ctx.author.id, "Poción Apuro I")
-            await ctx.reply_embed(ctx.l.econ.use.chug.format("Poción Apuro I", 6))
+            await self.db.remove_item(ctx.author.id, db_item.name, 1)
+            await self.karen.add_active_fx(ctx.author.id, db_item.name, duration)
+            await ctx.reply_embed(ctx.l.econ.use.chug.format(db_item.name, duration / 60))
 
-            await asyncio.sleep(60 * 6)
-
-            await self.bot.send_embed(ctx.author, ctx.l.econ.use.done.format("Poción Apuro I"))
-            await self.karen.remove_active_fx(ctx.author.id, "Poción Apuro I")
-            return
-
-        if thing == "poción apuro ii":
-            if amount > 1:
-                await ctx.reply_embed(ctx.l.econ.use.stupid_1)
-                return
-
-            await self.db.remove_item(ctx.author.id, thing, 1)
-            await self.karen.add_active_fx(ctx.author.id, "Poción Apuro II")
-            await ctx.reply_embed(ctx.l.econ.use.chug.format("Poción Apuro II", 4.5))
-
-            await asyncio.sleep(60 * 4.5)
-
-            await self.bot.send_embed(ctx.author, ctx.l.econ.use.done.format("Poción Apuro II"))
-            await self.karen.remove_active_fx(ctx.author.id, "Poción Apuro II")
+            await asyncio.sleep(duration)
+            await self.bot.send_embed(ctx.author, ctx.l.econ.use.done.format(db_item.name))
             return
 
         if thing == "hueso molido":
@@ -1373,34 +1364,19 @@ class Econ(commands.Cog):
 
             return
 
-        if thing == "poción de suerte":
-            if amount > 1:
-                await ctx.reply_embed(ctx.l.econ.use.stupid_1)
-                return
-
-            await self.db.remove_item(ctx.author.id, thing, 1)
-            await self.karen.add_active_fx(ctx.author.id, "Poción de Suerte")
-            await ctx.reply_embed(ctx.l.econ.use.chug.format("Poción de Suerte", 4.5))
-
-            await asyncio.sleep(60 * 4.5)
-
-            await self.bot.send_embed(ctx.author, ctx.l.econ.use.done.format("Poción de Suerte"))
-            await self.karen.remove_active_fx(ctx.author.id, "Poción de Suerte")
-            return
-
         if thing == "alga marina":
+            duration = 60 * 30
+
             if amount > 1:
                 await ctx.reply_embed(ctx.l.econ.use.stupid_1)
                 return
 
             await self.db.remove_item(ctx.author.id, thing, 1)
-            await self.karen.add_active_fx(ctx.author.id, "Alga Marina")
+            await self.karen.add_active_fx(ctx.author.id, "Alga Marina", duration)
             await ctx.reply_embed(ctx.l.econ.use.smoke_seaweed.format(30))
 
-            await asyncio.sleep(60 * 30)
-
+            await asyncio.sleep(duration)
             await self.bot.send_embed(ctx.author, ctx.l.econ.use.seaweed_done)
-            await self.karen.remove_active_fx(ctx.author.id, "Alga Marina")
             return
 
         if thing == "poción de bóveda":
@@ -1598,6 +1574,7 @@ class Econ(commands.Cog):
     async def leaderboards(self, ctx: Ctx):
         if ctx.invoked_subcommand is not None:
             return
+
         ctx.command.reset_cooldown(ctx)
 
         embed = discord.Embed(color=self.bot.embed_color, title=ctx.l.econ.lb.title)
@@ -1608,8 +1585,18 @@ class Econ(commands.Cog):
         )
         embed.add_field(name="\uFEFF", value="\uFEFF")
         embed.add_field(
-            name=f"{ctx.l.econ.lb.mooderalds} {self.d.emojis.autistic_emerald}",
-            value=f"`{ctx.prefix}top antimeraldas`",
+            name=f"{ctx.l.econ.lb.trash} {self.d.emojis.diamond}",
+            value=f"`{ctx.prefix}leaderboard trash`",
+        )
+
+        embed.add_field(
+            name=f"{ctx.l.econ.lb.farming} {self.d.emojis.farming.normal['wheat']}",
+            value=f"`{ctx.prefix}leaderboard farming`",
+        )
+        embed.add_field(name="\uFEFF", value="\uFEFF")
+        embed.add_field(
+            name=f"{ctx.l.econ.lb.fish} {self.d.emojis.fish.cod}",
+            value=f"`{ctx.prefix}leaderboard fish`",
         )
 
         embed.add_field(
@@ -1623,28 +1610,32 @@ class Econ(commands.Cog):
         )
 
         embed.add_field(
-            name=f"{ctx.l.econ.lb.bees} {self.d.emojis.bee}",
-            value=f"`{ctx.prefix}top abejas`",
-        )
-        embed.add_field(name="\uFEFF", value="\uFEFF")
-        embed.add_field(
-            name=f"{ctx.l.econ.lb.fish} {self.d.emojis.fish.cod}",
-            value=f"`{ctx.prefix}top pesca`",
-        )
-
-        embed.add_field(
-            name=f"{ctx.l.econ.lb.cmds} :keyboard:", value=f"`{ctx.prefix}top comandos`"
+            name=f"{ctx.l.econ.lb.votes} {self.d.emojis.updoot}",
+            value=f"`{ctx.prefix}leaderboard votes`",
         )
 
         embed.add_field(name="\uFEFF", value="\uFEFF")
         embed.add_field(
-            name=f"{ctx.l.econ.lb.farming} {self.d.emojis.farming.normal['wheat']}",
-            value=f"`{ctx.prefix}top agricultura`",
+            name=f"{ctx.l.econ.lb.cmds} :keyboard:", value=f"`{ctx.prefix}leaderboard commands`"
         )
 
         embed.add_field(
-            name=f"{ctx.l.econ.lb.trash} {self.d.emojis.diamond}",
-            value=f"`{ctx.prefix}top minerales`",
+            name=f"{ctx.l.econ.lb.wems} {self.d.emojis.emerald}",
+            value=f"`{ctx.prefix}leaderboard wems`",
+        )
+        embed.add_field(name="\uFEFF", value="\uFEFF")
+        embed.add_field(
+            name=f"{ctx.l.econ.lb.wcmds} :keyboard:", value=f"`{ctx.prefix}leaderboard wcmds`"
+        )
+
+        embed.add_field(
+            name=f"{ctx.l.econ.lb.item} {self.d.emojis.barrel}",
+            value=f"`{ctx.prefix}leaderboard item <{ctx.l.econ.lb.item.lower()}>`",
+        )
+        embed.add_field(name="\uFEFF", value="\uFEFF")
+        embed.add_field(
+            name=f"{ctx.l.econ.lb.unique_items} {self.d.emojis.barrel}",
+            value=f"`{ctx.prefix}leaderboard uniqueitems`",
         )
 
         await ctx.reply(embed=embed, mention_author=False)
@@ -1713,22 +1704,6 @@ class Econ(commands.Cog):
                 title=ctx.l.econ.lb.lb_kil.format(self.d.emojis.stevegun),
             )
 
-    @leaderboards.command(name="abejas", aliases=["abeja"])
-    async def leaderboard_bees(self, ctx: Ctx):
-        async with SuppressCtxManager(ctx.typing()):
-            global_lb = await self.db.fetch_global_lb_item("Tarro de Abejas", ctx.author.id)
-            local_lb = await self.db.fetch_local_lb_item(
-                "Tarro de Abejas", ctx.author.id, [m.id for m in ctx.guild.members if not m.bot]
-            )
-
-            await self._lb_logic(
-                ctx,
-                global_lb=global_lb,
-                local_lb=local_lb,
-                row_fmt=f"\n`{{}}.` **{{}}**{self.d.emojis.bee} {{}}",
-                title=ctx.l.econ.lb.lb_bee.format(self.d.emojis.anibee),
-            )
-
     @leaderboards.command(name="comandos", aliases=["cmds", "cmd"])
     async def leaderboard_commands(self, ctx: Ctx):
         async with SuppressCtxManager(ctx.typing()):
@@ -1759,22 +1734,6 @@ class Econ(commands.Cog):
                 local_lb=local_lb,
                 row_fmt=f"\n`{{}}.` **{{}}**{self.d.emojis.fish.cod} {{}}",
                 title=ctx.l.econ.lb.lb_fish.format(self.d.emojis.fish.rainbow_trout),
-            )
-
-    @leaderboards.command(name="antimeraldas", aliases=["antimeralda"])
-    async def leaderboard_mooderalds(self, ctx: Ctx):
-        async with SuppressCtxManager(ctx.typing()):
-            global_lb = await self.db.fetch_global_lb_item("Antimeralda", ctx.author.id)
-            local_lb = await self.db.fetch_local_lb_item(
-                "Antimeralda", ctx.author.id, [m.id for m in ctx.guild.members if not m.bot]
-            )
-
-            await self._lb_logic(
-                ctx,
-                global_lb=global_lb,
-                local_lb=local_lb,
-                row_fmt=f"\n`{{}}.` **{{}}**{self.d.emojis.autistic_emerald} {{}}",
-                title=ctx.l.econ.lb.lb_moods.format(self.d.emojis.autistic_emerald),
             )
 
     @leaderboards.command(name="agricultura", aliases=["agri"])
@@ -1808,6 +1767,93 @@ class Econ(commands.Cog):
                 row_fmt=f"\n`{{}}.` **{{}}** {self.d.emojis.diamond} {{}}",
                 title=ctx.l.econ.lb.lb_trash.format(f" {self.d.emojis.diamond} "),
             )
+
+    @leaderboards.command(name="weeklyemeralds", aliases=["wems", "weeklyems"])
+    async def leaderboard_weekly_emeralds(self, ctx: Ctx):
+        async with SuppressCtxManager(ctx.typing()):
+            global_lb = await self.db.fetch_global_lb("week_emeralds", ctx.author.id)
+            local_lb = await self.db.fetch_local_lb(
+                "week_emeralds", ctx.author.id, [m.id for m in ctx.guild.members if not m.bot]
+            )
+
+            await self._lb_logic(
+                ctx,
+                global_lb=global_lb,
+                local_lb=local_lb,
+                row_fmt=f"\n`{{}}.` **{{}}** {self.d.emojis.emerald} {{}}",
+                title=ctx.l.econ.lb.lb_wems.format(f" {self.d.emojis.emerald_spinn} "),
+            )
+
+    @leaderboards.command(name="weeklycommands", aliases=["wcmds", "weeklycmds", "wcmd"])
+    async def leaderboard_weekly_commands(self, ctx: Ctx):
+        async with SuppressCtxManager(ctx.typing()):
+            global_lb = await self.db.fetch_global_lb("week_commands", ctx.author.id)
+            local_lb = await self.db.fetch_local_lb(
+                "week_commands", ctx.author.id, [m.id for m in ctx.guild.members if not m.bot]
+            )
+
+            await self._lb_logic(
+                ctx,
+                global_lb=global_lb,
+                local_lb=local_lb,
+                row_fmt="\n`{}.` **{}** :keyboard: {}",
+                title=ctx.l.econ.lb.lb_wcmds.format(" :keyboard: "),
+            )
+
+    @leaderboards.command(name="uniqueitems", aliases=["uniqueitem", "uitems", "uitem", "ui"])
+    async def leaderboard_unique_items(self, ctx: Ctx):
+        async with SuppressCtxManager(ctx.typing()):
+            global_lb = await self.db.fetch_global_lb_unique_items(ctx.author.id)
+            local_lb = await self.db.fetch_local_lb_unique_items(
+                ctx.author.id, [m.id for m in ctx.guild.members if not m.bot]
+            )
+
+            await self._lb_logic(
+                ctx,
+                global_lb=global_lb,
+                local_lb=local_lb,
+                row_fmt=f"\n`{{}}.` **{{}}** {self.d.emojis.barrel} {{}}",
+                title=ctx.l.econ.lb.lb_unique_items.format(f" {self.d.emojis.barrel} "),
+            )
+
+    @leaderboards.command(name="item", aliases=["i"])
+    async def leaderboard_item(self, ctx: Ctx, *, item: str):
+        async with SuppressCtxManager(ctx.typing()):
+            global_lb = await self.db.fetch_global_lb_item(item, ctx.author.id)
+            local_lb = await self.db.fetch_local_lb_item(
+                item, ctx.author.id, [m.id for m in ctx.guild.members if not m.bot]
+            )
+            item_stats = await self.db.get_item_stats(item)
+
+        if not global_lb or global_lb[0]["amount"] <= 1:
+            await ctx.reply_embed(ctx.l.econ.lb.no_item_lb)
+            return
+
+        item_emoji = emojify_item(
+            self.d, item_case(item), default=emojify_item(self.d, item, default=None)
+        )
+
+        row_fmt = f"\n`{{}}.` **{{}}**{item_emoji or ''} {{}}"
+
+        title = ctx.l.econ.lb.lb_item.format(
+            f" {item_emoji} " if item_emoji else "", item_case(item)
+        )
+
+        async with SuppressCtxManager(ctx.typing()):
+            global_lb_str, local_lb_str = await craft_lbs(self.bot, global_lb, local_lb, row_fmt)
+
+        embed = discord.Embed(color=self.bot.embed_color, title=title)
+
+        embed.add_field(name=ctx.l.econ.lb.local_lb, value=local_lb_str)
+        embed.add_field(name=ctx.l.econ.lb.global_lb, value=global_lb_str)
+
+        embed.add_field(
+            name="\uFEFF",
+            value=f"*total of {item_stats['total_count']:,} owned by {item_stats['users_in_possession']} different users*",
+            inline=False,
+        )
+
+        await ctx.reply(embed=embed, mention_author=False)
 
     @commands.group(name="agricultura", case_insensitive=True)
     @commands.max_concurrency(1, per=commands.BucketType.user, wait=False)

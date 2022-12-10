@@ -399,7 +399,7 @@
       {
         "item": "Pata de Pavo",
         "sell_price": 512,
-        "rarity": 49999,
+        "rarity": 2000,
         "sticky": false
       },
       {
@@ -412,6 +412,18 @@
         "item": "Sombrero de Peregrino",
         "sell_price": 1024,
         "rarity": 99999,
+        "sticky": false
+      },
+      {
+        "item": "Rudolfs Red Nose",
+        "sell_price": 3333,
+        "rarity": 150000,
+        "sticky": false
+      },
+      {
+        "item": "Christmas Tree",
+        "sell_price": 2048,
+        "rarity": 125000,
         "sticky": false
       }
     ]
@@ -511,13 +523,25 @@
       {
         "item": "Poción de Suerte",
         "sell_price": 128,
-        "rarity": 6669,
+        "rarity": 3099,
         "sticky": false
       },
-       {
-        "item": "Cornucopia",
+      {
+        "item": "Rudolfs Red Nose",
+        "sell_price": 3333,
+        "rarity": 150000,
+        "sticky": false
+      },
+      {
+        "item": "Inflatable Santa",
+        "sell_price": 1024,
+        "rarity": 99999,
+        "sticky": false
+      },
+      {
+        "item": "Snow Globe",
         "sell_price": 512,
-        "rarity": 9999,
+        "rarity": 6669,
         "sticky": false
       },
       {

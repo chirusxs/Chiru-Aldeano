@@ -76,8 +76,8 @@ class Database(commands.Cog):
         disabled_records = await self.db.fetch("SELECT * FROM disabled_commands")
         disabled = defaultdict(set)
 
-        for guild_id, command in disabled_records:
-            disabled[guild_id].add(command)
+        for record in disabled_records:
+            disabled[record["guild_id"]].add(record["command"])
 
         return disabled
 
@@ -501,6 +501,33 @@ class Database(commands.Cog):
             user_ids,
         )
 
+    async def fetch_global_lb_unique_items(self, user_id: int) -> list[dict[str, Any]]:
+        return await self.db.fetch(
+            """
+        WITH lb AS (SELECT user_id, COUNT(*) AS amount, ROW_NUMBER() OVER(ORDER BY COUNT(*) DESC) AS idx FROM items GROUP BY user_id)
+        (
+            (SELECT lb.* FROM lb LIMIT 10)
+            UNION
+            (SELECT lb.* FROM lb WHERE lb.user_id = $1)
+        ) ORDER BY idx;""",
+            user_id,
+        )
+
+    async def fetch_local_lb_unique_items(
+        self, user_id: int, user_ids: list
+    ) -> list[dict[str, Any]]:
+        return await self.db.fetch(
+            """
+        WITH lb AS (SELECT user_id, COUNT(*) AS amount, ROW_NUMBER() OVER(ORDER BY COUNT(*) DESC) AS idx FROM items WHERE user_id = ANY($2::BIGINT[]) GROUP BY user_id)
+        (
+            (SELECT lb.* FROM lb LIMIT 10)
+            UNION
+            (SELECT lb.* FROM lb WHERE lb.user_id = $1)
+        ) ORDER BY idx;""",
+            user_id,
+            user_ids,
+        )
+
     async def set_botbanned(self, user_id: int, botbanned: bool) -> None:
         await self.ensure_user_exists(user_id)
 
@@ -734,6 +761,19 @@ class Database(commands.Cog):
         await self.db.executemany(
             "UPDATE items SET sell_price = $2 WHERE name = $1", list(prices.items())
         )
+
+    async def get_item_stats(self, item: str) -> dict[str, int]:
+        users_in_possession, total_count = await asyncio.gather(
+            self.db.fetchval(
+                "SELECT COUNT(*) FROM (SELECT user_id FROM items WHERE LOWER(name) = LOWER($1) GROUP BY user_id) iq",
+                item,
+            ),
+            self.db.fetchval(
+                "SELECT SUM(amount)::BIGINT FROM items WHERE LOWER(name) = LOWER($1)", item
+            ),
+        )
+
+        return {"users_in_possession": users_in_possession, "total_count": total_count}
 
 
 async def setup(bot: VillagerBotCluster) -> None:

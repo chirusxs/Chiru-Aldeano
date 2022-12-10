@@ -44,7 +44,7 @@ jobs:
 
       - name: auto commit
         if: github.ref != 'refs/heads/main'
-        uses: stefanzweifel/git-auto-commit-action@v4.14.1
+        uses: stefanzweifel/git-auto-commit-action@v4.15.4
         with:
           commit_message: format / fix code
 
@@ -56,3 +56,6 @@ jobs:
 
       - name: pytest
         run: poetry run pytest
+
+      - name: json-check
+        run: "find bot karen common -name \"*.json\" | while read file; do { echo \"Checking file: $file\"; jq . $file -c > /dev/null; }; done"
