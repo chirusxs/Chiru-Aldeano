@@ -160,7 +160,7 @@ class Emojis(ImmutableBaseModel):
     jar_of_bees: str
     honey_jar: str
     ticket: str
-    barril: str
+    barrel: str
     rock: str
     gun: str
     alien: str
