@@ -1,13 +1,5 @@
-import asyncio
-import base64
-import json
 import random
-from contextlib import suppress
-from urllib.parse import quote as urlquote
 
-import aiohttp
-import aiomcrcon as rcon
-import arrow
 import classyjson as cj
 import discord
 from cryptography.fernet import Fernet
@@ -15,7 +7,7 @@ from discord.ext import commands
 
 from bot.cogs.core.database import Database
 from bot.utils.ctx import Ctx
-from bot.utils.misc import SuppressCtxManager, fix_giphy_url
+from bot.utils.misc import SuppressCtxManager
 from bot.villager_bot import VillagerBotCluster
 
 try:
@@ -113,9 +105,7 @@ class Minecraft(commands.Cog):
         )
 
         embed.add_field(name=ctx.l.minecraft.mcping.latency, value=f'{jj["latency"]}ms')
-        embed.add_field(
-            name=ctx.l.minecraft.mcping.version, value=("MC.CHIRUSXS.NET")
-        )
+        embed.add_field(name=ctx.l.minecraft.mcping.version, value=("MC.CHIRUSXS.NET"))
 
         player_list_cut = []
 
@@ -167,6 +157,7 @@ class Minecraft(commands.Cog):
         idea = random.choice(self.d.build_ideas["ideas"])
 
         await ctx.reply_embed(f"{prefix} {idea}!")
+
 
 async def setup(bot: VillagerBotCluster) -> None:
     await bot.add_cog(Minecraft(bot))

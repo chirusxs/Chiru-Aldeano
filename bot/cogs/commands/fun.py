@@ -1,8 +1,6 @@
 import asyncio
 import random
-import typing
 from contextlib import suppress
-from urllib.parse import quote as urlquote
 
 import classyjson as cj
 import discord
@@ -300,6 +298,7 @@ class Fun(commands.Cog):
             await self.trivia_true_or_false(ctx, question, do_reward)
         else:
             await self.trivia_multiple_choice(ctx, question, do_reward)
+
 
 async def setup(bot: VillagerBotCluster) -> None:
     await bot.add_cog(Fun(bot))

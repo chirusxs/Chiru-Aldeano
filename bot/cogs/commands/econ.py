@@ -621,7 +621,11 @@ class Econ(commands.Cog):
         amount_item = amount_item.lower()
         db_user = await self.db.fetch_user(ctx.author.id)
 
-        if amount_item.startswith("max ") or amount_item.startswith("máx ") or amount_item.startswith("todo "):
+        if (
+            amount_item.startswith("max ")
+            or amount_item.startswith("máx ")
+            or amount_item.startswith("todo ")
+        ):
             item = amount_item[4:]
 
             try:
@@ -735,7 +739,11 @@ class Econ(commands.Cog):
 
         amount_item = amount_item.lower()
 
-        if amount_item.startswith("max ") or amount_item.startswith("máx ") or amount_item.startswith("todo "):
+        if (
+            amount_item.startswith("max ")
+            or amount_item.startswith("máx ")
+            or amount_item.startswith("todo ")
+        ):
             item = amount_item[4:]
             db_item = await self.db.fetch_item(ctx.author.id, item)
 
@@ -941,12 +949,9 @@ class Econ(commands.Cog):
             multi = (
                 40
                 + random.randint(5, 30)
-                + (await self.db.fetch_item(ctx.author.id, "Amuleto del Pillager") is not None)
-                * 20
+                + (await self.db.fetch_item(ctx.author.id, "Amuleto del Pillager") is not None) * 20
             )
-            multi += (
-                await self.db.fetch_item(ctx.author.id, "Trofeo de Dinero") is not None
-            ) * 40
+            multi += (await self.db.fetch_item(ctx.author.id, "Trofeo de Dinero") is not None) * 40
             multi = (150 + random.randint(-5, 0)) if multi >= 150 else multi
             multi /= 100
 
@@ -1565,9 +1570,7 @@ class Econ(commands.Cog):
 
             await ctx.reply_embed(random.choice(ctx.l.econ.honey.ded).format(bees_lost))
 
-    @commands.group(
-        name="leaderboards", aliases=["tablas"], case_insensitive=True
-    )
+    @commands.group(name="leaderboards", aliases=["tablas"], case_insensitive=True)
     @commands.guild_only()
     @commands.cooldown(1, 3, commands.BucketType.user)
     @commands.max_concurrency(1, commands.BucketType.user)
