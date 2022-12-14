@@ -1584,36 +1584,36 @@ class Econ(commands.Cog):
             value=f"`{ctx.prefix}top esmeraldas`",
         )
 
+        embed.add_field(name="\uFEFF", value="\uFEFF")
+
         embed.add_field(
             name=f"{ctx.l.econ.lb.trash} {self.d.emojis.diamond}",
             value=f"`{ctx.prefix}top minerales`",
         )
 
-        embed.add_field(name="\uFEFF", value="\uFEFF")
-
         embed.add_field(
             name=f"{ctx.l.econ.lb.farming} {self.d.emojis.farming.normal['wheat']}",
             value=f"`{ctx.prefix}top agricultura`",
         )
+
+        embed.add_field(name="\uFEFF", value="\uFEFF")
         
         embed.add_field(
             name=f"{ctx.l.econ.lb.fish} {self.d.emojis.fish.cod}",
             value=f"`{ctx.prefix}top pesca`",
         )
 
-        embed.add_field(name="\uFEFF", value="\uFEFF")
-
         embed.add_field(
             name=f"{ctx.l.econ.lb.kills} {self.d.emojis.stevegun}",
             value=f"`{ctx.prefix}top mobs`",
         )
 
+        embed.add_field(name="\uFEFF", value="\uFEFF")
+
         embed.add_field(
             name=f"{ctx.l.econ.lb.stolen} {self.d.emojis.emerald}",
             value=f"`{ctx.prefix}top robos`",
         )
-
-        embed.add_field(name="\uFEFF", value="\uFEFF")
 
         embed.add_field(
             name=f"{ctx.l.econ.lb.cmds} :keyboard:", value=f"`{ctx.prefix}top comandos`"
