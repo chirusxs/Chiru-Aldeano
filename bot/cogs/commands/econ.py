@@ -1566,7 +1566,7 @@ class Econ(commands.Cog):
             await ctx.reply_embed(random.choice(ctx.l.econ.honey.ded).format(bees_lost))
 
     @commands.group(
-        name="leaderboards", aliases=["tablas"], case_insensitive=True
+        name="leaderboards", aliases=["lb", "lbs", "leaderboard"], case_insensitive=True
     )
     @commands.guild_only()
     @commands.cooldown(1, 3, commands.BucketType.user)
@@ -1581,7 +1581,7 @@ class Econ(commands.Cog):
 
         embed.add_field(
             name=f"{ctx.l.econ.lb.emeralds} {self.d.emojis.emerald}",
-            value=f"`{ctx.prefix}top esmeraldas`",
+            value=f"`{ctx.prefix}leaderboard emeralds`",
         )
         embed.add_field(name="\uFEFF", value="\uFEFF")
         embed.add_field(
@@ -1601,19 +1601,18 @@ class Econ(commands.Cog):
 
         embed.add_field(
             name=f"{ctx.l.econ.lb.kills} {self.d.emojis.stevegun}",
-            value=f"`{ctx.prefix}top mobs`",
+            value=f"`{ctx.prefix}leaderboard mobkills`",
         )
         embed.add_field(name="\uFEFF", value="\uFEFF")
         embed.add_field(
             name=f"{ctx.l.econ.lb.stolen} {self.d.emojis.emerald}",
-            value=f"`{ctx.prefix}top robos`",
+            value=f"`{ctx.prefix}leaderboard stolen`",
         )
 
         embed.add_field(
             name=f"{ctx.l.econ.lb.votes} {self.d.emojis.updoot}",
             value=f"`{ctx.prefix}leaderboard votes`",
         )
-
         embed.add_field(name="\uFEFF", value="\uFEFF")
         embed.add_field(
             name=f"{ctx.l.econ.lb.cmds} :keyboard:", value=f"`{ctx.prefix}leaderboard commands`"
@@ -1652,11 +1651,12 @@ class Econ(commands.Cog):
 
         embed = discord.Embed(color=self.bot.embed_color, title=title)
 
+        embed.add_field(name=ctx.l.econ.lb.local_lb, value=local_lb_str)
         embed.add_field(name=ctx.l.econ.lb.global_lb, value=global_lb_str)
 
         await ctx.reply(embed=embed, mention_author=False)
 
-    @leaderboards.command(name="esmeraldas", aliases=["esm"])
+    @leaderboards.command(name="emeralds", aliases=["ems"])
     async def leaderboard_emeralds(self, ctx: Ctx):
         async with SuppressCtxManager(ctx.typing()):
             global_lb = await self.db.fetch_global_lb_user("emeralds", ctx.author.id)
@@ -1672,7 +1672,7 @@ class Econ(commands.Cog):
                 title=ctx.l.econ.lb.lb_ems.format(self.d.emojis.emerald_spinn),
             )
 
-    @leaderboards.command(name="robos", aliases=["rob"])
+    @leaderboards.command(name="pillages", aliases=["pil", "stolen"])
     async def leaderboard_pillages(self, ctx: Ctx):
         async with SuppressCtxManager(ctx.typing()):
             global_lb = await self.db.fetch_global_lb("pillaged_emeralds", ctx.author.id)
@@ -1688,7 +1688,7 @@ class Econ(commands.Cog):
                 title=ctx.l.econ.lb.lb_pil.format(self.d.emojis.emerald),
             )
 
-    @leaderboards.command(name="mobs", aliases=["mob"])
+    @leaderboards.command(name="mobkills", aliases=["kil", "kills", "kill", "bonk"])
     async def leaderboard_mobkills(self, ctx: Ctx):
         async with SuppressCtxManager(ctx.typing()):
             global_lb = await self.db.fetch_global_lb("mobs_killed", ctx.author.id)
@@ -1704,7 +1704,7 @@ class Econ(commands.Cog):
                 title=ctx.l.econ.lb.lb_kil.format(self.d.emojis.stevegun),
             )
 
-    @leaderboards.command(name="comandos", aliases=["cmds", "cmd"])
+    @leaderboards.command(name="commands", aliases=["!!", "cmds"])
     async def leaderboard_commands(self, ctx: Ctx):
         async with SuppressCtxManager(ctx.typing()):
             global_lb = await self.db.fetch_global_lb("commands", ctx.author.id)
@@ -1720,7 +1720,23 @@ class Econ(commands.Cog):
                 title=ctx.l.econ.lb.lb_cmds.format(" :keyboard: "),
             )
 
-    @leaderboards.command(name="pesca")
+    @leaderboards.command(name="votes", aliases=["votestreaks", "votestreak"])
+    async def leaderboard_votes(self, ctx: Ctx):
+        async with SuppressCtxManager(ctx.typing()):
+            global_lb = await self.db.fetch_global_lb_user("vote_streak", ctx.author.id)
+            local_lb = await self.db.fetch_local_lb_user(
+                "vote_streak", ctx.author.id, [m.id for m in ctx.guild.members if not m.bot]
+            )
+
+            await self._lb_logic(
+                ctx,
+                global_lb=global_lb,
+                local_lb=local_lb,
+                row_fmt=f"\n`{{}}.` **{{}}**{self.d.emojis.updoot} {{}}",
+                title=ctx.l.econ.lb.lb_votes.format(" :fire: "),
+            )
+
+    @leaderboards.command(name="fish", aliases=["fishies", "fishing"])
     async def leaderboard_fish(self, ctx: Ctx):
         async with SuppressCtxManager(ctx.typing()):
             global_lb = await self.db.fetch_global_lb("fish_fished", ctx.author.id)
@@ -1736,7 +1752,7 @@ class Econ(commands.Cog):
                 title=ctx.l.econ.lb.lb_fish.format(self.d.emojis.fish.rainbow_trout),
             )
 
-    @leaderboards.command(name="agricultura", aliases=["agri"])
+    @leaderboards.command(name="farming", aliases=["farm", "crop", "crops"])
     async def leaderboard_farming(self, ctx: Ctx):
         async with SuppressCtxManager(ctx.typing()):
             global_lb = await self.db.fetch_global_lb("crops_planted", ctx.author.id)
@@ -1752,7 +1768,7 @@ class Econ(commands.Cog):
                 title=ctx.l.econ.lb.lb_farming.format(f" {self.d.emojis.farming.normal['wheat']} "),
             )
 
-    @leaderboards.command(name="minerales", aliases=["mineral"])
+    @leaderboards.command(name="trash", aliases=["trashcan", "garbage", "tc"])
     async def leaderboard_trash(self, ctx: Ctx):
         async with SuppressCtxManager(ctx.typing()):
             global_lb = await self.db.fetch_global_lb("trash_emptied", ctx.author.id)
