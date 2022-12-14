@@ -123,7 +123,7 @@ class Econ(commands.Cog):
         pass
 
     @commands.command(name="perfil", aliases=["pp"])
-    async def perfil(self, ctx: Ctx, *, user: discord.User = None):
+    async def profile(self, ctx: Ctx, *, user: discord.User = None):
         if user is None:
             user = ctx.author
 
@@ -186,7 +186,7 @@ class Econ(commands.Cog):
         await ctx.reply(embed=embed, mention_author=False)
 
     @commands.command(name="saldo", aliases=["bal"])
-    async def saldo(self, ctx: Ctx, *, user: discord.User = None):
+    async def balance(self, ctx: Ctx, *, user: discord.User = None):
         """Shows the balance of a user or the message sender"""
 
         if user is None:
@@ -473,7 +473,7 @@ class Econ(commands.Cog):
     @commands.group(name="tienda", case_insensitive=True)
     @commands.guild_only()
     @commands.cooldown(2, 10, commands.BucketType.user)
-    async def tienda(self, ctx: Ctx):
+    async def shop(self, ctx: Ctx):
         """Shows the available options in the Villager Shop"""
 
         if ctx.invoked_subcommand is None:
@@ -538,7 +538,7 @@ class Econ(commands.Cog):
 
         await self.paginator.paginate_embed(ctx, get_page, timeout=60, page_count=len(item_pages))
 
-    @tienda.command(name="herramientas")
+    @shop.command(name="herramientas")
     async def shop_tools(self, ctx: Ctx):
         """Allows you to shop for tools"""
 
@@ -546,7 +546,7 @@ class Econ(commands.Cog):
             ctx, "tools", f"{ctx.l.econ.shop.villager_shop} [{ctx.l.econ.shop.tools[3:]}]"
         )
 
-    @tienda.command(name="magia")
+    @shop.command(name="magia")
     async def shop_magic(self, ctx: Ctx):
         """Allows you to shop for magic items"""
 
@@ -554,7 +554,7 @@ class Econ(commands.Cog):
             ctx, "magic", f"{ctx.l.econ.shop.villager_shop} [{ctx.l.econ.shop.magic[3:]}]"
         )
 
-    @tienda.command(name="agricultura", aliases=["agri"])
+    @shop.command(name="agricultura", aliases=["agri"])
     async def shop_farming(self, ctx: Ctx):
         """Allows you to shop for farming items"""
 
@@ -562,7 +562,7 @@ class Econ(commands.Cog):
             ctx, "farming", f"{ctx.l.econ.shop.villager_shop} [{ctx.l.econ.shop.farming[3:]}]"
         )
 
-    @tienda.command(name="otros")
+    @shop.command(name="otros")
     async def shop_other(self, ctx: Ctx):
         """Allows you to shop for other/miscellaneous items"""
 
