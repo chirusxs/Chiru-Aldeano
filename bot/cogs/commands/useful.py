@@ -236,7 +236,7 @@ class Useful(commands.Cog):
 
     @commands.command(name="créditosoriginales", aliases=["creditosoriginales"])
     @commands.cooldown(1, 2, commands.BucketType.user)
-    async def credits(self, ctx: Ctx):
+    async def créditosoriginales(self, ctx: Ctx):
         embed_template = discord.Embed(color=self.bot.embed_color)
         embed_template.set_author(name=ctx.l.useful.credits.credits, icon_url=self.d.splash_logo)
 
@@ -273,7 +273,7 @@ class Useful(commands.Cog):
 
     @commands.command(name="créditoscomunidad", aliases=["creditoscomunidad"])
     @commands.cooldown(1, 2, commands.BucketType.user)
-    async def credits(self, ctx: Ctx):
+    async def créditoscomunidad(self, ctx: Ctx):
         embed_template = discord.Embed(color=self.bot.embed_color)
         embed_template.set_author(name=ctx.l.useful.credits.credits, icon_url=self.d.splash_logo)
 
