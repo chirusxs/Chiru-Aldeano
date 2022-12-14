@@ -219,9 +219,7 @@ class Config(commands.Cog):
         else:
             await ctx.reply_embed(ctx.l.config.invalid.format("`sí`, `no`"))
 
-    @config.command(
-        name="rconlimpiar"
-    )
+    @config.command(name="rconlimpiar")
     @commands.cooldown(1, 2, commands.BucketType.user)
     async def config_clear_rcon_passwords(self, ctx: Ctx):
         deleted = len(await self.db.mass_delete_user_rcon(ctx.author.id))

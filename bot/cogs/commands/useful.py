@@ -1,22 +1,13 @@
 import asyncio
-import io
-import json
-import os
-import secrets
 import time
 from contextlib import suppress
-from typing import Any, Optional
-from urllib.parse import quote as urlquote
+from typing import Any
 
-import aiofiles
-import aiohttp
 import arrow
 import async_cse
 import discord
-import moviepy.editor
 from discord.app_commands import command as slash_command
 from discord.ext import commands, tasks
-from PIL import ExifTags, Image
 
 from common.models.system_stats import SystemStats
 
@@ -24,16 +15,7 @@ from bot.cogs.core.database import Database
 from bot.cogs.core.paginator import Paginator
 from bot.models.translation import Translation
 from bot.utils.ctx import Ctx
-from bot.utils.misc import (
-    SuppressCtxManager,
-    clean_text,
-    fetch_aprox_ban_count,
-    get_timedelta_granularity,
-    is_valid_image_res,
-    parse_timedelta,
-    read_limited,
-    shorten_chunks,
-)
+from bot.utils.misc import SuppressCtxManager, fetch_aprox_ban_count, shorten_chunks
 from bot.villager_bot import VillagerBotCluster
 
 
@@ -324,9 +306,7 @@ class Useful(commands.Cog):
 
         await ctx.reply(embed=embed, mention_author=False)
 
-    @commands.command(
-        name="ping"
-    )
+    @commands.command(name="ping")
     async def ping_pong(self, ctx: Ctx):
         content = ctx.message.content.lower()
 
@@ -524,6 +504,7 @@ class Useful(commands.Cog):
         embed.add_field(name="\uFEFF", value=ctx.l.useful.rules.rule_4)
 
         await ctx.reply(embed=embed, mention_author=False)
+
 
 async def setup(bot: VillagerBotCluster) -> None:
     await bot.add_cog(Useful(bot))
