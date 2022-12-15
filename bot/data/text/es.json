@@ -39,7 +39,7 @@
           "¡Gracias por agregarme! Utiliza `{prefix}ayuda` para comenzar con el bot.",
           "If you need any more help, check out the **[Support Server]({support_server})**!"
         ],
-        "footer": "Bot oficial de la comunidad CHIRUSXS ({prefix}créditos)  |  Revisa las {prefix}reglasbot"
+        "footer": "Bot privado de la comunidad CHIRUSXS | Revisa las {prefix}reglasbot"
       }
     },
     "help": {
@@ -1542,7 +1542,7 @@
         "rules": "Reglas del bot",
         "slashrules": "{}reglasbot para las reglas",
         "penalty": "El romper estas reglas puede implicar ser vetado/a temporal o permanentemente del bot o recibir un reinicio de estadísticas.",
-        "rule_1": "**1.** No abuses de ni divulges públicamente bugs o errores, reportalos abriendo un ticket en <#832033137742708737>",
+        "rule_1": "**1.** No abuses de ni divulges públicamente bugs o errores, reportalos abriendo un ticket en el canal <#832033137742708737>",
         "rule_2": "**2.** No hagas trampas de ninguna manera, ya sea con multiples cuentas o con automatizaciones",
         "rule_3": "**3.** No utilices el bot para molestar, irrespetar o humillar a alguien más.",
         "rule_4": "**4.** No desvirtues el uso del bot."
@@ -1556,10 +1556,21 @@
       },
       "credits": {
         "credits": "Créditos del bot",
-        "foot": "Bot oficial de la comunidad CHIRUSXS ({0}créditos)",
+        "foot": "Bot privado de la comunidad CHIRUSXS",
         "people": {
-          "Chiruso": "El creador del bot",
-          "iapetus11": "El creador del bot original"
+          "iapetus11": "The creator, owner, and developer of Villager Bot",
+          "hpancakesk": "Helped come up with the original ideas behind Villager Bot",
+          "moody": "Helped with the ideas behind several items and fishing",
+          "emulator": "Helped with bug fixes and feature additions",
+          "elrynd": "Has helped with bug fixes and code understanding, and translated Villager Bot into French",
+          "chez": "Created new features and helps fix bugs",
+          "quack": "Helps fix minor issues with the code and translations",
+          "zelou": "Helps with the Spanish translation of Villager Bot",
+          "joaooh": "Created and maintains the Portuguese translation of Villager Bot",
+          "xe": "Minor bug fixes and feature additions",
+          "radar": "Minor bug fixes and feature additions",
+          "kuro": "Helps with multiple translations of Villager Bot",
+          "hilt": "Helps with multiple translations of Villager Bot"
         },
         "others": "Y por supuesto, los incontables usuarios que han contribuido ideas y reportado bugs para ayudar a mejorar al bot."
       },
