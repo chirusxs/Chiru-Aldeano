@@ -166,7 +166,7 @@ class Minecraft(commands.Cog):
         prefix = random.choice(self.d.build_ideas["prefixes"])
         idea = random.choice(self.d.build_ideas["ideas"])
 
-        await ctx.reply_embed(f"{prefix} {idea}!")
+        await ctx.reply_embed(f"¡{prefix} {idea}!")
 
 async def setup(bot: VillagerBotCluster) -> None:
     await bot.add_cog(Minecraft(bot))
