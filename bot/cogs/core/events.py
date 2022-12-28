@@ -138,8 +138,8 @@ class Events(commands.Cog):
         # add user to new member cache
         self.bot.new_member_cache[member.guild.id].add(member.id)
 
-        if member.guild.id == self.k.support_server_id:
-            await update_support_member_role(self.bot, member)
+        # if member.guild.id == self.k.support_server_id:
+        #     await update_support_member_role(self.bot, member)
 
     @commands.Cog.listener()
     async def on_member_update(self, before: discord.Member, after: discord.Member):
